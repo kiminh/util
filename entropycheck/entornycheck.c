@@ -129,11 +129,12 @@ int main(int argc,char **argv)
             double p_d_0 = double(neg) / sum_d;
             double p_d_1 = double(pos) / sum_d;
 
-			D += ((double)sum_d / sum) * ( - (double)neg / sum_d * log(p_d_0) - (double)pos / (sum_d) * log(p_d_1) );
+			D += ((double)sum_d / sum) * ( - p_d_0  * log(p_d_0) - p_d_1 * log(p_d_1) );
 		}
 	}
     //cout << "D : " << D << endl;
 	HD_A = HD - D;
 	cout << HD_A << endl;
+    train_stream.close();
 	return 0;
 }
