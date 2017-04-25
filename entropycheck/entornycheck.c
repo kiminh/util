@@ -103,15 +103,15 @@ int main(int argc,char **argv)
 			}
 		}
         total_ins++;
-        if(total_ins % 1000000 == 0)
-            cout << "total_ins: " << total_ins << endl; 
+     //   if(total_ins % 1000000 == 0)
+      //      cout << "total_ins: " << total_ins << endl; 
 	}
 	
 	int sum = label_value[0] + label_value[1];
 	double p_0 = double(label_value[0]) / sum;
 	double p_1 = double(label_value[1]) / sum;
 
-    cout << label_value[0] <<" "<< label_value[1] << " " << sum << endl;
+   // cout << label_value[0] <<" "<< label_value[1] << " " << sum << endl;
 
 	double HD = - p_0 * log(p_0) - p_1 * log(p_1);
 	//cout << "HD : " << HD << endl;	
