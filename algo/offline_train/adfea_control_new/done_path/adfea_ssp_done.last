@@ -1,0 +1,4 @@
+end_time_stamp=2018061412
+data_path=/home/work/xuyichen/shitu_log2.0/
+data_path_tmp=/home/work/xuyicheng/shitu_log2.0_tmp
+dest_model_file=lr_model_spot.dat
