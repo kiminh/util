@@ -1,0 +1,27 @@
+
+# hourly update
+# local
+7 * * * * cd /home/ling.fang/ctr_space/hourly_update/shitu_generate/ && bash -x script/join_click.sh && cd /home/ling.fang/ctr_space/hourly_update/model_train && bash -x model_train.sh  
+# hadoop mapreduce
+10 * * * * cd /home/ling.fang/ctr_space/ed_join_click_hour && bash -x run_ed_join_click.sh
+
+
+#
+# daily update
+#
+
+# ed join click
+30 0 * * * cd /home/ling.fang/ctr_space/ed_join_click/ && bash -x stat_info.sh && bash -x run_ed_join_click.sh
+# batch model train
+0 1 * * * cd /home/ling.fang/ctr_space/daily_update/shitu_generate && bash -x run_shitu.sh && cd /home/ling.fang/ctr_space/daily_update/model_train/ && bash -x model_train.sh
+
+#stat ctr update tmp
+20 * * * * cd /home/ling.fang/stat_ctr/ && bash -x update_online_ctr.sh
+
+
+#metric eval and log upload hdfs
+0 4 * * * cd /home/ling.fang/ctr_space/hourly_update/daily_metric_eval && bash -x run_metric_eval.sh && cd /home/ling.fang/ctr_space/hourly_update/shitu_generate && bash -x log_upload_hdfs.sh
+
+# data clean
+30 * * * * find /home/ling.fang/ctr_space/hourly_update/model_train/incre_adfea/ -cmin +120 -exec rm -f {} \;
+40 * * * * find /home/ling.fang/ctr_space/hourly_update/model_train/model_bk/ -cmin +120 -exec rm -f {} \;
