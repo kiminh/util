@@ -1,0 +1,1447 @@
++ kinit -kt /home/ling.fang/ling.fang.keytab ling.fang
+++ pwd
++ ROOT_PATH=/home/ling.fang/automated_targeting
++ JOB_PATH=/home/ling.fang/automated_targeting/script
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
++ SPARK_HOME=/usr/local/spark-2.1.1-bin-hadoop2.6
++ LOG_PATH=hdfs:///user/dmp/spark_eventlog
++ SRC_PATH=/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/user_applist_all/json
++ DES_PATH=/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
+rm: `/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/': No such file or directory
++ sparksubmit='/usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit                  --master yarn                  --queue root.ad-root.etl.dailyetl.normal                  --num-executors 60                  --executor-memory 10g                  --driver-memory 15g                  --conf spark.dynamicAllocation.enabled=true                  --conf spark.dynamicAllocation.maxExecutors=100                  --conf spark.dynamicAllocation.minExecutors=60                  --conf spark.driver.maxResultSize=12G                  --conf spark.shuffle.service.enabled=true                  --conf spark.executor.cores=2                  --conf spark.eventLog.enabled=true                  --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog'
++ /usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit --master yarn --queue root.ad-root.etl.dailyetl.normal --num-executors 60 --executor-memory 10g --driver-memory 15g --conf spark.dynamicAllocation.enabled=true --conf spark.dynamicAllocation.maxExecutors=100 --conf spark.dynamicAllocation.minExecutors=60 --conf spark.driver.maxResultSize=12G --conf spark.shuffle.service.enabled=true --conf spark.executor.cores=2 --conf spark.eventLog.enabled=true --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog /home/ling.fang/automated_targeting/script/app_agg_user.py /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/user_applist_all/json /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
+19/07/25 14:33:47 INFO spark.SparkContext: Running Spark version 2.1.1
+19/07/25 14:33:47 INFO spark.SecurityManager: Changing view acls to: ling.fang
+19/07/25 14:33:47 INFO spark.SecurityManager: Changing modify acls to: ling.fang
+19/07/25 14:33:47 INFO spark.SecurityManager: Changing view acls groups to: 
+19/07/25 14:33:47 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/07/25 14:33:47 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ling.fang); groups with view permissions: Set(); users  with modify permissions: Set(ling.fang); groups with modify permissions: Set()
+19/07/25 14:33:48 INFO util.Utils: Successfully started service 'sparkDriver' on port 23273.
+19/07/25 14:33:48 INFO spark.SparkEnv: Registering MapOutputTracker
+19/07/25 14:33:48 INFO spark.SparkEnv: Registering BlockManagerMaster
+19/07/25 14:33:48 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/07/25 14:33:48 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/07/25 14:33:48 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-f0c17608-4304-46d7-8b11-8acbb9d1b532
+19/07/25 14:33:48 INFO memory.MemoryStore: MemoryStore started with capacity 8.7 GB
+19/07/25 14:33:48 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+19/07/25 14:33:48 INFO util.log: Logging initialized @2510ms
+19/07/25 14:33:48 INFO server.Server: jetty-9.2.z-SNAPSHOT
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@742cb63f{/jobs,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5fd3e423{/jobs/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6d51a663{/jobs/job,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6b9dc2e3{/jobs/job/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7a910ce1{/stages,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3a230d6c{/stages/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5aa1d6f5{/stages/stage,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5f2e9d98{/stages/stage/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2d2a7498{/stages/pool,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@f40543c{/stages/pool/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5b823d5f{/storage,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@70ebb9ea{/storage/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@e1b8ddb{/storage/rdd,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3f7d990{/storage/rdd/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@49557474{/environment,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@645ca05d{/environment/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@36fb9c58{/executors,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@b7df84e{/executors/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@69e9cb81{/executors/threadDump,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@68b6c0a9{/executors/threadDump/json,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@24598bb{/static,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@669eaf35{/,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@418cd5a4{/api,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1f61f6b4{/jobs/job/kill,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@31cf25a3{/stages/stage/kill,null,AVAILABLE,@Spark}
+19/07/25 14:33:48 INFO server.ServerConnector: Started Spark@491823ba{HTTP/1.1}{0.0.0.0:11453}
+19/07/25 14:33:48 INFO server.Server: Started @2625ms
+19/07/25 14:33:48 INFO util.Utils: Successfully started service 'SparkUI' on port 11453.
+19/07/25 14:33:48 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.184.24:11453
+19/07/25 14:33:48 WARN util.Utils: spark.dynamicAllocation.initialExecutors less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+19/07/25 14:33:48 INFO util.Utils: Using initial executors = 60, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+19/07/25 14:33:49 INFO yarn.Client: Requesting a new application from cluster with 252 NodeManagers
+19/07/25 14:33:49 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (32768 MB per container)
+19/07/25 14:33:49 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+19/07/25 14:33:49 INFO yarn.Client: Setting up container launch context for our AM
+19/07/25 14:33:49 INFO yarn.Client: Setting up the launch environment for our AM container
+19/07/25 14:33:49 INFO yarn.Client: Preparing resources for our AM container
+19/07/25 14:33:49 INFO security.HDFSCredentialProvider: getting token for namenode: hdfs://cootek/user/ling.fang
+19/07/25 14:33:49 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4954611 for ling.fang on ha-hdfs:cootek
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/25 14:33:51 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/25 14:33:51 INFO hive.metastore: Trying to connect to metastore with URI thrift://192.168.190.6:9083
+19/07/25 14:33:51 INFO hive.metastore: Connected to metastore.
+19/07/25 14:33:52 WARN token.Token: Cannot find class for token kind HIVE_DELEGATION_TOKEN
+19/07/25 14:33:52 INFO security.HiveCredentialProvider: Get Token from hive metastore: Kind: HIVE_DELEGATION_TOKEN, Service: , Ident: 00 1c 6c 69 6e 67 2e 66 61 6e 67 40 55 53 43 41 53 56 32 2e 43 4f 4f 54 45 4b 2e 43 4f 4d 06 68 61 64 6f 6f 70 00 8a 01 6c 29 8d 76 62 8a 01 6c 4d 99 fa 62 8d 01 f5 4f 8f bf
+19/07/25 14:33:52 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+19/07/25 14:33:54 INFO yarn.Client: Uploading resource file:/tmp/spark-82b296f3-2e8d-4386-b066-7403db9cc310/__spark_libs__5517031108258513888.zip -> hdfs://cootek/user/ling.fang/.sparkStaging/application_1557354662193_565869/__spark_libs__5517031108258513888.zip
+19/07/25 14:33:59 INFO yarn.Client: Uploading resource file:/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/pyspark.zip -> hdfs://cootek/user/ling.fang/.sparkStaging/application_1557354662193_565869/pyspark.zip
+19/07/25 14:33:59 INFO yarn.Client: Uploading resource file:/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/py4j-0.10.4-src.zip -> hdfs://cootek/user/ling.fang/.sparkStaging/application_1557354662193_565869/py4j-0.10.4-src.zip
+19/07/25 14:33:59 INFO yarn.Client: Uploading resource file:/tmp/spark-82b296f3-2e8d-4386-b066-7403db9cc310/__spark_conf__5636374738954807027.zip -> hdfs://cootek/user/ling.fang/.sparkStaging/application_1557354662193_565869/__spark_conf__.zip
+19/07/25 14:33:59 INFO spark.SecurityManager: Changing view acls to: ling.fang
+19/07/25 14:33:59 INFO spark.SecurityManager: Changing modify acls to: ling.fang
+19/07/25 14:33:59 INFO spark.SecurityManager: Changing view acls groups to: 
+19/07/25 14:33:59 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/07/25 14:33:59 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ling.fang); groups with view permissions: Set(); users  with modify permissions: Set(ling.fang); groups with modify permissions: Set()
+19/07/25 14:33:59 INFO yarn.Client: Submitting application application_1557354662193_565869 to ResourceManager
+19/07/25 14:33:59 INFO impl.YarnClientImpl: Submitted application application_1557354662193_565869
+19/07/25 14:33:59 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1557354662193_565869 and attemptId None
+19/07/25 14:34:00 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:00 INFO yarn.Client: 
+	 client token: Token { kind: YARN_CLIENT_TOKEN, service:  }
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.ad-root.etl.dailyetl.normal
+	 start time: 1564065239609
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_565869/
+	 user: ling.fang
+19/07/25 14:34:01 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:02 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:03 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:04 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:05 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:06 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:07 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:08 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:09 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:10 INFO yarn.Client: Application report for application_1557354662193_565869 (state: ACCEPTED)
+19/07/25 14:34:10 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(null)
+19/07/25 14:34:10 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> hadoop-namenode-003.uscasv2.cootek.com,hadoop-namenode-004.uscasv2.cootek.com, PROXY_URI_BASES -> http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_565869,http://hadoop-namenode-004.uscasv2.cootek.com:8088/proxy/application_1557354662193_565869), /proxy/application_1557354662193_565869
+19/07/25 14:34:10 INFO ui.JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+19/07/25 14:34:11 INFO yarn.Client: Application report for application_1557354662193_565869 (state: RUNNING)
+19/07/25 14:34:11 INFO yarn.Client: 
+	 client token: Token { kind: YARN_CLIENT_TOKEN, service:  }
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.175.69
+	 ApplicationMaster RPC port: 0
+	 queue: root.ad-root.etl.dailyetl.normal
+	 start time: 1564065239609
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_565869/
+	 user: ling.fang
+19/07/25 14:34:11 INFO cluster.YarnClientSchedulerBackend: Application application_1557354662193_565869 has started running.
+19/07/25 14:34:11 INFO cluster.YarnScheduler: Starting speculative execution thread
+19/07/25 14:34:11 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37027.
+19/07/25 14:34:11 INFO netty.NettyBlockTransferService: Server created on 192.168.184.24:37027
+19/07/25 14:34:11 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/07/25 14:34:11 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.184.24, 37027, None)
+19/07/25 14:34:11 INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.184.24:37027 with 8.7 GB RAM, BlockManagerId(driver, 192.168.184.24, 37027, None)
+19/07/25 14:34:11 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.184.24, 37027, None)
+19/07/25 14:34:11 INFO storage.BlockManager: external shuffle service port = 7337
+19/07/25 14:34:11 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.184.24, 37027, None)
+19/07/25 14:34:11 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@36588729{/metrics/json,null,AVAILABLE,@Spark}
+19/07/25 14:34:12 INFO scheduler.EventLoggingListener: Logging events to hdfs:///user/dmp/spark_eventlog/application_1557354662193_565869
+19/07/25 14:34:12 WARN util.Utils: spark.dynamicAllocation.initialExecutors less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+19/07/25 14:34:12 INFO util.Utils: Using initial executors = 60, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+19/07/25 14:34:18 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.175.238:38328) with ID 49
+19/07/25 14:34:18 INFO spark.ExecutorAllocationManager: New executor 49 has registered (new total is 1)
+19/07/25 14:34:18 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (192.168.169.25:22194) with ID 26
+19/07/25 14:34:18 INFO spark.ExecutorAllocationManager: New executor 26 has registered (new total is 2)
+19/07/25 14:34:18 INFO storage.BlockManagerMasterEndpoint: Registering block manager hadoop-datanode-200.uscasv2.cootek.com:10063 with 5.7 GB RAM, BlockManagerId(49, hadoop-datanode-200.uscasv2.cootek.com, 10063, None)
+19/07/25 14:34:18 INFO storage.BlockManagerMasterEndpoint: Registering block manager hadoop-datanode-231.uscasv2.cootek.com:34783 with 5.7 GB RAM, BlockManagerId(26, hadoop-datanode-231.uscasv2.cootek.com, 34783, None)
+19/07/25 14:34:18 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000(ms)
++-----------------------------------------------------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|pkg                                                  |idf      |gaid_list                                                                                                                                                                                     |
++-----------------------------------------------------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Aconk.JR.hight.shadow.planning                       |16.09083 |[63dcbf0f-c62c-4082-98d5-fa79c7414a59, c8489748-35a1-4af3-ab82-0d4193835726]                                                                                                                  |
+|Animal_World.zooking.inputmethod                     |16.496294|[fd1781c0-0a17-4c50-b4e8-b2991519c1a6]                                                                                                                                                        |
+|Anup_Rode.Black_Paisley_Pattern.common               |16.496294|[92d4544d-4a8a-454e-80ab-bb7dca06d5ab]                                                                                                                                                        |
+|Anup_Rode.Coffee_Bean_Tree.popupcalculator           |16.496294|[6c0c0aca-ffc4-47cf-9afb-ce0df933eb41]                                                                                                                                                        |
+|Anup_Rode.Color_UX.gallery3d                         |16.496294|[febaa314-d3c5-4464-a6c4-bac3c598dba4]                                                                                                                                                        |
+|Anup_Rode.Gradient_Pink_Black_Edition.sm             |16.09083 |[38f89604-fb64-4058-9425-cfc813cd70eb, 603c4352-3420-4b58-9708-11827e87b470]                                                                                                                  |
+|Anup_Rode.Gradient_Purple_Black_Edition.assistantmenu|16.496294|[0634dc39-497c-47a8-a9b7-f1fa1858308d]                                                                                                                                                        |
+|Anup_Rode.Hexa_Red.policydm                          |16.496294|[ec4aab78-9807-45d0-976a-cdef6e52220a]                                                                                                                                                        |
+|Anup_Rode.Midnight_Black_2.policydm                  |15.397682|[4ad7e45a-8ab8-4344-b7b4-33640fbfbb36, ae89e393-3dfb-46a6-aab1-8b46b197233a, 4c6af4ca-57f9-4596-9931-55ea61de275c, 529b2d45-c30d-43ca-9c93-d763bcef9301, fce39fdb-b2a7-4b5c-bcf0-c92be6a65731]|
+|Anup_Rode.Winter_Night.sm_cn                         |16.496294|[298c9574-5530-4b41-a426-ea796b914e1e]                                                                                                                                                        |
++-----------------------------------------------------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+only showing top 10 rows
+
+19/07/25 22:07:20 ERROR server.TransportRequestHandler: Error while invoking RpcHandler#receive() for one-way message.
+org.apache.spark.SparkException: Could not find CoarseGrainedScheduler.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:154)
+	at org.apache.spark.rpc.netty.Dispatcher.postOneWayMessage(Dispatcher.scala:134)
+	at org.apache.spark.rpc.netty.NettyRpcHandler.receive(NettyRpcEnv.scala:570)
+	at org.apache.spark.network.server.TransportRequestHandler.processOneWayMessage(TransportRequestHandler.java:180)
+	at org.apache.spark.network.server.TransportRequestHandler.handle(TransportRequestHandler.java:109)
+	at org.apache.spark.network.server.TransportChannelHandler.channelRead(TransportChannelHandler.java:118)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:343)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:336)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:343)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:336)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:343)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:336)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:85)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:343)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:336)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:343)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.189:20178 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.190:52284 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.237:26520 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.204:22590 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.41:31968 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.11:48848 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.41:31964 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.41:31960 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.11:48844 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.11:48842 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.11:48852 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.11:48846 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.11:48850 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.80:36324 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.86:13356 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.86:13354 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.148:30208 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.252:45074 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.237:26522 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.163:60070 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.80:36322 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.113:10288 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.252:45070 is closed
+java.util.concurrent.RejectedExecutionException: Task scala.concurrent.impl.CallbackRunnable@3c232426 rejected from java.util.concurrent.ThreadPoolExecutor@73f59792[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1949]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:205)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$2.apply(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$2.apply(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.RpcOutboxMessage.onFailure(Outbox.scala:78)
+	at org.apache.spark.network.client.TransportResponseHandler.failOutstandingRequests(TransportResponseHandler.java:110)
+	at org.apache.spark.network.client.TransportResponseHandler.channelInactive(TransportResponseHandler.java:128)
+	at org.apache.spark.network.server.TransportChannelHandler.channelInactive(TransportChannelHandler.java:108)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.handler.timeout.IdleStateHandler.channelInactive(IdleStateHandler.java:278)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelInactive(TransportFrameDecoder.java:182)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1289)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:893)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:691)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:367)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:671)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:456)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.101:49738 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.81:35530 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.109:23278 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.76:15600 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.237:26518 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.114:14112 is closed
+19/07/25 22:07:20 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.154:36118 is closed
++ kinit -kt /home/ling.fang/ling.fang.keytab ling.fang
+++ pwd
++ ROOT_PATH=/home/ling.fang/automated_targeting
++ JOB_PATH=/home/ling.fang/automated_targeting/script
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
++ SPARK_HOME=/usr/local/spark-2.1.1-bin-hadoop2.6
++ LOG_PATH=hdfs:///user/dmp/spark_eventlog
++ SRC_PATH=/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/user_applist_all/json
++ DES_PATH=/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
++ sparksubmit='/usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit                  --master yarn                  --queue root.ad-root.etl.dailyetl.normal                  --num-executors 60                  --executor-memory 10g                  --driver-memory 15g                  --conf spark.dynamicAllocation.enabled=true                  --conf spark.dynamicAllocation.maxExecutors=100                  --conf spark.dynamicAllocation.minExecutors=60                  --conf spark.driver.maxResultSize=12G                  --conf spark.shuffle.service.enabled=true                  --conf spark.executor.cores=2                  --conf spark.eventLog.enabled=true                  --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog'
++ /usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit --master yarn --queue root.ad-root.etl.dailyetl.normal --num-executors 60 --executor-memory 10g --driver-memory 15g --conf spark.dynamicAllocation.enabled=true --conf spark.dynamicAllocation.maxExecutors=100 --conf spark.dynamicAllocation.minExecutors=60 --conf spark.driver.maxResultSize=12G --conf spark.shuffle.service.enabled=true --conf spark.executor.cores=2 --conf spark.eventLog.enabled=true --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog /home/ling.fang/automated_targeting/script/app_agg_user.py /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/user_applist_all/json /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
+Traceback (most recent call last):
+  File "/home/ling.fang/automated_targeting/script/app_agg_user.py", line 4, in <module>
+    import pyspark.sql.functions as F
+  File "/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/__init__.py", line 44, in <module>
+  File "/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/context.py", line 36, in <module>
+  File "/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/java_gateway.py", line 25, in <module>
+  File "/usr/lib/python2.7/platform.py", line 1361, in <module>
+    r'([\w.+]+)\s*'
+  File "/usr/lib/python2.7/re.py", line 194, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 249, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python2.7/sre_compile.py", line 576, in compile
+    code = _code(p, flags)
+  File "/usr/lib/python2.7/sre_compile.py", line 558, in _code
+    _compile_info(code, p, flags)
+  File "/usr/lib/python2.7/sre_compile.py", line 437, in _compile_info
+    lo, hi = pattern.getwidth()
+  File "/usr/lib/python2.7/sre_parse.py", line 179, in getwidth
+    hi = hi + j * av[1]
+KeyboardInterrupt
++ kinit -kt /home/ling.fang/ling.fang.keytab ling.fang
+++ pwd
++ ROOT_PATH=/home/ling.fang/automated_targeting
++ JOB_PATH=/home/ling.fang/automated_targeting/script
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
++ SPARK_HOME=/usr/local/spark-2.1.1-bin-hadoop2.6
++ LOG_PATH=hdfs:///user/dmp/spark_eventlog
++ SRC_PATH=/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/user_applist_all/json
++ DES_PATH=/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
+In permitToDelete pathUri is hdfs://cootek/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us
+In permitToDelete newUri is /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us
+Move to trash start
+19/07/26 13:00:30 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 2880 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us' to trash at: hdfs://cootek/user/ling.fang/.Trash/Current
+Move to trash stop,success is true
++ sparksubmit='/usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit                  --master yarn                  --queue root.ad-root.etl.dailyetl.normal                  --num-executors 60                  --executor-memory 10g                  --driver-memory 15g                  --conf spark.dynamicAllocation.enabled=true                  --conf spark.dynamicAllocation.maxExecutors=100                  --conf spark.dynamicAllocation.minExecutors=60                  --conf spark.driver.maxResultSize=12G                  --conf spark.shuffle.service.enabled=true                  --conf spark.executor.cores=2                  --conf spark.eventLog.enabled=true                  --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog'
++ /usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit --master yarn --queue root.ad-root.etl.dailyetl.normal --num-executors 60 --executor-memory 10g --driver-memory 15g --conf spark.dynamicAllocation.enabled=true --conf spark.dynamicAllocation.maxExecutors=100 --conf spark.dynamicAllocation.minExecutors=60 --conf spark.driver.maxResultSize=12G --conf spark.shuffle.service.enabled=true --conf spark.executor.cores=2 --conf spark.eventLog.enabled=true --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog /home/ling.fang/automated_targeting/script/app_agg_user.py /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/user_applist_all/json /user/ling.fang/1/2/3/4/5/automated_targeting/matrix/app_agg_user/us/
+19/07/26 13:00:32 INFO spark.SparkContext: Running Spark version 2.1.1
+19/07/26 13:00:33 INFO spark.SecurityManager: Changing view acls to: ling.fang
+19/07/26 13:00:33 INFO spark.SecurityManager: Changing modify acls to: ling.fang
+19/07/26 13:00:33 INFO spark.SecurityManager: Changing view acls groups to: 
+19/07/26 13:00:33 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/07/26 13:00:33 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ling.fang); groups with view permissions: Set(); users  with modify permissions: Set(ling.fang); groups with modify permissions: Set()
+19/07/26 13:00:33 INFO util.Utils: Successfully started service 'sparkDriver' on port 20447.
+19/07/26 13:00:33 INFO spark.SparkEnv: Registering MapOutputTracker
+19/07/26 13:00:33 INFO spark.SparkEnv: Registering BlockManagerMaster
+19/07/26 13:00:33 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/07/26 13:00:33 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/07/26 13:00:33 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-6726071b-490c-4b3b-b03c-62aa344344cf
+19/07/26 13:00:33 INFO memory.MemoryStore: MemoryStore started with capacity 8.7 GB
+19/07/26 13:00:33 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+19/07/26 13:00:34 INFO util.log: Logging initialized @2632ms
+19/07/26 13:00:34 INFO server.Server: jetty-9.2.z-SNAPSHOT
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5dac5dec{/jobs,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1daa0e78{/jobs/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6a3040b0{/jobs/job,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@200dc943{/jobs/job/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1ff1a393{/stages,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@52e5b7db{/stages/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3a3858f7{/stages/stage,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@74b1c922{/stages/stage/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@66ce011c{/stages/pool,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@196a3971{/stages/pool/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@616d354b{/storage,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1bef189d{/storage/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d3f3c1d{/storage/rdd,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@45562d7a{/storage/rdd/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4d999ff6{/environment,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2ed15d28{/environment/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5afa433b{/executors,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2eb388e3{/executors/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2fd4c4ec{/executors/threadDump,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@bc8e423{/executors/threadDump/json,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3a39dfa{/static,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@31e5e9fd{/,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@389fb889{/api,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@743aba45{/jobs/job/kill,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6be9a575{/stages/stage/kill,null,AVAILABLE,@Spark}
+19/07/26 13:00:34 INFO server.ServerConnector: Started Spark@63759083{HTTP/1.1}{0.0.0.0:17329}
+19/07/26 13:00:34 INFO server.Server: Started @2756ms
+19/07/26 13:00:34 INFO util.Utils: Successfully started service 'SparkUI' on port 17329.
+19/07/26 13:00:34 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.184.24:17329
+19/07/26 13:00:34 WARN util.Utils: spark.dynamicAllocation.initialExecutors less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+19/07/26 13:00:34 INFO util.Utils: Using initial executors = 60, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+19/07/26 13:00:35 INFO yarn.Client: Requesting a new application from cluster with 252 NodeManagers
+19/07/26 13:00:35 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (32768 MB per container)
+19/07/26 13:00:35 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+19/07/26 13:00:35 INFO yarn.Client: Setting up container launch context for our AM
+19/07/26 13:00:35 INFO yarn.Client: Setting up the launch environment for our AM container
+19/07/26 13:00:35 INFO yarn.Client: Preparing resources for our AM container
+19/07/26 13:00:35 INFO security.HDFSCredentialProvider: getting token for namenode: hdfs://cootek/user/ling.fang
+19/07/26 13:00:35 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4971289 for ling.fang on ha-hdfs:cootek
+19/07/26 13:00:36 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/26 13:00:36 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/26 13:00:36 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/26 13:00:36 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/26 13:00:36 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/26 13:00:36 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/26 13:00:36 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/26 13:00:36 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/26 13:00:37 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/26 13:00:37 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/26 13:00:37 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/26 13:00:37 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/26 13:00:37 INFO hive.metastore: Trying to connect to metastore with URI thrift://192.168.190.6:9083
+19/07/26 13:00:37 INFO hive.metastore: Connected to metastore.
+19/07/26 13:00:37 WARN token.Token: Cannot find class for token kind HIVE_DELEGATION_TOKEN
+19/07/26 13:00:37 INFO security.HiveCredentialProvider: Get Token from hive metastore: Kind: HIVE_DELEGATION_TOKEN, Service: , Ident: 00 1c 6c 69 6e 67 2e 66 61 6e 67 40 55 53 43 41 53 56 32 2e 43 4f 4f 54 45 4b 2e 43 4f 4d 06 68 61 64 6f 6f 70 00 8a 01 6c 2e 5e 74 c9 8a 01 6c 52 6a f8 c9 8d 01 f8 30 8f bf
+19/07/26 13:00:37 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+19/07/26 13:00:39 INFO yarn.Client: Uploading resource file:/tmp/spark-801709cc-014c-4eb8-98e5-1423073e0f50/__spark_libs__6008915038527720061.zip -> hdfs://cootek/user/ling.fang/.sparkStaging/application_1557354662193_572112/__spark_libs__6008915038527720061.zip
+19/07/26 13:00:44 INFO yarn.Client: Uploading resource file:/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/pyspark.zip -> hdfs://cootek/user/ling.fang/.sparkStaging/application_1557354662193_572112/pyspark.zip
+19/07/26 13:00:44 INFO yarn.Client: Uploading resource file:/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/py4j-0.10.4-src.zip -> hdfs://cootek/user/ling.fang/.sparkStaging/application_1557354662193_572112/py4j-0.10.4-src.zip
+19/07/26 13:00:44 INFO yarn.Client: Uploading resource file:/tmp/spark-801709cc-014c-4eb8-98e5-1423073e0f50/__spark_conf__3932357573909281074.zip -> hdfs://cootek/user/ling.fang/.sparkStaging/application_1557354662193_572112/__spark_conf__.zip
+19/07/26 13:00:44 INFO spark.SecurityManager: Changing view acls to: ling.fang
+19/07/26 13:00:44 INFO spark.SecurityManager: Changing modify acls to: ling.fang
+19/07/26 13:00:44 INFO spark.SecurityManager: Changing view acls groups to: 
+19/07/26 13:00:44 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/07/26 13:00:44 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ling.fang); groups with view permissions: Set(); users  with modify permissions: Set(ling.fang); groups with modify permissions: Set()
+19/07/26 13:00:44 INFO yarn.Client: Submitting application application_1557354662193_572112 to ResourceManager
+19/07/26 13:00:45 INFO impl.YarnClientImpl: Submitted application application_1557354662193_572112
+19/07/26 13:00:45 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1557354662193_572112 and attemptId None
+19/07/26 13:00:46 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:46 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.ad-root.etl.dailyetl.normal
+	 start time: 1564146045038
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_572112/
+	 user: ling.fang
+19/07/26 13:00:47 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:48 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:49 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:50 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:51 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:52 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:53 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:54 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:55 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:56 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:57 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:58 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:00:59 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:00 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:01 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:02 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:03 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:04 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:05 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:06 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:07 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:08 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:09 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:10 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:11 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:12 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:13 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:14 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:15 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:16 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:17 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:18 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:19 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:20 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:21 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:22 INFO yarn.Client: Application report for application_1557354662193_572112 (state: ACCEPTED)
+19/07/26 13:01:22 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(null)
+19/07/26 13:01:22 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> hadoop-namenode-003.uscasv2.cootek.com,hadoop-namenode-004.uscasv2.cootek.com, PROXY_URI_BASES -> http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_572112,http://hadoop-namenode-004.uscasv2.cootek.com:8088/proxy/application_1557354662193_572112), /proxy/application_1557354662193_572112
+19/07/26 13:01:22 INFO ui.JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+19/07/26 13:01:23 INFO yarn.Client: Application report for application_1557354662193_572112 (state: RUNNING)
+19/07/26 13:01:23 INFO yarn.Client: 
+	 client token: Token { kind: YARN_CLIENT_TOKEN, service:  }
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.175.58
+	 ApplicationMaster RPC port: 0
+	 queue: root.ad-root.etl.dailyetl.normal
+	 start time: 1564146045038
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_572112/
+	 user: ling.fang
+19/07/26 13:01:23 INFO cluster.YarnClientSchedulerBackend: Application application_1557354662193_572112 has started running.
+19/07/26 13:01:23 INFO cluster.YarnScheduler: Starting speculative execution thread
+19/07/26 13:01:23 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 27183.
+19/07/26 13:01:23 INFO netty.NettyBlockTransferService: Server created on 192.168.184.24:27183
+19/07/26 13:01:23 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/07/26 13:01:23 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.184.24, 27183, None)
+19/07/26 13:01:23 INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.184.24:27183 with 8.7 GB RAM, BlockManagerId(driver, 192.168.184.24, 27183, None)
+19/07/26 13:01:23 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.184.24, 27183, None)
+19/07/26 13:01:23 INFO storage.BlockManager: external shuffle service port = 7337
+19/07/26 13:01:23 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.184.24, 27183, None)
+19/07/26 13:01:23 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@116c74b6{/metrics/json,null,AVAILABLE,@Spark}
+19/07/26 13:01:23 INFO scheduler.EventLoggingListener: Logging events to hdfs:///user/dmp/spark_eventlog/application_1557354662193_572112
+19/07/26 13:01:23 WARN util.Utils: spark.dynamicAllocation.initialExecutors less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+19/07/26 13:01:23 INFO util.Utils: Using initial executors = 60, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+19/07/26 13:01:23 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000(ms)
+827376943
++--------------------+--------------------+
+|            pkg_name|                gaid|
++--------------------+--------------------+
+|com.gigigo.ipiran...|00056c47-5474-4d3...|
+|com.google.androi...|00056c47-5474-4d3...|
+|com.vialsoft.rada...|00056c47-5474-4d3...|
+|com.microsoft.off...|00056c47-5474-4d3...|
+| com.facebook.katana|00056c47-5474-4d3...|
+|com.enhance.games...|00056c47-5474-4d3...|
+|com.google.androi...|00056c47-5474-4d3...|
+|com.google.androi...|00056c47-5474-4d3...|
+|com.samsung.andro...|00056c47-5474-4d3...|
+|full.movie.video....|00056c47-5474-4d3...|
+|        com.lge.app1|00056c47-5474-4d3...|
+|com.google.androi...|00056c47-5474-4d3...|
+|com.google.androi...|00056c47-5474-4d3...|
+|  com.tencent.iglite|00056c47-5474-4d3...|
+|com.dsi.ant.plugi...|00056c47-5474-4d3...|
+|com.dsi.ant.servi...|00056c47-5474-4d3...|
+|    com.skype.raider|00056c47-5474-4d3...|
+|  com.xti.wifiwarden|00056c47-5474-4d3...|
+|  com.android.chrome|00056c47-5474-4d3...|
+|com.sec.android.a...|00056c47-5474-4d3...|
++--------------------+--------------------+
+only showing top 20 rows
+
++ kinit -kt /home/ling.fang/ad_user.keytab ad_user
++ [[ 1 -ne 1 ]]
++ region='{us,ap,eu}'
++ day=20190719
+++ pwd
++ ROOT_PATH=/home/ling.fang/automated_targeting
++ JOB_PATH=/home/ling.fang/automated_targeting/script
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
++ SPARK_HOME=/usr/local/spark-2.1.1-bin-hadoop2.6
++ LOG_PATH=hdfs:///user/dmp/spark_eventlog
++ USER_APPLIST_DATA=/user/ling.fang/age_model/user_applist_data/parquet
++ APPUSAGE_PATH='/user/dw/trends/etl/app_usage/{us,ap,eu}/20190719/'
++ APPDB_PATH=/data/dw/app_db/latest/json
++ IDF2GAID='/user/james.jiang/1/2/3/4/5/all_ids/smartinput/{us,ap,eu}/latest'
++ DES_PATH=/user/ling.fang/1/2/3/4/5/automated_targeting/usage_daily/20190719/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ling.fang/1/2/3/4/5/automated_targeting/usage_daily/20190719/
+rm: `/user/ling.fang/1/2/3/4/5/automated_targeting/usage_daily/20190719/': No such file or directory
++ sparksubmit='/usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit                  --master yarn                  --queue root.ad-root.etl.dailyetl.normal                  --num-executors 50                  --executor-memory 8g                  --driver-memory 10g                  --conf spark.dynamicAllocation.enabled=true                  --conf spark.dynamicAllocation.maxExecutors=120                  --conf spark.dynamicAllocation.minExecutors=50                  --conf spark.driver.maxResultSize=12G                  --conf spark.shuffle.service.enabled=true                  --conf spark.eventLog.enabled=true                  --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog'
++ /usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit --master yarn --queue root.ad-root.etl.dailyetl.normal --num-executors 50 --executor-memory 8g --driver-memory 10g --conf spark.dynamicAllocation.enabled=true --conf spark.dynamicAllocation.maxExecutors=120 --conf spark.dynamicAllocation.minExecutors=50 --conf spark.driver.maxResultSize=12G --conf spark.shuffle.service.enabled=true --conf spark.eventLog.enabled=true --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog /home/ling.fang/automated_targeting/script/extract_appusage_data_daily.py /user/ling.fang/age_model/user_applist_data/parquet '/user/dw/trends/etl/app_usage/{us,ap,eu}/20190719/' /data/dw/app_db/latest/json '/user/james.jiang/1/2/3/4/5/all_ids/smartinput/{us,ap,eu}/latest' /user/ling.fang/1/2/3/4/5/automated_targeting/usage_daily/20190719/
+19/07/29 02:38:03 INFO spark.SparkContext: Running Spark version 2.1.1
+19/07/29 02:38:04 INFO spark.SecurityManager: Changing view acls to: ling.fang,ad_user
+19/07/29 02:38:04 INFO spark.SecurityManager: Changing modify acls to: ling.fang,ad_user
+19/07/29 02:38:04 INFO spark.SecurityManager: Changing view acls groups to: 
+19/07/29 02:38:04 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/07/29 02:38:04 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ling.fang, ad_user); groups with view permissions: Set(); users  with modify permissions: Set(ling.fang, ad_user); groups with modify permissions: Set()
+19/07/29 02:38:04 INFO util.Utils: Successfully started service 'sparkDriver' on port 17751.
+19/07/29 02:38:04 INFO spark.SparkEnv: Registering MapOutputTracker
+19/07/29 02:38:04 INFO spark.SparkEnv: Registering BlockManagerMaster
+19/07/29 02:38:04 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/07/29 02:38:04 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/07/29 02:38:04 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-708acc9d-4674-42bb-a647-5ac078654936
+19/07/29 02:38:04 INFO memory.MemoryStore: MemoryStore started with capacity 5.7 GB
+19/07/29 02:38:04 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+19/07/29 02:38:05 INFO util.log: Logging initialized @2490ms
+19/07/29 02:38:05 INFO server.Server: jetty-9.2.z-SNAPSHOT
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@57487e01{/jobs,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@190c719b{/jobs/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6836d69b{/jobs/job,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7532c695{/jobs/job/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@611e1644{/stages,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1be43355{/stages/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@45b8bcbc{/stages/stage,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@26ddccf0{/stages/stage/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@37e04259{/stages/pool,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@da4a16b{/stages/pool/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@df9a13f{/storage,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@450b563c{/storage/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@70cc264e{/storage/rdd,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@584b7ec5{/storage/rdd/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@187bdcaa{/environment,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7dec32f{/environment/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@16317bcc{/executors,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@158f8299{/executors/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5357820e{/executors/threadDump,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@22e1e4f0{/executors/threadDump/json,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3f13047b{/static,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5661c24a{/,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@39497d7a{/api,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1422d8c7{/jobs/job/kill,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@333526e4{/stages/stage/kill,null,AVAILABLE,@Spark}
+19/07/29 02:38:05 INFO server.ServerConnector: Started Spark@375cf0f5{HTTP/1.1}{0.0.0.0:17073}
+19/07/29 02:38:05 INFO server.Server: Started @2601ms
+19/07/29 02:38:05 INFO util.Utils: Successfully started service 'SparkUI' on port 17073.
+19/07/29 02:38:05 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.184.24:17073
+19/07/29 02:38:05 WARN util.Utils: spark.dynamicAllocation.initialExecutors less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+19/07/29 02:38:05 INFO util.Utils: Using initial executors = 50, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+19/07/29 02:38:08 INFO yarn.Client: Requesting a new application from cluster with 251 NodeManagers
+19/07/29 02:38:08 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (32768 MB per container)
+19/07/29 02:38:08 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+19/07/29 02:38:08 INFO yarn.Client: Setting up container launch context for our AM
+19/07/29 02:38:08 INFO yarn.Client: Setting up the launch environment for our AM container
+19/07/29 02:38:08 INFO yarn.Client: Preparing resources for our AM container
+19/07/29 02:38:08 INFO security.HDFSCredentialProvider: getting token for namenode: hdfs://cootek/user/ad_user
+19/07/29 02:38:08 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 5004501 for ad_user on ha-hdfs:cootek
+19/07/29 02:38:09 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/29 02:38:09 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/29 02:38:09 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/29 02:38:10 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/29 02:38:10 INFO hive.metastore: Trying to connect to metastore with URI thrift://192.168.190.6:9083
+19/07/29 02:38:10 INFO hive.metastore: Connected to metastore.
+19/07/29 02:38:11 WARN token.Token: Cannot find class for token kind HIVE_DELEGATION_TOKEN
+19/07/29 02:38:11 INFO security.HiveCredentialProvider: Get Token from hive metastore: Kind: HIVE_DELEGATION_TOKEN, Service: , Ident: 00 1a 61 64 5f 75 73 65 72 40 55 53 43 41 53 56 32 2e 43 4f 4f 54 45 4b 2e 43 4f 4d 06 68 61 64 6f 6f 70 00 8a 01 6c 3b 97 aa 3d 8a 01 6c 5f a4 2e 3d 8f b0 02
+19/07/29 02:38:11 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+19/07/29 02:38:12 INFO yarn.Client: Uploading resource file:/tmp/spark-db29b822-4d37-412c-a70f-6e146f7966d5/__spark_libs__2314437953986422533.zip -> hdfs://cootek/user/ad_user/.sparkStaging/application_1557354662193_587096/__spark_libs__2314437953986422533.zip
+19/07/29 02:38:51 INFO yarn.Client: Uploading resource file:/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/pyspark.zip -> hdfs://cootek/user/ad_user/.sparkStaging/application_1557354662193_587096/pyspark.zip
+19/07/29 02:38:51 INFO yarn.Client: Uploading resource file:/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/py4j-0.10.4-src.zip -> hdfs://cootek/user/ad_user/.sparkStaging/application_1557354662193_587096/py4j-0.10.4-src.zip
+19/07/29 02:38:51 INFO yarn.Client: Uploading resource file:/tmp/spark-db29b822-4d37-412c-a70f-6e146f7966d5/__spark_conf__6898449738799393021.zip -> hdfs://cootek/user/ad_user/.sparkStaging/application_1557354662193_587096/__spark_conf__.zip
+19/07/29 02:38:52 INFO spark.SecurityManager: Changing view acls to: ling.fang,ad_user
+19/07/29 02:38:52 INFO spark.SecurityManager: Changing modify acls to: ling.fang,ad_user
+19/07/29 02:38:52 INFO spark.SecurityManager: Changing view acls groups to: 
+19/07/29 02:38:52 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/07/29 02:38:52 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ling.fang, ad_user); groups with view permissions: Set(); users  with modify permissions: Set(ling.fang, ad_user); groups with modify permissions: Set()
+19/07/29 02:38:52 INFO yarn.Client: Submitting application application_1557354662193_587096 to ResourceManager
+19/07/29 02:38:52 INFO impl.YarnClientImpl: Submitted application application_1557354662193_587096
+19/07/29 02:38:52 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1557354662193_587096 and attemptId None
+19/07/29 02:38:53 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:38:53 INFO yarn.Client: 
+	 client token: Token { kind: YARN_CLIENT_TOKEN, service:  }
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.ad-root.etl.dailyetl.normal
+	 start time: 1564367932088
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_587096/
+	 user: ad_user
+19/07/29 02:38:54 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:38:55 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:38:56 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:38:57 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:38:58 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:38:59 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:00 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:01 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:02 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:03 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:04 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:05 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:06 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:07 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:08 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:08 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(null)
+19/07/29 02:39:09 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> hadoop-namenode-003.uscasv2.cootek.com,hadoop-namenode-004.uscasv2.cootek.com, PROXY_URI_BASES -> http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_587096,http://hadoop-namenode-004.uscasv2.cootek.com:8088/proxy/application_1557354662193_587096), /proxy/application_1557354662193_587096
+19/07/29 02:39:09 INFO ui.JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+19/07/29 02:39:09 INFO yarn.Client: Application report for application_1557354662193_587096 (state: ACCEPTED)
+19/07/29 02:39:10 INFO yarn.Client: Application report for application_1557354662193_587096 (state: RUNNING)
+19/07/29 02:39:10 INFO yarn.Client: 
+	 client token: Token { kind: YARN_CLIENT_TOKEN, service:  }
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.175.250
+	 ApplicationMaster RPC port: 0
+	 queue: root.ad-root.etl.dailyetl.normal
+	 start time: 1564367932088
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_587096/
+	 user: ad_user
+19/07/29 02:39:10 INFO cluster.YarnClientSchedulerBackend: Application application_1557354662193_587096 has started running.
+19/07/29 02:39:10 INFO cluster.YarnScheduler: Starting speculative execution thread
+19/07/29 02:39:10 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 21447.
+19/07/29 02:39:10 INFO netty.NettyBlockTransferService: Server created on 192.168.184.24:21447
+19/07/29 02:39:10 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/07/29 02:39:10 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.184.24, 21447, None)
+19/07/29 02:39:10 INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.184.24:21447 with 5.7 GB RAM, BlockManagerId(driver, 192.168.184.24, 21447, None)
+19/07/29 02:39:10 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.184.24, 21447, None)
+19/07/29 02:39:10 INFO storage.BlockManager: external shuffle service port = 7337
+19/07/29 02:39:10 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.184.24, 21447, None)
+19/07/29 02:39:10 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@64e3d007{/metrics/json,null,AVAILABLE,@Spark}
+19/07/29 02:39:10 INFO scheduler.EventLoggingListener: Logging events to hdfs:///user/dmp/spark_eventlog/application_1557354662193_587096
+19/07/29 02:39:10 WARN util.Utils: spark.dynamicAllocation.initialExecutors less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+19/07/29 02:39:10 INFO util.Utils: Using initial executors = 50, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+19/07/29 02:39:10 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000(ms)
++--------------------+------------------+-----------------+---------------+--------------------+--------------------+--------------------+
+|          identifier|           user_id|recommend_channel|   channel_code|        use_app_name|    action_time_list|         package_src|
++--------------------+------------------+-----------------+---------------+--------------------+--------------------+--------------------+
+|39c5670fc95e3f7c6...|360287970567118831|  OEM 093 ABY 006|OEM 093 ABY 010|com.naver.lineweb...|[[1563552671906,1...|com.emoji.keyboar...|
+|154264f0cd42a85d2...|360287970908283982|  OEM 093 ABY 009|         000000|com.videoringtone...|[[1563539100911,1...|com.emoji.keyboar...|
+|c2cd13c0def204863...|360287970450833552|  OEM 093 ABY 001|OEM 093 ABY 002|com.devtab.thaitv...|[[1563545950429,1...|com.emoji.keyboar...|
+|a6838af4d7bc82dd3...|360287970713000828|  OEM 093 ABY 008|OEM 093 ABY 009|         com.dc.hwsj|[[1563548104237,1...|com.emoji.keyboar...|
+|59e4553c1b72de03c...|360287970899187844|  OEM 014 ABV 004|OEM 014 ABV 004|com.google.androi...|[[1563546065223,1...|com.emoji.keyboar...|
+|345ee872a84c965bc...|360287970475708595|  OEM 093 ABY 002|OEM 093 ABY 002|com.google.androi...|[[1563537351188,1...|com.emoji.keyboar...|
+|44b925d6a0150edff...|360287970453847546|  OEM 093 ABY 001|OEM 093 ABY 002|  com.android.chrome|[[1563521829844,1...|com.emoji.keyboar...|
+|4ac67bf625a4b621f...| 72057595292828694|  OEM 014 ABV 004|OEM 014 ABV 004|      cn.wps.moffice|[[1563541957909,1...|com.emoji.keyboar...|
+|78bab486c95f21d75...|360287970538928852|  OEM 093 ABY 006|OEM 093 ABY 006|com.icarusgame.on...|[[1563539349600,1...|com.emoji.keyboar...|
+|9df4dae040fbd6d91...|360287970559888341|  OEM 093 ABY 006|         000000|          io.faceapp|[[1563544094786,1...|com.emoji.keyboar...|
+|62c70d3087d8b217c...|360287970733690895|  OEM 093 ABY 008|OEM 093 ABY 009|com.google.androi...|[[1563501829931,1...|com.emoji.keyboar...|
+|cf5b5ca446f319342...|360287970679224801|           000000|         000000|com.ss.android.ug...|[[1563512730963,1...|com.cootek.smarti...|
+|d6fb268dae0fc3254...|360287970913324199|  OEM 014 ABV 004|OEM 014 ABV 004|   com.facebook.orca|[[1563548264583,1...|com.emoji.keyboar...|
+|2a15f28ebef1dd6a6...|360287970511945971|  OEM 093 ABY 006|OEM 093 ABY 006|             android|[[1563537665473,1...|com.emoji.keyboar...|
+|9ec662d1c5663f3aa...|360287970565890717|  OEM 093 ABY 006|OEM 093 ABY 006|  com.android.chrome|[[1563544393337,1...|com.emoji.keyboar...|
+|43ecfc85a69bccc3a...|360287970547216262|  OEM 093 ABY 008|         000000| com.twitter.android|[[1563540152456,1...|com.emoji.keyboar...|
+|90b9512138cbf35b6...|360287970668164289|  OEM 093 ABY 008|         000000|        com.whatsapp|[[1563576304380,1...|com.emoji.keyboar...|
+|c2b7a12db63fc3975...|360287970909349050|  OEM 093 ABY 011|OEM 093 ABY 011|com.google.androi...|[[1563535122734,1...|com.emoji.keyboar...|
+|825fd5920ce74c813...|360287970662054443|  OEM 200 ABV 002|OEM 200 ABV 002|com.samsung.andro...|[[1563527914011,1...|com.emoji.keyboar...|
+|6035b7963eae3c965...|360287970618876914|  OEM 093 ABY 006|OEM 093 ABY 006|    com.vivo.browser|[[1563511821097,1...|com.emoji.keyboar...|
++--------------------+------------------+-----------------+---------------+--------------------+--------------------+--------------------+
+only showing top 20 rows
+
+user appusage count: 1124263526
++--------------------+--------------------+
+|        package_name|            category|
++--------------------+--------------------+
+|com.programmingis...|Medical[APPLICATION]|
+|air.com.artsana.a...|Education[APPLICA...|
+|com.iky94studio.K...|Books & Reference...|
+|musicplayer.bass....|Music & Audio[APP...|
+|com.bnaysoso.best...|  Tools[APPLICATION]|
+|com.tripim.thanks...|  Tools[APPLICATION]|
+|com.codeoneit.exp...|Finance[APPLICATION]|
+|com.minimiew.love...|Photography[APPLI...|
+|com.ionicframewor...|Business[APPLICAT...|
+|      com.news.news1|News & Magazines[...|
+|kz.onlinebank.mobile|Finance[APPLICATION]|
+|com.giatec.cell.m...|  Tools[APPLICATION]|
+|com.onekhaleefa.t...|Music & Audio[APP...|
+|com.appefizeptelt...|News & Magazines[...|
+|   zufang.com.zufang|Business[APPLICAT...|
+|ua.com.citysites....|News & Magazines[...|
+|com.apgis.dynalis...|Health & Fitness[...|
+|com.rbm.android.m...|Finance[APPLICATION]|
+|com.stupendousgam...|        Racing[GAME]|
+|ru.alexanderklimo...|Entertainment[APP...|
++--------------------+--------------------+
+only showing top 20 rows
+
+19/07/29 02:40:45 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.199:22162 is closed
+19/07/29 02:40:45 ERROR spark.ContextCleaner: Error cleaning broadcast 5
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 02:40:45 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.146:42774 is closed
+19/07/29 02:40:45 ERROR client.TransportClient: Failed to send RPC 8632330438102373191 to /192.168.175.146:42774: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR client.TransportResponseHandler: Still have 2 requests outstanding when connection from /192.168.175.104:52866 is closed
+19/07/29 02:40:45 ERROR spark.ContextCleaner: Error cleaning broadcast 6
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 02:40:45 ERROR client.TransportClient: Failed to send RPC 4661159544551134550 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR spark.ContextCleaner: Error cleaning broadcast 10
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Failed to send RPC 4661159544551134550 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:249)
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:233)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:507)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:481)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:420)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:122)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:852)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:738)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:733)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:725)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1900(AbstractChannelHandlerContext.java:35)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1062)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1116)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1051)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR client.TransportClient: Failed to send RPC 7194504222756193252 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR spark.ContextCleaner: Error cleaning broadcast 9
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Failed to send RPC 7194504222756193252 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:249)
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:233)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:507)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:481)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:420)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:122)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:852)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:738)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:733)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:725)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1900(AbstractChannelHandlerContext.java:35)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1062)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1116)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1051)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR client.TransportClient: Failed to send RPC 5023238519357267819 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR spark.ContextCleaner: Error cleaning broadcast 7
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Failed to send RPC 5023238519357267819 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:249)
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:233)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:507)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:481)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:420)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:122)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:852)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:738)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:733)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:725)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1900(AbstractChannelHandlerContext.java:35)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1062)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1116)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1051)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR client.TransportClient: Failed to send RPC 8083311663839886317 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR spark.ContextCleaner: Error cleaning broadcast 8
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Failed to send RPC 8083311663839886317 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:249)
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:233)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:507)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:481)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:420)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:122)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:852)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:738)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:733)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:725)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1900(AbstractChannelHandlerContext.java:35)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1062)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1116)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1051)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR client.TransportClient: Failed to send RPC 6700306183373737022 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:40:45 ERROR spark.ContextCleaner: Error cleaning broadcast 11
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Failed to send RPC 6700306183373737022 to /192.168.175.104:52866: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:249)
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:233)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:507)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:481)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:420)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:122)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:852)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:738)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:733)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:725)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1900(AbstractChannelHandlerContext.java:35)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1062)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1116)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1051)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+After filter OEM exchange(pv): 23496547
+After filter OEM exchange(uv): 1936752
+After join idf2gaid table(pv): 23496512
+After join idf2gaid table(uv): 1936760
+19/07/29 02:49:05 ERROR client.TransportResponseHandler: Still have 2 requests outstanding when connection from /192.168.175.132:52782 is closed
+19/07/29 02:49:05 ERROR spark.ContextCleaner: Error cleaning broadcast 0
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 02:49:06 ERROR client.TransportResponseHandler: Still have 2 requests outstanding when connection from /192.168.175.125:15328 is closed
+19/07/29 02:49:06 ERROR spark.ContextCleaner: Error cleaning broadcast 4
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 02:49:06 ERROR client.TransportResponseHandler: Still have 7 requests outstanding when connection from /192.168.175.32:10694 is closed
+19/07/29 02:49:06 ERROR client.TransportResponseHandler: Still have 2 requests outstanding when connection from /192.168.175.97:53540 is closed
+19/07/29 02:49:06 ERROR client.TransportResponseHandler: Still have 7 requests outstanding when connection from /192.168.175.36:22091 is closed
+19/07/29 02:49:06 ERROR spark.ContextCleaner: Error cleaning broadcast 3
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 02:49:06 ERROR client.TransportClient: Failed to send RPC 9129217753642549517 to /192.168.175.36:22091: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:49:06 ERROR client.TransportClient: Failed to send RPC 6914181503501231944 to /192.168.175.97:53540: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:49:06 ERROR spark.ContextCleaner: Error cleaning broadcast 1
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Failed to send RPC 9129217753642549517 to /192.168.175.36:22091: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:249)
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:233)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:507)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:481)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:420)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:122)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:852)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:738)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:733)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:725)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1900(AbstractChannelHandlerContext.java:35)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1062)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1116)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1051)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:49:06 ERROR client.TransportClient: Failed to send RPC 5463088285899420909 to /192.168.175.36:22091: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:49:06 ERROR client.TransportClient: Failed to send RPC 5480907311555582744 to /192.168.175.97:53540: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:49:06 ERROR spark.ContextCleaner: Error cleaning broadcast 38
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Failed to send RPC 5463088285899420909 to /192.168.175.36:22091: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:249)
+	at org.apache.spark.network.client.TransportClient$3.operationComplete(TransportClient.java:233)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:507)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:481)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:420)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:122)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:852)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:738)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:733)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:725)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1900(AbstractChannelHandlerContext.java:35)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1062)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1116)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1051)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source)
+19/07/29 02:49:06 ERROR client.TransportResponseHandler: Still have 3 requests outstanding when connection from /192.168.175.31:57686 is closed
+19/07/29 02:50:57 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.91:13566 is closed
+19/07/29 02:50:57 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.178:22212 is closed
+19/07/29 02:50:57 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.45:16916 is closed
+19/07/29 02:50:57 ERROR spark.ContextCleaner: Error cleaning broadcast 43
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+After user appusage join appdb count(pv): 23496505
+After user appusage join appdb count(uv): 1936755
++--------------------+------------------+--------------------+--------------------+----------------+------------------+--------------------+-------+--------------------+--------------------+--------------------+-------+--------+
+|          identifier|           user_id|        use_app_name|         package_src|      android_id|               uid|                 idf|ip_city|                gaid|        package_name|            category|use_cnt|use_time|
++--------------------+------------------+--------------------+--------------------+----------------+------------------+--------------------+-------+--------------------+--------------------+--------------------+-------+--------+
+|000dad8d6909756b6...|360287970903119714|tw.ailabs.Yating....|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|tw.ailabs.Yating....|Productivity[APPL...|      1|    84.0|
+|000dad8d6909756b6...|360287970903119714|        live.free.tv|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|        live.free.tv|Lifestyle[APPLICA...|      1|   230.0|
+|000dad8d6909756b6...|360287970903119714|        com.jkos.app|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|        com.jkos.app|Finance[APPLICATION]|      1|    17.0|
+|000dad8d6909756b6...|360287970903119714|com.taobao.htao.a...|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|com.taobao.htao.a...|Shopping[APPLICAT...|      5|  1240.0|
+|000dad8d6909756b6...|360287970903119714|    com.ltnnews.news|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|    com.ltnnews.news|News & Magazines[...|      1|    54.0|
+|000dad8d6909756b6...|360287970903119714|      com.kuo.buy123|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|      com.kuo.buy123|Shopping[APPLICAT...|      1|   318.0|
+|000dad8d6909756b6...|360287970903119714|com.huawei.appmarket|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|com.huawei.appmarket|             Unknown|      1|     6.0|
+|000dad8d6909756b6...|360287970903119714|       com.shopee.tw|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|       com.shopee.tw|Shopping[APPLICAT...|     13|  3576.0|
+|000dad8d6909756b6...|360287970903119714|com.huawei.androi...|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|com.huawei.androi...|             Unknown|      2|     5.0|
+|000dad8d6909756b6...|360287970903119714|      com.iwantavnow|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|      com.iwantavnow|  Tools[APPLICATION]|      1|     6.0|
+|000dad8d6909756b6...|360287970903119714|   com.taobao.taobao|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|   com.taobao.taobao|Shopping[APPLICAT...|      4|  1227.0|
+|000dad8d6909756b6...|360287970903119714|com.huawei.intell...|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|com.huawei.intell...|             Unknown|      6|    13.0|
+|000dad8d6909756b6...|360287970903119714|com.google.androi...|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|com.google.androi...|  Tools[APPLICATION]|     37|  1161.0|
+|000dad8d6909756b6...|360287970903119714|   com.huawei.camera|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|   com.huawei.camera|             Unknown|     10|   133.0|
+|000dad8d6909756b6...|360287970903119714|     com.nextmediatw|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|     com.nextmediatw|News & Magazines[...|     18|  2554.0|
+|000dad8d6909756b6...|360287970903119714|    com.adobe.reader|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|    com.adobe.reader|Productivity[APPL...|      2|    95.0|
+|000dad8d6909756b6...|360287970903119714|tw.com.taishinban...|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|tw.com.taishinban...|Finance[APPLICATION]|      2|    50.0|
+|000dad8d6909756b6...|360287970903119714|tw.ebookservice.v...|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|tw.ebookservice.v...|Books & Reference...|      8|  1319.0|
+|000dad8d6909756b6...|360287970903119714|tw.mobileapp.qrco...|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|tw.mobileapp.qrco...|  Tools[APPLICATION]|      4|    27.0|
+|000dad8d6909756b6...|360287970903119714|   com.spotify.music|com.cootek.smarti...|1619325900b9d8bd|360287970903155551|000dad8d6909756b6...|     TW|258e2938-db38-46e...|   com.spotify.music|Music & Audio[APP...|      4|    55.0|
++--------------------+------------------+--------------------+--------------------+----------------+------------------+--------------------+-------+--------------------+--------------------+--------------------+-------+--------+
+only showing top 20 rows
+
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.189:61680 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.44:59210 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.243:29856 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.74:51508 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.37:23879 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.33:29035 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.136:27570 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.12:15786 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.242:50598 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.222:29528 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.222:29532 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.73:54288 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.32:35556 is closed
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.223:25664 is closed
+java.util.concurrent.RejectedExecutionException: Task scala.concurrent.impl.CallbackRunnable@2e443072 rejected from java.util.concurrent.ThreadPoolExecutor@63a9f9ae[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 22520]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:205)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$2.apply(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$2.apply(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.RpcOutboxMessage.onFailure(Outbox.scala:78)
+	at org.apache.spark.network.client.TransportResponseHandler.failOutstandingRequests(TransportResponseHandler.java:110)
+	at org.apache.spark.network.client.TransportResponseHandler.channelInactive(TransportResponseHandler.java:128)
+	at org.apache.spark.network.server.TransportChannelHandler.channelInactive(TransportChannelHandler.java:108)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.handler.timeout.IdleStateHandler.channelInactive(IdleStateHandler.java:278)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelInactive(TransportFrameDecoder.java:182)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1289)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:893)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:691)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:367)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:671)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:456)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 03:08:16 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.204:56698 is closed

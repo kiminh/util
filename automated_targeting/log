@@ -1,0 +1,416 @@
++ kinit -kt /home/ling.fang/ad_user.keytab ad_user
++ [[ 1 -ne 1 ]]
++ region='{us,ap,eu}'
++ day=20190718
+++ pwd
++ ROOT_PATH=/home/ling.fang/automated_targeting
++ JOB_PATH=/home/ling.fang/automated_targeting/script
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
++ SPARK_HOME=/usr/local/spark-2.1.1-bin-hadoop2.6
++ LOG_PATH=hdfs:///user/dmp/spark_eventlog
++ USER_APPLIST_DATA=/user/ling.fang/age_model/user_applist_data/parquet
++ APPUSAGE_PATH='/user/dw/trends/etl/app_usage/{us,ap,eu}/20190718/'
++ APPDB_PATH=/data/dw/app_db/latest/json
++ IDF2GAID='/user/james.jiang/1/2/3/4/5/all_ids/smartinput/{us,ap,eu}/latest'
++ DES_PATH=/user/ling.fang/1/2/3/4/5/automated_targeting/usage_daily/20190718/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ling.fang/1/2/3/4/5/automated_targeting/usage_daily/20190718/
+rm: `/user/ling.fang/1/2/3/4/5/automated_targeting/usage_daily/20190718/': No such file or directory
++ sparksubmit='/usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit                  --master yarn                  --queue root.ad-root.etl.dailyetl.normal                  --num-executors 50                  --executor-memory 8g                  --driver-memory 10g                  --conf spark.dynamicAllocation.enabled=true                  --conf spark.dynamicAllocation.maxExecutors=120                  --conf spark.dynamicAllocation.minExecutors=50                  --conf spark.driver.maxResultSize=12G                  --conf spark.shuffle.service.enabled=true                  --conf spark.eventLog.enabled=true                  --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog'
++ /usr/local/spark-2.1.1-bin-hadoop2.6/bin/spark-submit --master yarn --queue root.ad-root.etl.dailyetl.normal --num-executors 50 --executor-memory 8g --driver-memory 10g --conf spark.dynamicAllocation.enabled=true --conf spark.dynamicAllocation.maxExecutors=120 --conf spark.dynamicAllocation.minExecutors=50 --conf spark.driver.maxResultSize=12G --conf spark.shuffle.service.enabled=true --conf spark.eventLog.enabled=true --conf spark.eventLog.dir=hdfs:///user/dmp/spark_eventlog /home/ling.fang/automated_targeting/script/extract_appusage_data_daily.py /user/ling.fang/age_model/user_applist_data/parquet '/user/dw/trends/etl/app_usage/{us,ap,eu}/20190718/' /data/dw/app_db/latest/json '/user/james.jiang/1/2/3/4/5/all_ids/smartinput/{us,ap,eu}/latest' /user/ling.fang/1/2/3/4/5/automated_targeting/usage_daily/20190718/
+19/07/29 02:40:02 INFO spark.SparkContext: Running Spark version 2.1.1
+19/07/29 02:40:02 INFO spark.SecurityManager: Changing view acls to: ling.fang,ad_user
+19/07/29 02:40:02 INFO spark.SecurityManager: Changing modify acls to: ling.fang,ad_user
+19/07/29 02:40:02 INFO spark.SecurityManager: Changing view acls groups to: 
+19/07/29 02:40:02 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/07/29 02:40:02 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ling.fang, ad_user); groups with view permissions: Set(); users  with modify permissions: Set(ling.fang, ad_user); groups with modify permissions: Set()
+19/07/29 02:40:03 INFO util.Utils: Successfully started service 'sparkDriver' on port 31803.
+19/07/29 02:40:03 INFO spark.SparkEnv: Registering MapOutputTracker
+19/07/29 02:40:03 INFO spark.SparkEnv: Registering BlockManagerMaster
+19/07/29 02:40:03 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/07/29 02:40:03 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/07/29 02:40:03 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-1ada19cd-89fc-4bb2-9f81-e703e73556dc
+19/07/29 02:40:03 INFO memory.MemoryStore: MemoryStore started with capacity 5.7 GB
+19/07/29 02:40:03 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+19/07/29 02:40:03 INFO util.log: Logging initialized @2637ms
+19/07/29 02:40:03 INFO server.Server: jetty-9.2.z-SNAPSHOT
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@57487e01{/jobs,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@190c719b{/jobs/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6836d69b{/jobs/job,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7532c695{/jobs/job/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@611e1644{/stages,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1be43355{/stages/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@45b8bcbc{/stages/stage,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@26ddccf0{/stages/stage/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@37e04259{/stages/pool,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@da4a16b{/stages/pool/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@df9a13f{/storage,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@450b563c{/storage/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@70cc264e{/storage/rdd,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@584b7ec5{/storage/rdd/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@187bdcaa{/environment,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7dec32f{/environment/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@16317bcc{/executors,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@158f8299{/executors/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5357820e{/executors/threadDump,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@22e1e4f0{/executors/threadDump/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3f13047b{/static,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5661c24a{/,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@39497d7a{/api,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1422d8c7{/jobs/job/kill,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@333526e4{/stages/stage/kill,null,AVAILABLE,@Spark}
+19/07/29 02:40:03 INFO server.ServerConnector: Started Spark@375cf0f5{HTTP/1.1}{0.0.0.0:12971}
+19/07/29 02:40:03 INFO server.Server: Started @2762ms
+19/07/29 02:40:03 INFO util.Utils: Successfully started service 'SparkUI' on port 12971.
+19/07/29 02:40:03 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.184.24:12971
+19/07/29 02:40:03 WARN util.Utils: spark.dynamicAllocation.initialExecutors less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+19/07/29 02:40:03 INFO util.Utils: Using initial executors = 50, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+19/07/29 02:40:04 INFO yarn.Client: Requesting a new application from cluster with 251 NodeManagers
+19/07/29 02:40:04 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (32768 MB per container)
+19/07/29 02:40:04 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+19/07/29 02:40:04 INFO yarn.Client: Setting up container launch context for our AM
+19/07/29 02:40:04 INFO yarn.Client: Setting up the launch environment for our AM container
+19/07/29 02:40:04 INFO yarn.Client: Preparing resources for our AM container
+19/07/29 02:40:04 INFO security.HDFSCredentialProvider: getting token for namenode: hdfs://cootek/user/ad_user
+19/07/29 02:40:04 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 5004525 for ad_user on ha-hdfs:cootek
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.mapred.num.threshold does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.Password does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.userName does not exist
+19/07/29 02:40:06 WARN conf.HiveConf: HiveConf of name hive.query.history.connectionstring does not exist
+19/07/29 02:40:06 INFO hive.metastore: Trying to connect to metastore with URI thrift://192.168.190.6:9083
+19/07/29 02:40:06 INFO hive.metastore: Connected to metastore.
+19/07/29 02:40:07 WARN token.Token: Cannot find class for token kind HIVE_DELEGATION_TOKEN
+19/07/29 02:40:07 INFO security.HiveCredentialProvider: Get Token from hive metastore: Kind: HIVE_DELEGATION_TOKEN, Service: , Ident: 00 1a 61 64 5f 75 73 65 72 40 55 53 43 41 53 56 32 2e 43 4f 4f 54 45 4b 2e 43 4f 4d 06 68 61 64 6f 6f 70 00 8a 01 6c 3b 99 71 95 8a 01 6c 5f a5 f5 95 8f b1 02
+19/07/29 02:40:07 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+19/07/29 02:40:09 INFO yarn.Client: Uploading resource file:/tmp/spark-b106a409-9c70-4dad-8a30-c45d51be8b63/__spark_libs__8479928575321345747.zip -> hdfs://cootek/user/ad_user/.sparkStaging/application_1557354662193_587115/__spark_libs__8479928575321345747.zip
+19/07/29 02:40:19 INFO yarn.Client: Uploading resource file:/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/pyspark.zip -> hdfs://cootek/user/ad_user/.sparkStaging/application_1557354662193_587115/pyspark.zip
+19/07/29 02:40:19 INFO yarn.Client: Uploading resource file:/usr/local/spark-2.1.1-bin-hadoop2.6/python/lib/py4j-0.10.4-src.zip -> hdfs://cootek/user/ad_user/.sparkStaging/application_1557354662193_587115/py4j-0.10.4-src.zip
+19/07/29 02:40:19 INFO yarn.Client: Uploading resource file:/tmp/spark-b106a409-9c70-4dad-8a30-c45d51be8b63/__spark_conf__4069302318593280965.zip -> hdfs://cootek/user/ad_user/.sparkStaging/application_1557354662193_587115/__spark_conf__.zip
+19/07/29 02:40:19 INFO spark.SecurityManager: Changing view acls to: ling.fang,ad_user
+19/07/29 02:40:19 INFO spark.SecurityManager: Changing modify acls to: ling.fang,ad_user
+19/07/29 02:40:19 INFO spark.SecurityManager: Changing view acls groups to: 
+19/07/29 02:40:19 INFO spark.SecurityManager: Changing modify acls groups to: 
+19/07/29 02:40:19 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ling.fang, ad_user); groups with view permissions: Set(); users  with modify permissions: Set(ling.fang, ad_user); groups with modify permissions: Set()
+19/07/29 02:40:19 INFO yarn.Client: Submitting application application_1557354662193_587115 to ResourceManager
+19/07/29 02:40:19 INFO impl.YarnClientImpl: Submitted application application_1557354662193_587115
+19/07/29 02:40:19 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1557354662193_587115 and attemptId None
+19/07/29 02:40:20 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:20 INFO yarn.Client: 
+	 client token: Token { kind: YARN_CLIENT_TOKEN, service:  }
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.ad-root.etl.dailyetl.normal
+	 start time: 1564368019694
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_587115/
+	 user: ad_user
+19/07/29 02:40:21 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:22 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:23 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:24 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:25 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:26 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:27 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:28 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:29 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:30 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:31 INFO yarn.Client: Application report for application_1557354662193_587115 (state: ACCEPTED)
+19/07/29 02:40:32 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(null)
+19/07/29 02:40:32 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> hadoop-namenode-003.uscasv2.cootek.com,hadoop-namenode-004.uscasv2.cootek.com, PROXY_URI_BASES -> http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_587115,http://hadoop-namenode-004.uscasv2.cootek.com:8088/proxy/application_1557354662193_587115), /proxy/application_1557354662193_587115
+19/07/29 02:40:32 INFO ui.JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+19/07/29 02:40:32 INFO yarn.Client: Application report for application_1557354662193_587115 (state: RUNNING)
+19/07/29 02:40:32 INFO yarn.Client: 
+	 client token: Token { kind: YARN_CLIENT_TOKEN, service:  }
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.175.102
+	 ApplicationMaster RPC port: 0
+	 queue: root.ad-root.etl.dailyetl.normal
+	 start time: 1564368019694
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-namenode-003.uscasv2.cootek.com:8088/proxy/application_1557354662193_587115/
+	 user: ad_user
+19/07/29 02:40:32 INFO cluster.YarnClientSchedulerBackend: Application application_1557354662193_587115 has started running.
+19/07/29 02:40:32 INFO cluster.YarnScheduler: Starting speculative execution thread
+19/07/29 02:40:32 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 31757.
+19/07/29 02:40:32 INFO netty.NettyBlockTransferService: Server created on 192.168.184.24:31757
+19/07/29 02:40:32 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/07/29 02:40:32 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.184.24, 31757, None)
+19/07/29 02:40:32 INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.184.24:31757 with 5.7 GB RAM, BlockManagerId(driver, 192.168.184.24, 31757, None)
+19/07/29 02:40:32 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.184.24, 31757, None)
+19/07/29 02:40:32 INFO storage.BlockManager: external shuffle service port = 7337
+19/07/29 02:40:32 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.184.24, 31757, None)
+19/07/29 02:40:32 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4f26248f{/metrics/json,null,AVAILABLE,@Spark}
+19/07/29 02:40:33 INFO scheduler.EventLoggingListener: Logging events to hdfs:///user/dmp/spark_eventlog/application_1557354662193_587115
+19/07/29 02:40:33 WARN util.Utils: spark.dynamicAllocation.initialExecutors less than spark.dynamicAllocation.minExecutors is invalid, ignoring its setting, please update your configs.
+19/07/29 02:40:33 INFO util.Utils: Using initial executors = 50, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+19/07/29 02:40:33 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000(ms)
++--------------------+------------------+-----------------+---------------+--------------------+--------------------+--------------------+
+|          identifier|           user_id|recommend_channel|   channel_code|        use_app_name|    action_time_list|         package_src|
++--------------------+------------------+-----------------+---------------+--------------------+--------------------+--------------------+
+|ccb843947bb499df5...|360287970659220110|  OEM 093 ABY 008|OEM 093 ABY 010|com.instagram.and...|[[1563475752181,1...|com.emoji.keyboar...|
+|6f2340d27e6bc6c37...|360287970451531157|  OEM 093 ABY 001|OEM 093 ABY 006|jp.naver.line.and...|[[1563433379837,1...|com.emoji.keyboar...|
+|536786080c56a2eaa...|360287970478866752|  OEM 093 ABY 005|OEM 093 ABY 006| com.facebook.katana|[[1563409049423,1...|com.emoji.keyboar...|
+|d3414a2714d8e121b...|360287970762990258|  OEM 006 ABM 003|OEM 006 ABM 003|com.zhiliaoapp.mu...|[[1563446178411,1...|com.emoji.keyboar...|
+|86153c63bddbe56bb...|360287970725890713|  OEM 093 ABY 005|OEM 093 ABY 006|   com.facebook.orca|[[1563469508236,1...|com.emoji.keyboar...|
+|b3942f8846632a7c1...|360287970584404356|  OEM 014 ABV 003|OEM 014 ABV 003| com.netease.g93natw|[[1563419790718,1...|com.emoji.keyboar...|
+|49734ff91581c72f9...|360287970593405173|  OEM 014 ABV 003|OEM 014 ABV 003|      com.truecaller|[[1563441230809,1...|com.emoji.keyboar...|
+|33bff603d2a375db0...|360287970901649929|  OEM 093 ABY 011|OEM 093 ABY 011|   in.startv.hotstar|[[1563430662284,1...|com.emoji.keyboar...|
+|1503e71e55c213d15...|360287970741071277|  OEM 093 ABY 008|         000000|    com.vivo.upslide|[[1563448660034,1...|com.emoji.keyboar...|
+|6b07cc299f7011377...|360287970913641025|  OEM 115 A9H 001|OEM 115 A9H 001|      com.sprd.omacp|[[1563458758738,1...|com.emoji.keyboar...|
+|e063a4b25054693ee...|360287970758333337|  OEM 093 ABY 008|OEM 093 ABY 008|   com.UCMobile.intl|[[1563439424754,1...|com.emoji.keyboar...|
+|ae70a512dd64d8140...|360287970452006448|  OEM 093 ABY 001|OEM 093 ABY 006|   com.facebook.orca|[[1563454971296,1...|com.emoji.keyboar...|
+|36f6e716cda2722fd...|360287970756571073|  OEM 093 ABY 006|OEM 093 ABY 006|photo.video.insta...|[[1563438479481,1...|com.emoji.keyboar...|
+|1af08aeaeb89c81af...|360287970460253781|  OEM 093 ABY 001|         000000|   com.vivo.magazine|[[1563427087960,1...|com.emoji.keyboar...|
+|762f20f5c47b09dd5...|360287970718852605|  OEM 093 ABY 008|OEM 093 ABY 009|com.geishatokyo.t...|[[1563432730268,1...|com.emoji.keyboar...|
+|730f4eb9387ae5d82...|360287970565860216|  OEM 093 ABY 006|OEM 093 ABY 010|        com.whatsapp|[[1563447052582,1...|com.emoji.keyboar...|
+|56749eff2189a4250...|360287970475792096|  OEM 093 ABY 005|         000000|com.kasikorn.reta...|[[1563459039165,1...|com.emoji.keyboar...|
+|3adef79ed674b6792...|360287970723272564|  OEM 093 ABY 008|OEM 093 ABY 009|             android|[[1563468635681,1...|com.emoji.keyboar...|
+|a7db9565c0acccc4e...|360287970624018733|  OEM 093 ABY 008|         000000|com.google.androi...|[[1563462548027,1...|com.emoji.keyboar...|
+|83c96296943b2b50c...|360287970525874707|  OEM 093 ABY 006|         000000|        com.whatsapp|[[1563437501713,1...|com.emoji.keyboar...|
++--------------------+------------------+-----------------+---------------+--------------------+--------------------+--------------------+
+only showing top 20 rows
+
+user appusage count: 1120730103
++--------------------+--------------------+
+|        package_name|            category|
++--------------------+--------------------+
+|com.programmingis...|Medical[APPLICATION]|
+|air.com.artsana.a...|Education[APPLICA...|
+|com.iky94studio.K...|Books & Reference...|
+|musicplayer.bass....|Music & Audio[APP...|
+|com.bnaysoso.best...|  Tools[APPLICATION]|
+|com.tripim.thanks...|  Tools[APPLICATION]|
+|com.codeoneit.exp...|Finance[APPLICATION]|
+|com.minimiew.love...|Photography[APPLI...|
+|com.ionicframewor...|Business[APPLICAT...|
+|      com.news.news1|News & Magazines[...|
+|kz.onlinebank.mobile|Finance[APPLICATION]|
+|com.giatec.cell.m...|  Tools[APPLICATION]|
+|com.onekhaleefa.t...|Music & Audio[APP...|
+|com.appefizeptelt...|News & Magazines[...|
+|   zufang.com.zufang|Business[APPLICAT...|
+|ua.com.citysites....|News & Magazines[...|
+|com.apgis.dynalis...|Health & Fitness[...|
+|com.rbm.android.m...|Finance[APPLICATION]|
+|com.stupendousgam...|        Racing[GAME]|
+|ru.alexanderklimo...|Entertainment[APP...|
++--------------------+--------------------+
+only showing top 20 rows
+
+After filter OEM exchange(pv): 23646612
+After filter OEM exchange(uv): 1948013
+After join idf2gaid table(pv): 23646615
+After join idf2gaid table(uv): 1948013
+After user appusage join appdb count(pv): 23646603
+After user appusage join appdb count(uv): 1948010
++--------------------+------------------+--------------------+--------------------+----------------+------------------+--------------------+-------+--------------------+--------------------+--------------------+-------+--------+
+|          identifier|           user_id|        use_app_name|         package_src|      android_id|               uid|                 idf|ip_city|                gaid|        package_name|            category|use_cnt|use_time|
++--------------------+------------------+--------------------+--------------------+----------------+------------------+--------------------+-------+--------------------+--------------------+--------------------+-------+--------+
+|000dad8d6909756b6...|360287970903119714|com.intsig.camsca...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.intsig.camsca...|Productivity[APPL...|      2|    60.0|
+|000dad8d6909756b6...|360287970903119714|tw.com.taishinban...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|tw.com.taishinban...|Finance[APPLICATION]|      3|   983.0|
+|000dad8d6909756b6...|360287970903119714|com.huawei.androi...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.huawei.androi...|             Unknown|      5|     9.0|
+|000dad8d6909756b6...|360287970903119714|com.google.androi...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.google.androi...|Photography[APPLI...|      1|    72.0|
+|000dad8d6909756b6...|360287970903119714|     com.nextmediatw|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|     com.nextmediatw|News & Magazines[...|      9|  1578.0|
+|000dad8d6909756b6...|360287970903119714| com.facebook.katana|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null| com.facebook.katana| Social[APPLICATION]|     19|  5932.0|
+|000dad8d6909756b6...|360287970903119714|   com.huawei.camera|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|   com.huawei.camera|             Unknown|     21|   238.0|
+|000dad8d6909756b6...|360287970903119714|com.google.androi...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.google.androi...|Video Players & E...|      2|  1518.0|
+|000dad8d6909756b6...|360287970903119714|com.huawei.androi...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.huawei.androi...|             Unknown|      1|    37.0|
+|000dad8d6909756b6...|360287970903119714|tw.mobileapp.qrco...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|tw.mobileapp.qrco...|  Tools[APPLICATION]|      7|   169.0|
+|000dad8d6909756b6...|360287970903119714|tw.ailabs.Yating....|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|tw.ailabs.Yating....|Productivity[APPL...|      1|   241.0|
+|000dad8d6909756b6...|360287970903119714|info.kfsoft.calendar|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|info.kfsoft.calendar|Productivity[APPL...|      1|    10.0|
+|000dad8d6909756b6...|360287970903119714|com.fiistudio.fii...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.fiistudio.fii...|Productivity[APPL...|      1|    24.0|
+|000dad8d6909756b6...|360287970903119714|com.huawei.intell...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.huawei.intell...|             Unknown|      2|     4.0|
+|000dad8d6909756b6...|360287970903119714|       com.shopee.tw|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|       com.shopee.tw|Shopping[APPLICAT...|     15|  2927.0|
+|000dad8d6909756b6...|360287970903119714|com.huawei.system...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.huawei.system...|             Unknown|      2|     6.0|
+|000dad8d6909756b6...|360287970903119714|com.citibank.mobi...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.citibank.mobi...|Finance[APPLICATION]|      8|  1076.0|
+|000dad8d6909756b6...|360287970903119714|com.google.androi...|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|com.google.androi...|  Tools[APPLICATION]|     32|   871.0|
+|000dad8d6909756b6...|360287970903119714|        com.jkos.app|com.cootek.smarti...|1619325900b9d8bd|360287970903154233|000dad8d6909756b6...|     TW|                null|        com.jkos.app|Finance[APPLICATION]|      2|    38.0|
+|0023ad8a7c2a48e6b...| 72057594084997463|jp.co.yahoo.andro...|com.cootek.smarti...|                | 72057594084997463|0023ad8a7c2a48e6b...|     TW|e21cc5b5-560c-438...|jp.co.yahoo.andro...|News & Magazines[...|      1|   324.0|
++--------------------+------------------+--------------------+--------------------+----------------+------------------+--------------------+-------+--------------------+--------------------+--------------------+-------+--------+
+only showing top 20 rows
+
+19/07/29 03:02:40 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.147:45498 is closed
+19/07/29 03:02:40 ERROR spark.ContextCleaner: Error cleaning broadcast 69
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 03:02:40 ERROR client.TransportResponseHandler: Still have 2 requests outstanding when connection from /192.168.175.191:27968 is closed
+19/07/29 03:02:41 ERROR client.TransportResponseHandler: Still have 2 requests outstanding when connection from /192.168.175.38:19804 is closed
+19/07/29 03:02:41 ERROR spark.ContextCleaner: Error cleaning broadcast 67
+org.apache.spark.SparkException: Exception thrown in awaitResult
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:77)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$1.applyOrElse(RpcTimeout.scala:75)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:83)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:151)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:303)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:60)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1245)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:643)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.31:44704 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.211:31548 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.19:42028 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.206:59494 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.222:21858 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.236:30922 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.20:20830 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.47:18161 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.244:62938 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.165:32142 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.50:57848 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.172:12756 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.22:33650 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.135:35498 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.95:56448 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.47:18162 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.35:26601 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.63:41298 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.219:54448 is closed
+java.util.concurrent.RejectedExecutionException: Task scala.concurrent.impl.CallbackRunnable@1d710ab8 rejected from java.util.concurrent.ThreadPoolExecutor@390595ec[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 23441]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:205)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$2.apply(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$2.apply(NettyRpcEnv.scala:228)
+	at org.apache.spark.rpc.netty.RpcOutboxMessage.onFailure(Outbox.scala:78)
+	at org.apache.spark.network.client.TransportResponseHandler.failOutstandingRequests(TransportResponseHandler.java:110)
+	at org.apache.spark.network.client.TransportResponseHandler.channelInactive(TransportResponseHandler.java:128)
+	at org.apache.spark.network.server.TransportChannelHandler.channelInactive(TransportChannelHandler.java:108)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.handler.timeout.IdleStateHandler.channelInactive(IdleStateHandler.java:278)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelInactive(TransportFrameDecoder.java:182)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1289)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:893)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:691)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:367)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:671)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:456)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.165:32140 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.46:54810 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.143:13990 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.210:38514 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.235:17778 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.160:22196 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.169.43:30496 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.100:27912 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.89:62506 is closed
+19/07/29 03:09:54 ERROR client.TransportResponseHandler: Still have 1 requests outstanding when connection from /192.168.175.130:46428 is closed
