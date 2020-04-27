@@ -1,0 +1,14 @@
+# hourly update
+3 * * * * cd /home/ling.fang/ctr_space/jobs && bash -x ctr_hourly_schedule.sh
+
+# daily update
+0 1 * * * cd /home/work/ling.fang/ctr_space/jobs && bash -x ctr_daily_schedule.sh
+# metric eval
+0 4 * * * cd /home/ling.fang/ctr_space/hourly_update/daily_metric_eval && bash -x run_metric_eval.sh
+
+# cvr space
+0 5 * * * cd /home/ling.fang/cvr_space/click_join_trans && bash -x run_click_join_trans.sh && cd /home/ling.fang/cvr_space/shitu_generate && bash -x run_shitu.sh && cd /home/ling.fang/cvr_space/model_train && bash -x model_train_daily.sh
+0 6 * * * cd /home/ling.fang/cvr_space/daily_metric_eval && bash -x run_metric_eval.sh
+
+#ad support 
+#40 * * * * cd /home/ling.fang/ctr_space/ad_support && bash -x run.sh

@@ -1,0 +1,31 @@
+did	1001
+nt	1002
+is_wifi	1003
+city	1004
+osv	1005
+adstyle	1006
+planid	1007
+cmpid	1008
+orgid	1009
+plid	1010
+app_series
+ad_type
+industry
+adwh_pwh	1011
+pwh	1012
+pwh_plid	1013
+make_model_plid	1014
+make_model_promotedapp	1014
+plid_hour	1015
+plid_wk	1016
+plid_planid	1017
+plid_osv
+city_plid	1018
+promoted_app	1019
+pwh_promotedapp	1020
+wk_promotedapp	1021
+hour_promotedapp	1022
+plid_promotedapp	1023
+iswifi_promotedapp	1024
+planid_promotedapp	1025
+tu	1026

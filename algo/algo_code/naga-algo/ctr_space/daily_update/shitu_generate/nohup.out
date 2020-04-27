@@ -1,0 +1,2310 @@
++ bash -x run_shitu.sh 20191029
++ bash /home/ling.fang/kinit_ad_user.sh
++ USER_NAME=ad_user
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ common_file=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++ source /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
+++ bash /home/ling.fang/kinit_ad_user.sh
+++ HADOOP_BIN=/usr/local/hadoop-2.6.3/bin/hadoop
+++++ dirname /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++++ cd /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools
++++ pwd
+++ ROOT_PATH=/home/ad_user/personal/ling.fang/script/tools
++ '[' 1 -ge 1 ']'
++ DATE=20191029
++ '[' 1 -eq 2 ']'
++ JOB_TAG=
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ INPUTDIR='-input "/user/ad_user/ctr_space/ed_join_click/join/20191029/" '
++ echo -input '"/user/ad_user/ctr_space/ed_join_click/join/20191029/"'
+-input "/user/ad_user/ctr_space/ed_join_click/join/20191029/"
++ OUTPUTDIR=/user/ad_user/ctr_space/model_train/shitu/20191029/
++ PLID_EDCLKDIR=/user/ad_user/ctr_space/plid_stat_info/json
++ done_file=/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS
++ loop_check /user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS 140 1
++ file=/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS
++ ready=0
++ check_time=140
++ mode=1
++ echo 'input params:/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS 140 1'
+input params:/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS 140 1
++ '[' 3 -ne 3 ']'
++ '[' 140 -gt 0 ']'
++ '[' 1 -eq 1 ']'
++ hadoop_check_ready
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS
++ ready=0
++ '[' 0 -eq 1 ']'
++ mylog '/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS is not ready, check [140]'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-22:46:19
++ echo '[20191105-22:46:19] /user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS' is not ready, check '[140]'
+[20191105-22:46:19] /user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS is not ready, check [140]
++ (( check_time=check_time-1 ))
++ sleep 600
++ bash -x run_shitu.sh 20191029
++ bash /home/ling.fang/kinit_ad_user.sh
++ USER_NAME=ad_user
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ common_file=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++ source /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
+++ bash /home/ling.fang/kinit_ad_user.sh
+++ HADOOP_BIN=/usr/local/hadoop-2.6.3/bin/hadoop
+++++ dirname /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++++ cd /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools
++++ pwd
+++ ROOT_PATH=/home/ad_user/personal/ling.fang/script/tools
++ '[' 1 -ge 1 ']'
++ DATE=20191029
++ '[' 1 -eq 2 ']'
++ JOB_TAG=
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ INPUTDIR='-input "/user/ad_user/ctr_space/ed_join_click/join/20191029/" '
++ echo -input '"/user/ad_user/ctr_space/ed_join_click/join/20191029/"'
+-input "/user/ad_user/ctr_space/ed_join_click/join/20191029/"
++ OUTPUTDIR=/user/ad_user/ctr_space/model_train/shitu/20191029/
++ PLID_EDCLKDIR=/user/ad_user/ctr_space/plid_stat_info/json
++ done_file=/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS
++ loop_check /user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS 140 1
++ file=/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS
++ ready=0
++ check_time=140
++ mode=1
++ echo 'input params:/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS 140 1'
+input params:/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS 140 1
++ '[' 3 -ne 3 ']'
++ '[' 140 -gt 0 ']'
++ '[' 1 -eq 1 ']'
++ hadoop_check_ready
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS
++ ready=1
++ '[' 1 -eq 1 ']'
++ mylog '/user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS is ready!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-22:46:24
++ echo '[20191105-22:46:24] /user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS' is 'ready!'
+[20191105-22:46:24] /user/ad_user/ctr_space/ed_join_click/join/20191029/_SUCCESS is ready!
++ return 0
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -cat '/user/ad_user/ctr_space/plid_stat_info/json/*'
+cat: `/user/ad_user/ctr_space/plid_stat_info/json/*': No such file or directory
++ OWNER_INFO=ad_user@cootek.cn
++ TASK_NAME=naga_ctr_generate_shitu_log
++ hadoop_run
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191029/
+19/11/05 22:46:30 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191029' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop jar /usr/local/hadoop-2.6.3/share/hadoop/tools/lib/hadoop-streaming-2.6.3.jar -libjars /home/ling.fang/script/tools/mr_plugins-1.0.jar -files script -D map.output.key.field.separator=# -D num.key.fields.for.partition=1 -D mapreduce.map.memory.mb=4096 -D mapreduce.map.java.opts=-Xmx3276m -Dmapred.map.tasks.speculative.execution=false -Dmapred.reduce.tasks.speculative.execution=false -Dstream.non.zero.exit.is.failure=false -Dmapred.job.priority=HIGH -Dmapreduce.job.queuename=root.ad-root.etl.dailyetl.high -Dmapred.map.tasks=1000 -Dmapred.reduce.tasks=200 -Dmapred.job.map.capacity=1000 -Dmapred.job.reduce.capacity=200 -Dmapred.job.name=naga_ctr_generate_shitu_log_20191029 -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner -outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat -mapper 'python script/mapper.py' -reducer 'python script/reducer.py' -input '"/user/ad_user/ctr_space/ed_join_click/join/20191029/"' -output /user/ad_user/ctr_space/model_train/shitu/20191029/
+19/11/05 22:46:32 INFO Configuration.deprecation: map.output.key.field.separator is deprecated. Instead, use mapreduce.map.output.key.field.separator
+19/11/05 22:46:32 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+19/11/05 22:46:32 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+19/11/05 22:46:32 INFO Configuration.deprecation: mapred.job.priority is deprecated. Instead, use mapreduce.job.priority
+19/11/05 22:46:32 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/11/05 22:46:32 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+19/11/05 22:46:32 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [/tmp/hadoop-unjar7021754210333692487/] [] /tmp/streamjob7132754204600873814.jar tmpDir=null
+19/11/05 22:46:32 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 22:46:33 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 22:46:33 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4044374 for ad_user on ha-hdfs:cootek
+19/11/05 22:46:33 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044374 for ad_user)
+19/11/05 22:46:33 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 22:46:33 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 08 17 d7 8a 01 6e 60 14 9b d7 8d 30 fa a8 8e 02 7f
+19/11/05 22:46:39 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library from the embedded binaries
+19/11/05 22:46:39 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 52decc77982b58949890770d22720a91adce0c3f]
+19/11/05 22:46:40 INFO mapred.FileInputFormat: Total input paths to process : 1000
+19/11/05 22:46:41 INFO mapreduce.JobSubmitter: number of splits:1000
+19/11/05 22:46:42 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1567079137842_609325
+19/11/05 22:46:42 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044374 for ad_user)
+19/11/05 22:46:42 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 22:46:42 WARN token.Token: Cannot find class for token kind kms-dt
+Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 08 17 d7 8a 01 6e 60 14 9b d7 8d 30 fa a8 8e 02 7f
+19/11/05 22:46:42 INFO impl.YarnClientImpl: Submitted application application_1567079137842_609325
+19/11/05 22:46:42 INFO mapreduce.Job: The url to track the job: http://hadoop2-namenode.corp.cootek.com:8088/proxy/application_1567079137842_609325/
+19/11/05 22:46:42 INFO mapreduce.Job: Running job: job_1567079137842_609325
+19/11/05 23:02:56 INFO mapreduce.Job: Job job_1567079137842_609325 running in uber mode : false
+19/11/05 23:02:56 INFO mapreduce.Job:  map 0% reduce 0%
+19/11/05 23:03:16 INFO mapreduce.Job:  map 1% reduce 0%
+19/11/05 23:03:19 INFO mapreduce.Job:  map 2% reduce 0%
+19/11/05 23:03:22 INFO mapreduce.Job:  map 3% reduce 0%
+19/11/05 23:03:24 INFO mapreduce.Job:  map 4% reduce 0%
+19/11/05 23:03:26 INFO mapreduce.Job:  map 5% reduce 0%
+19/11/05 23:03:28 INFO mapreduce.Job:  map 6% reduce 0%
+19/11/05 23:03:30 INFO mapreduce.Job:  map 7% reduce 0%
+19/11/05 23:03:31 INFO mapreduce.Job:  map 8% reduce 0%
+19/11/05 23:03:33 INFO mapreduce.Job:  map 9% reduce 0%
+19/11/05 23:03:35 INFO mapreduce.Job:  map 10% reduce 0%
+19/11/05 23:03:36 INFO mapreduce.Job:  map 11% reduce 0%
+19/11/05 23:03:38 INFO mapreduce.Job:  map 12% reduce 0%
+19/11/05 23:03:39 INFO mapreduce.Job:  map 13% reduce 0%
+19/11/05 23:03:40 INFO mapreduce.Job:  map 14% reduce 0%
+19/11/05 23:03:41 INFO mapreduce.Job:  map 15% reduce 0%
+19/11/05 23:03:42 INFO mapreduce.Job:  map 16% reduce 0%
+19/11/05 23:03:44 INFO mapreduce.Job:  map 17% reduce 0%
+19/11/05 23:03:45 INFO mapreduce.Job:  map 18% reduce 0%
+19/11/05 23:03:46 INFO mapreduce.Job:  map 19% reduce 0%
+19/11/05 23:03:48 INFO mapreduce.Job:  map 20% reduce 0%
+19/11/05 23:03:49 INFO mapreduce.Job:  map 21% reduce 0%
+19/11/05 23:03:50 INFO mapreduce.Job:  map 22% reduce 0%
+19/11/05 23:03:54 INFO mapreduce.Job:  map 23% reduce 0%
+19/11/05 23:04:00 INFO mapreduce.Job:  map 24% reduce 0%
+19/11/05 23:04:03 INFO mapreduce.Job:  map 25% reduce 0%
+19/11/05 23:04:06 INFO mapreduce.Job:  map 26% reduce 0%
+19/11/05 23:04:08 INFO mapreduce.Job:  map 27% reduce 0%
+19/11/05 23:04:10 INFO mapreduce.Job:  map 28% reduce 0%
+19/11/05 23:04:11 INFO mapreduce.Job:  map 29% reduce 0%
+19/11/05 23:04:12 INFO mapreduce.Job:  map 30% reduce 0%
+19/11/05 23:04:14 INFO mapreduce.Job:  map 31% reduce 0%
+19/11/05 23:04:15 INFO mapreduce.Job:  map 32% reduce 0%
+19/11/05 23:04:16 INFO mapreduce.Job:  map 33% reduce 0%
+19/11/05 23:04:18 INFO mapreduce.Job:  map 34% reduce 0%
+19/11/05 23:04:20 INFO mapreduce.Job:  map 35% reduce 0%
+19/11/05 23:04:21 INFO mapreduce.Job:  map 36% reduce 0%
+19/11/05 23:04:22 INFO mapreduce.Job:  map 37% reduce 0%
+19/11/05 23:04:23 INFO mapreduce.Job:  map 38% reduce 0%
+19/11/05 23:04:25 INFO mapreduce.Job:  map 39% reduce 0%
+19/11/05 23:04:26 INFO mapreduce.Job:  map 40% reduce 0%
+19/11/05 23:04:27 INFO mapreduce.Job:  map 41% reduce 0%
+19/11/05 23:04:28 INFO mapreduce.Job:  map 42% reduce 0%
+19/11/05 23:04:29 INFO mapreduce.Job:  map 43% reduce 0%
+19/11/05 23:04:30 INFO mapreduce.Job:  map 44% reduce 0%
+19/11/05 23:04:31 INFO mapreduce.Job:  map 45% reduce 0%
+19/11/05 23:04:32 INFO mapreduce.Job:  map 46% reduce 0%
+19/11/05 23:04:33 INFO mapreduce.Job:  map 47% reduce 0%
+19/11/05 23:04:34 INFO mapreduce.Job:  map 49% reduce 0%
+19/11/05 23:04:35 INFO mapreduce.Job:  map 50% reduce 0%
+19/11/05 23:04:36 INFO mapreduce.Job:  map 51% reduce 0%
+19/11/05 23:04:37 INFO mapreduce.Job:  map 53% reduce 0%
+19/11/05 23:04:38 INFO mapreduce.Job:  map 54% reduce 0%
+19/11/05 23:04:39 INFO mapreduce.Job:  map 55% reduce 0%
+19/11/05 23:04:40 INFO mapreduce.Job:  map 56% reduce 0%
+19/11/05 23:04:41 INFO mapreduce.Job:  map 57% reduce 0%
+19/11/05 23:04:43 INFO mapreduce.Job:  map 58% reduce 0%
+19/11/05 23:04:44 INFO mapreduce.Job:  map 59% reduce 0%
+19/11/05 23:04:46 INFO mapreduce.Job:  map 60% reduce 0%
+19/11/05 23:04:49 INFO mapreduce.Job:  map 61% reduce 0%
+19/11/05 23:04:52 INFO mapreduce.Job:  map 62% reduce 0%
+19/11/05 23:04:55 INFO mapreduce.Job:  map 63% reduce 0%
+19/11/05 23:04:58 INFO mapreduce.Job:  map 64% reduce 0%
+19/11/05 23:05:00 INFO mapreduce.Job:  map 65% reduce 0%
+19/11/05 23:05:02 INFO mapreduce.Job:  map 66% reduce 0%
+19/11/05 23:05:05 INFO mapreduce.Job:  map 67% reduce 0%
+19/11/05 23:05:07 INFO mapreduce.Job:  map 68% reduce 0%
+19/11/05 23:05:10 INFO mapreduce.Job:  map 69% reduce 0%
+19/11/05 23:05:12 INFO mapreduce.Job:  map 70% reduce 0%
+19/11/05 23:05:15 INFO mapreduce.Job:  map 71% reduce 0%
+19/11/05 23:05:17 INFO mapreduce.Job:  map 72% reduce 0%
+19/11/05 23:05:19 INFO mapreduce.Job:  map 73% reduce 0%
+19/11/05 23:05:21 INFO mapreduce.Job:  map 74% reduce 0%
+19/11/05 23:05:24 INFO mapreduce.Job:  map 75% reduce 0%
+19/11/05 23:05:30 INFO mapreduce.Job:  map 76% reduce 0%
+19/11/05 23:05:33 INFO mapreduce.Job:  map 77% reduce 0%
+19/11/05 23:05:36 INFO mapreduce.Job:  map 78% reduce 0%
+19/11/05 23:05:38 INFO mapreduce.Job:  map 79% reduce 0%
+19/11/05 23:05:41 INFO mapreduce.Job:  map 80% reduce 0%
+19/11/05 23:05:43 INFO mapreduce.Job:  map 81% reduce 0%
+19/11/05 23:05:45 INFO mapreduce.Job:  map 82% reduce 0%
+19/11/05 23:05:47 INFO mapreduce.Job:  map 83% reduce 0%
+19/11/05 23:05:49 INFO mapreduce.Job:  map 84% reduce 0%
+19/11/05 23:05:51 INFO mapreduce.Job:  map 85% reduce 0%
+19/11/05 23:05:53 INFO mapreduce.Job:  map 86% reduce 0%
+19/11/05 23:05:55 INFO mapreduce.Job:  map 87% reduce 0%
+19/11/05 23:05:56 INFO mapreduce.Job:  map 88% reduce 0%
+19/11/05 23:05:57 INFO mapreduce.Job:  map 89% reduce 0%
+19/11/05 23:05:59 INFO mapreduce.Job:  map 90% reduce 0%
+19/11/05 23:06:00 INFO mapreduce.Job:  map 91% reduce 0%
+19/11/05 23:06:01 INFO mapreduce.Job:  map 92% reduce 0%
+19/11/05 23:06:02 INFO mapreduce.Job:  map 93% reduce 0%
+19/11/05 23:06:04 INFO mapreduce.Job:  map 94% reduce 0%
+19/11/05 23:06:07 INFO mapreduce.Job:  map 95% reduce 0%
+19/11/05 23:06:10 INFO mapreduce.Job:  map 96% reduce 0%
+19/11/05 23:06:12 INFO mapreduce.Job:  map 96% reduce 1%
+19/11/05 23:06:14 INFO mapreduce.Job:  map 96% reduce 2%
+19/11/05 23:06:15 INFO mapreduce.Job:  map 96% reduce 3%
+19/11/05 23:06:17 INFO mapreduce.Job:  map 97% reduce 3%
+19/11/05 23:06:26 INFO mapreduce.Job:  map 98% reduce 3%
+19/11/05 23:06:35 INFO mapreduce.Job:  map 99% reduce 3%
+19/11/05 23:06:42 INFO mapreduce.Job:  map 99% reduce 4%
+19/11/05 23:06:43 INFO mapreduce.Job:  map 99% reduce 5%
+19/11/05 23:06:46 INFO mapreduce.Job:  map 99% reduce 6%
+19/11/05 23:06:50 INFO mapreduce.Job:  map 99% reduce 7%
+19/11/05 23:06:59 INFO mapreduce.Job:  map 100% reduce 7%
+19/11/05 23:07:10 INFO mapreduce.Job:  map 100% reduce 10%
+19/11/05 23:07:11 INFO mapreduce.Job:  map 100% reduce 13%
+19/11/05 23:07:12 INFO mapreduce.Job:  map 100% reduce 15%
+19/11/05 23:07:13 INFO mapreduce.Job:  map 100% reduce 16%
+19/11/05 23:07:14 INFO mapreduce.Job:  map 100% reduce 19%
+19/11/05 23:07:15 INFO mapreduce.Job:  map 100% reduce 20%
+19/11/05 23:07:16 INFO mapreduce.Job:  map 100% reduce 21%
+19/11/05 23:07:17 INFO mapreduce.Job:  map 100% reduce 25%
+19/11/05 23:07:18 INFO mapreduce.Job:  map 100% reduce 26%
+19/11/05 23:07:19 INFO mapreduce.Job:  map 100% reduce 28%
+19/11/05 23:07:20 INFO mapreduce.Job:  map 100% reduce 29%
+19/11/05 23:07:21 INFO mapreduce.Job:  map 100% reduce 30%
+19/11/05 23:07:22 INFO mapreduce.Job:  map 100% reduce 31%
+19/11/05 23:07:49 INFO mapreduce.Job:  map 100% reduce 32%
+19/11/05 23:07:50 INFO mapreduce.Job:  map 100% reduce 33%
+19/11/05 23:07:51 INFO mapreduce.Job:  map 100% reduce 38%
+19/11/05 23:07:52 INFO mapreduce.Job:  map 100% reduce 46%
+19/11/05 23:07:53 INFO mapreduce.Job:  map 100% reduce 58%
+19/11/05 23:07:54 INFO mapreduce.Job:  map 100% reduce 63%
+19/11/05 23:07:55 INFO mapreduce.Job:  map 100% reduce 65%
+19/11/05 23:07:57 INFO mapreduce.Job:  map 100% reduce 66%
+19/11/05 23:07:59 INFO mapreduce.Job:  map 100% reduce 67%
+19/11/05 23:08:00 INFO mapreduce.Job:  map 100% reduce 68%
+19/11/05 23:08:02 INFO mapreduce.Job:  map 100% reduce 69%
+19/11/05 23:08:03 INFO mapreduce.Job:  map 100% reduce 70%
+19/11/05 23:08:05 INFO mapreduce.Job:  map 100% reduce 71%
+19/11/05 23:08:07 INFO mapreduce.Job:  map 100% reduce 72%
+19/11/05 23:08:09 INFO mapreduce.Job:  map 100% reduce 73%
+19/11/05 23:08:11 INFO mapreduce.Job:  map 100% reduce 74%
+19/11/05 23:08:13 INFO mapreduce.Job:  map 100% reduce 75%
+19/11/05 23:08:15 INFO mapreduce.Job:  map 100% reduce 76%
+19/11/05 23:08:17 INFO mapreduce.Job:  map 100% reduce 77%
+19/11/05 23:08:19 INFO mapreduce.Job:  map 100% reduce 78%
+19/11/05 23:08:21 INFO mapreduce.Job:  map 100% reduce 79%
+19/11/05 23:08:23 INFO mapreduce.Job:  map 100% reduce 80%
+19/11/05 23:08:24 INFO mapreduce.Job:  map 100% reduce 81%
+19/11/05 23:08:26 INFO mapreduce.Job:  map 100% reduce 82%
+19/11/05 23:08:28 INFO mapreduce.Job:  map 100% reduce 83%
+19/11/05 23:08:30 INFO mapreduce.Job:  map 100% reduce 84%
+19/11/05 23:08:32 INFO mapreduce.Job:  map 100% reduce 85%
+19/11/05 23:08:33 INFO mapreduce.Job:  map 100% reduce 86%
+19/11/05 23:08:35 INFO mapreduce.Job:  map 100% reduce 87%
+19/11/05 23:08:37 INFO mapreduce.Job:  map 100% reduce 88%
+19/11/05 23:08:40 INFO mapreduce.Job:  map 100% reduce 89%
+19/11/05 23:08:42 INFO mapreduce.Job:  map 100% reduce 90%
+19/11/05 23:08:44 INFO mapreduce.Job:  map 100% reduce 91%
+19/11/05 23:08:46 INFO mapreduce.Job:  map 100% reduce 92%
+19/11/05 23:08:48 INFO mapreduce.Job:  map 100% reduce 93%
+19/11/05 23:08:51 INFO mapreduce.Job:  map 100% reduce 94%
+19/11/05 23:08:56 INFO mapreduce.Job:  map 100% reduce 95%
+19/11/05 23:09:00 INFO mapreduce.Job:  map 100% reduce 96%
+19/11/05 23:09:03 INFO mapreduce.Job:  map 100% reduce 97%
+19/11/05 23:09:06 INFO mapreduce.Job:  map 100% reduce 98%
+19/11/05 23:09:22 INFO mapreduce.Job:  map 100% reduce 99%
+19/11/05 23:09:45 INFO mapreduce.Job:  map 100% reduce 100%
+19/11/05 23:10:55 INFO mapreduce.Job: Job job_1567079137842_609325 completed successfully
+19/11/05 23:10:55 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=18683847374
+		FILE: Number of bytes written=53617018670
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=160213910078
+		HDFS: Number of bytes written=201673315217
+		HDFS: Number of read operations=3600
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=800
+	Job Counters 
+		Launched map tasks=1000
+		Launched reduce tasks=200
+		Data-local map tasks=958
+		Rack-local map tasks=42
+		Total time spent by all maps in occupied slots (ms)=312115936
+		Total time spent by all reduces in occupied slots (ms)=144500016
+		Total time spent by all map tasks (ms)=39014492
+		Total time spent by all reduce tasks (ms)=24083336
+		Total vcore-milliseconds taken by all map tasks=39014492
+		Total vcore-milliseconds taken by all reduce tasks=24083336
+		Total megabyte-milliseconds taken by all map tasks=159803359232
+		Total megabyte-milliseconds taken by all reduce tasks=73984008192
+	Map-Reduce Framework
+		Map input records=74799857
+		Map output records=241811836
+		Map output bytes=149836269044
+		Map output materialized bytes=34781073468
+		Input split bytes=174000
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=8172840
+		Reduce shuffle bytes=34781073468
+		Reduce input records=241811836
+		Reduce output records=151068366
+		Spilled Records=483623672
+		Shuffled Maps =200000
+		Failed Shuffles=0
+		Merged Map outputs=200000
+		GC time elapsed (ms)=307325
+		CPU time spent (ms)=57284410
+		Physical memory (bytes) snapshot=1631398760448
+		Virtual memory (bytes) snapshot=6291796099072
+		Total committed heap usage (bytes)=2223347597312
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=160213736078
+	File Output Format Counters 
+		Bytes Written=201673315217
+19/11/05 23:10:55 INFO streaming.StreamJob: Output directory: /user/ad_user/ctr_space/model_train/shitu/20191029/
++ judge_result hadoop_run
++ [[ 0 -ne 0 ]]
++ echo 'hadoop_run success.'
+hadoop_run success.
++ ADFEA_DIR=/user/ad_user/ctr_space/model_train/shitu/adfea/
++ ADFEA_PATH=/user/ad_user/ctr_space/model_train/shitu/adfea//20191029/
++ INS_DIR=/user/ad_user/ctr_space/model_train/shitu/ins/
++ INS_PATH=/user/ad_user/ctr_space/model_train/shitu/ins//20191029/
++ STATINFO_DIR=/user/ad_user/ctr_space/model_train/shitu/statinfo/
++ STATINFO_PATH=/user/ad_user/ctr_space/model_train/shitu/statinfo//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/adfea//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/adfea//20191029/
+19/11/05 23:11:01 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/adfea/20191029' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/adfea//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/ins//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/ins//20191029/
+19/11/05 23:11:10 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/ins/20191029' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/ins//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/statinfo//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/statinfo//20191029/
+19/11/05 23:11:19 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/statinfo/20191029' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/statinfo//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191029//part-*-A' /user/ad_user/ctr_space/model_train/shitu/adfea//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/adfea//20191029//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191029//part-*-B' /user/ad_user/ctr_space/model_train/shitu/statinfo//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/statinfo//20191029//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191029//part-*-C' /user/ad_user/ctr_space/model_train/shitu/ins//20191029/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/ins//20191029//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191029/
+19/11/05 23:11:48 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191029' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ mylog 'task[20191029] success!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:11:49
++ echo '[20191105-23:11:49] task[20191029]' 'success!'
+[20191105-23:11:49] task[20191029] success!
++ exit 0
++ bash -x run_shitu.sh 20191030
++ bash /home/ling.fang/kinit_ad_user.sh
++ USER_NAME=ad_user
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ common_file=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++ source /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
+++ bash /home/ling.fang/kinit_ad_user.sh
+++ HADOOP_BIN=/usr/local/hadoop-2.6.3/bin/hadoop
+++++ dirname /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++++ cd /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools
++++ pwd
+++ ROOT_PATH=/home/ad_user/personal/ling.fang/script/tools
++ '[' 1 -ge 1 ']'
++ DATE=20191030
++ '[' 1 -eq 2 ']'
++ JOB_TAG=
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ INPUTDIR='-input "/user/ad_user/ctr_space/ed_join_click/join/20191030/" '
++ echo -input '"/user/ad_user/ctr_space/ed_join_click/join/20191030/"'
+-input "/user/ad_user/ctr_space/ed_join_click/join/20191030/"
++ OUTPUTDIR=/user/ad_user/ctr_space/model_train/shitu/20191030/
++ PLID_EDCLKDIR=/user/ad_user/ctr_space/plid_stat_info/json
++ done_file=/user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS
++ loop_check /user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS 140 1
++ file=/user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS
++ ready=0
++ check_time=140
++ mode=1
++ echo 'input params:/user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS 140 1'
+input params:/user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS 140 1
++ '[' 3 -ne 3 ']'
++ '[' 140 -gt 0 ']'
++ '[' 1 -eq 1 ']'
++ hadoop_check_ready
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS
++ ready=1
++ '[' 1 -eq 1 ']'
++ mylog '/user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS is ready!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:11:52
++ echo '[20191105-23:11:52] /user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS' is 'ready!'
+[20191105-23:11:52] /user/ad_user/ctr_space/ed_join_click/join/20191030/_SUCCESS is ready!
++ return 0
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -cat '/user/ad_user/ctr_space/plid_stat_info/json/*'
+cat: `/user/ad_user/ctr_space/plid_stat_info/json/*': No such file or directory
++ OWNER_INFO=ad_user@cootek.cn
++ TASK_NAME=naga_ctr_generate_shitu_log
++ hadoop_run
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191030/
+19/11/05 23:11:57 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191030' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop jar /usr/local/hadoop-2.6.3/share/hadoop/tools/lib/hadoop-streaming-2.6.3.jar -libjars /home/ling.fang/script/tools/mr_plugins-1.0.jar -files script -D map.output.key.field.separator=# -D num.key.fields.for.partition=1 -D mapreduce.map.memory.mb=4096 -D mapreduce.map.java.opts=-Xmx3276m -Dmapred.map.tasks.speculative.execution=false -Dmapred.reduce.tasks.speculative.execution=false -Dstream.non.zero.exit.is.failure=false -Dmapred.job.priority=HIGH -Dmapreduce.job.queuename=root.ad-root.etl.dailyetl.high -Dmapred.map.tasks=1000 -Dmapred.reduce.tasks=200 -Dmapred.job.map.capacity=1000 -Dmapred.job.reduce.capacity=200 -Dmapred.job.name=naga_ctr_generate_shitu_log_20191030 -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner -outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat -mapper 'python script/mapper.py' -reducer 'python script/reducer.py' -input '"/user/ad_user/ctr_space/ed_join_click/join/20191030/"' -output /user/ad_user/ctr_space/model_train/shitu/20191030/
+19/11/05 23:12:00 INFO Configuration.deprecation: map.output.key.field.separator is deprecated. Instead, use mapreduce.map.output.key.field.separator
+19/11/05 23:12:00 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+19/11/05 23:12:00 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+19/11/05 23:12:00 INFO Configuration.deprecation: mapred.job.priority is deprecated. Instead, use mapreduce.job.priority
+19/11/05 23:12:00 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/11/05 23:12:00 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+19/11/05 23:12:00 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [/tmp/hadoop-unjar5570642581425513001/] [] /tmp/streamjob3570834730807191914.jar tmpDir=null
+19/11/05 23:12:01 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:12:01 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:12:02 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4044555 for ad_user on ha-hdfs:cootek
+19/11/05 23:12:02 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044555 for ad_user)
+19/11/05 23:12:02 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:12:02 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 1f 6a 39 8a 01 6e 60 2b ee 39 8d 30 fb 53 8e 02 7f
+19/11/05 23:12:09 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library from the embedded binaries
+19/11/05 23:12:09 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 52decc77982b58949890770d22720a91adce0c3f]
+19/11/05 23:12:09 INFO mapred.FileInputFormat: Total input paths to process : 1000
+19/11/05 23:12:10 INFO mapreduce.JobSubmitter: number of splits:1000
+19/11/05 23:12:10 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1567079137842_609497
+19/11/05 23:12:10 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044555 for ad_user)
+19/11/05 23:12:10 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:12:10 WARN token.Token: Cannot find class for token kind kms-dt
+Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 1f 6a 39 8a 01 6e 60 2b ee 39 8d 30 fb 53 8e 02 7f
+19/11/05 23:12:10 INFO impl.YarnClientImpl: Submitted application application_1567079137842_609497
+19/11/05 23:12:10 INFO mapreduce.Job: The url to track the job: http://hadoop2-namenode.corp.cootek.com:8088/proxy/application_1567079137842_609497/
+19/11/05 23:12:10 INFO mapreduce.Job: Running job: job_1567079137842_609497
+19/11/05 23:12:20 INFO mapreduce.Job: Job job_1567079137842_609497 running in uber mode : false
+19/11/05 23:12:21 INFO mapreduce.Job:  map 0% reduce 0%
+19/11/05 23:12:41 INFO mapreduce.Job:  map 1% reduce 0%
+19/11/05 23:12:43 INFO mapreduce.Job:  map 2% reduce 0%
+19/11/05 23:12:44 INFO mapreduce.Job:  map 3% reduce 0%
+19/11/05 23:12:45 INFO mapreduce.Job:  map 4% reduce 0%
+19/11/05 23:12:47 INFO mapreduce.Job:  map 6% reduce 0%
+19/11/05 23:12:48 INFO mapreduce.Job:  map 7% reduce 0%
+19/11/05 23:12:49 INFO mapreduce.Job:  map 8% reduce 0%
+19/11/05 23:12:50 INFO mapreduce.Job:  map 9% reduce 0%
+19/11/05 23:12:51 INFO mapreduce.Job:  map 10% reduce 0%
+19/11/05 23:12:52 INFO mapreduce.Job:  map 12% reduce 0%
+19/11/05 23:12:53 INFO mapreduce.Job:  map 13% reduce 0%
+19/11/05 23:12:54 INFO mapreduce.Job:  map 15% reduce 0%
+19/11/05 23:12:55 INFO mapreduce.Job:  map 16% reduce 0%
+19/11/05 23:12:57 INFO mapreduce.Job:  map 17% reduce 0%
+19/11/05 23:12:58 INFO mapreduce.Job:  map 19% reduce 0%
+19/11/05 23:12:59 INFO mapreduce.Job:  map 20% reduce 0%
+19/11/05 23:13:00 INFO mapreduce.Job:  map 21% reduce 0%
+19/11/05 23:13:01 INFO mapreduce.Job:  map 23% reduce 0%
+19/11/05 23:13:02 INFO mapreduce.Job:  map 24% reduce 0%
+19/11/05 23:13:03 INFO mapreduce.Job:  map 26% reduce 0%
+19/11/05 23:13:04 INFO mapreduce.Job:  map 28% reduce 0%
+19/11/05 23:13:05 INFO mapreduce.Job:  map 29% reduce 0%
+19/11/05 23:13:06 INFO mapreduce.Job:  map 31% reduce 0%
+19/11/05 23:13:07 INFO mapreduce.Job:  map 33% reduce 0%
+19/11/05 23:13:08 INFO mapreduce.Job:  map 35% reduce 0%
+19/11/05 23:13:09 INFO mapreduce.Job:  map 37% reduce 0%
+19/11/05 23:13:10 INFO mapreduce.Job:  map 39% reduce 0%
+19/11/05 23:13:11 INFO mapreduce.Job:  map 41% reduce 0%
+19/11/05 23:13:12 INFO mapreduce.Job:  map 44% reduce 0%
+19/11/05 23:13:13 INFO mapreduce.Job:  map 47% reduce 0%
+19/11/05 23:13:14 INFO mapreduce.Job:  map 50% reduce 0%
+19/11/05 23:13:15 INFO mapreduce.Job:  map 52% reduce 0%
+19/11/05 23:13:16 INFO mapreduce.Job:  map 53% reduce 0%
+19/11/05 23:13:17 INFO mapreduce.Job:  map 55% reduce 0%
+19/11/05 23:13:18 INFO mapreduce.Job:  map 56% reduce 0%
+19/11/05 23:13:19 INFO mapreduce.Job:  map 57% reduce 0%
+19/11/05 23:13:20 INFO mapreduce.Job:  map 58% reduce 0%
+19/11/05 23:13:21 INFO mapreduce.Job:  map 60% reduce 0%
+19/11/05 23:13:22 INFO mapreduce.Job:  map 61% reduce 0%
+19/11/05 23:13:23 INFO mapreduce.Job:  map 62% reduce 0%
+19/11/05 23:13:24 INFO mapreduce.Job:  map 64% reduce 0%
+19/11/05 23:13:25 INFO mapreduce.Job:  map 65% reduce 0%
+19/11/05 23:13:26 INFO mapreduce.Job:  map 66% reduce 0%
+19/11/05 23:13:27 INFO mapreduce.Job:  map 67% reduce 0%
+19/11/05 23:13:28 INFO mapreduce.Job:  map 68% reduce 0%
+19/11/05 23:13:29 INFO mapreduce.Job:  map 69% reduce 0%
+19/11/05 23:13:30 INFO mapreduce.Job:  map 70% reduce 0%
+19/11/05 23:13:31 INFO mapreduce.Job:  map 71% reduce 0%
+19/11/05 23:13:32 INFO mapreduce.Job:  map 72% reduce 0%
+19/11/05 23:13:33 INFO mapreduce.Job:  map 73% reduce 0%
+19/11/05 23:13:34 INFO mapreduce.Job:  map 74% reduce 0%
+19/11/05 23:13:35 INFO mapreduce.Job:  map 75% reduce 0%
+19/11/05 23:13:36 INFO mapreduce.Job:  map 76% reduce 0%
+19/11/05 23:13:37 INFO mapreduce.Job:  map 77% reduce 0%
+19/11/05 23:13:38 INFO mapreduce.Job:  map 78% reduce 0%
+19/11/05 23:13:39 INFO mapreduce.Job:  map 79% reduce 0%
+19/11/05 23:13:41 INFO mapreduce.Job:  map 80% reduce 0%
+19/11/05 23:13:42 INFO mapreduce.Job:  map 81% reduce 0%
+19/11/05 23:13:43 INFO mapreduce.Job:  map 82% reduce 0%
+19/11/05 23:13:44 INFO mapreduce.Job:  map 83% reduce 0%
+19/11/05 23:13:45 INFO mapreduce.Job:  map 84% reduce 0%
+19/11/05 23:13:46 INFO mapreduce.Job:  map 85% reduce 0%
+19/11/05 23:13:47 INFO mapreduce.Job:  map 86% reduce 0%
+19/11/05 23:13:48 INFO mapreduce.Job:  map 88% reduce 0%
+19/11/05 23:13:49 INFO mapreduce.Job:  map 89% reduce 0%
+19/11/05 23:13:50 INFO mapreduce.Job:  map 91% reduce 0%
+19/11/05 23:13:51 INFO mapreduce.Job:  map 93% reduce 0%
+19/11/05 23:13:52 INFO mapreduce.Job:  map 95% reduce 0%
+19/11/05 23:13:53 INFO mapreduce.Job:  map 97% reduce 0%
+19/11/05 23:13:55 INFO mapreduce.Job:  map 98% reduce 0%
+19/11/05 23:13:56 INFO mapreduce.Job:  map 99% reduce 0%
+19/11/05 23:14:00 INFO mapreduce.Job:  map 100% reduce 0%
+19/11/05 23:14:01 INFO mapreduce.Job:  map 100% reduce 3%
+19/11/05 23:14:02 INFO mapreduce.Job:  map 100% reduce 7%
+19/11/05 23:14:03 INFO mapreduce.Job:  map 100% reduce 16%
+19/11/05 23:14:04 INFO mapreduce.Job:  map 100% reduce 26%
+19/11/05 23:14:05 INFO mapreduce.Job:  map 100% reduce 32%
+19/11/05 23:14:06 INFO mapreduce.Job:  map 100% reduce 33%
+19/11/05 23:14:11 INFO mapreduce.Job:  map 100% reduce 34%
+19/11/05 23:14:12 INFO mapreduce.Job:  map 100% reduce 37%
+19/11/05 23:14:13 INFO mapreduce.Job:  map 100% reduce 48%
+19/11/05 23:14:14 INFO mapreduce.Job:  map 100% reduce 57%
+19/11/05 23:14:15 INFO mapreduce.Job:  map 100% reduce 62%
+19/11/05 23:14:16 INFO mapreduce.Job:  map 100% reduce 66%
+19/11/05 23:14:17 INFO mapreduce.Job:  map 100% reduce 67%
+19/11/05 23:14:18 INFO mapreduce.Job:  map 100% reduce 68%
+19/11/05 23:14:19 INFO mapreduce.Job:  map 100% reduce 69%
+19/11/05 23:14:21 INFO mapreduce.Job:  map 100% reduce 70%
+19/11/05 23:14:23 INFO mapreduce.Job:  map 100% reduce 71%
+19/11/05 23:14:25 INFO mapreduce.Job:  map 100% reduce 72%
+19/11/05 23:14:27 INFO mapreduce.Job:  map 100% reduce 73%
+19/11/05 23:14:28 INFO mapreduce.Job:  map 100% reduce 74%
+19/11/05 23:14:30 INFO mapreduce.Job:  map 100% reduce 75%
+19/11/05 23:14:32 INFO mapreduce.Job:  map 100% reduce 76%
+19/11/05 23:14:34 INFO mapreduce.Job:  map 100% reduce 77%
+19/11/05 23:14:36 INFO mapreduce.Job:  map 100% reduce 78%
+19/11/05 23:14:37 INFO mapreduce.Job:  map 100% reduce 79%
+19/11/05 23:14:39 INFO mapreduce.Job:  map 100% reduce 80%
+19/11/05 23:14:41 INFO mapreduce.Job:  map 100% reduce 81%
+19/11/05 23:14:43 INFO mapreduce.Job:  map 100% reduce 82%
+19/11/05 23:14:45 INFO mapreduce.Job:  map 100% reduce 83%
+19/11/05 23:14:46 INFO mapreduce.Job:  map 100% reduce 84%
+19/11/05 23:14:49 INFO mapreduce.Job:  map 100% reduce 85%
+19/11/05 23:14:50 INFO mapreduce.Job:  map 100% reduce 86%
+19/11/05 23:14:52 INFO mapreduce.Job:  map 100% reduce 87%
+19/11/05 23:14:54 INFO mapreduce.Job:  map 100% reduce 88%
+19/11/05 23:14:56 INFO mapreduce.Job:  map 100% reduce 89%
+19/11/05 23:14:58 INFO mapreduce.Job:  map 100% reduce 90%
+19/11/05 23:14:59 INFO mapreduce.Job:  map 100% reduce 91%
+19/11/05 23:15:01 INFO mapreduce.Job:  map 100% reduce 92%
+19/11/05 23:15:03 INFO mapreduce.Job:  map 100% reduce 93%
+19/11/05 23:15:05 INFO mapreduce.Job:  map 100% reduce 94%
+19/11/05 23:15:08 INFO mapreduce.Job:  map 100% reduce 95%
+19/11/05 23:15:12 INFO mapreduce.Job:  map 100% reduce 96%
+19/11/05 23:15:15 INFO mapreduce.Job:  map 100% reduce 97%
+19/11/05 23:15:21 INFO mapreduce.Job:  map 100% reduce 98%
+19/11/05 23:15:27 INFO mapreduce.Job:  map 100% reduce 99%
+19/11/05 23:15:45 INFO mapreduce.Job:  map 100% reduce 100%
+19/11/05 23:17:40 INFO mapreduce.Job: Job job_1567079137842_609497 completed successfully
+19/11/05 23:17:40 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=18973444643
+		FILE: Number of bytes written=54184601634
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=161303633310
+		HDFS: Number of bytes written=203624432702
+		HDFS: Number of read operations=3600
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=800
+	Job Counters 
+		Launched map tasks=1000
+		Launched reduce tasks=200
+		Data-local map tasks=929
+		Rack-local map tasks=71
+		Total time spent by all maps in occupied slots (ms)=351538376
+		Total time spent by all reduces in occupied slots (ms)=105039624
+		Total time spent by all map tasks (ms)=43942297
+		Total time spent by all reduce tasks (ms)=17506604
+		Total vcore-milliseconds taken by all map tasks=43942297
+		Total vcore-milliseconds taken by all reduce tasks=17506604
+		Total megabyte-milliseconds taken by all map tasks=179987648512
+		Total megabyte-milliseconds taken by all reduce tasks=53780287488
+	Map-Reduce Framework
+		Map input records=75517610
+		Map output records=246047831
+		Map output bytes=151413825144
+		Map output materialized bytes=35059059163
+		Input split bytes=174000
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=8369238
+		Reduce shuffle bytes=35059059163
+		Reduce input records=246047831
+		Reduce output records=152560813
+		Spilled Records=492095662
+		Shuffled Maps =200000
+		Failed Shuffles=0
+		Merged Map outputs=200000
+		GC time elapsed (ms)=414339
+		CPU time spent (ms)=58585960
+		Physical memory (bytes) snapshot=1630772764672
+		Virtual memory (bytes) snapshot=6292684275712
+		Total committed heap usage (bytes)=2228494532608
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=161303459310
+	File Output Format Counters 
+		Bytes Written=203624432702
+19/11/05 23:17:40 INFO streaming.StreamJob: Output directory: /user/ad_user/ctr_space/model_train/shitu/20191030/
++ judge_result hadoop_run
++ [[ 0 -ne 0 ]]
++ echo 'hadoop_run success.'
+hadoop_run success.
++ ADFEA_DIR=/user/ad_user/ctr_space/model_train/shitu/adfea/
++ ADFEA_PATH=/user/ad_user/ctr_space/model_train/shitu/adfea//20191030/
++ INS_DIR=/user/ad_user/ctr_space/model_train/shitu/ins/
++ INS_PATH=/user/ad_user/ctr_space/model_train/shitu/ins//20191030/
++ STATINFO_DIR=/user/ad_user/ctr_space/model_train/shitu/statinfo/
++ STATINFO_PATH=/user/ad_user/ctr_space/model_train/shitu/statinfo//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/adfea//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/adfea//20191030/
+19/11/05 23:17:46 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/adfea/20191030' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/adfea//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/ins//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/ins//20191030/
+19/11/05 23:17:54 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/ins/20191030' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/ins//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/statinfo//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/statinfo//20191030/
+19/11/05 23:18:03 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/statinfo/20191030' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/statinfo//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191030//part-*-A' /user/ad_user/ctr_space/model_train/shitu/adfea//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/adfea//20191030//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191030//part-*-B' /user/ad_user/ctr_space/model_train/shitu/statinfo//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/statinfo//20191030//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191030//part-*-C' /user/ad_user/ctr_space/model_train/shitu/ins//20191030/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/ins//20191030//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191030/
+19/11/05 23:18:32 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191030' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ mylog 'task[20191030] success!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:18:33
++ echo '[20191105-23:18:33] task[20191030]' 'success!'
+[20191105-23:18:33] task[20191030] success!
++ exit 0
++ bash -x run_shitu.sh 20191031
++ bash /home/ling.fang/kinit_ad_user.sh
++ USER_NAME=ad_user
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ common_file=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++ source /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
+++ bash /home/ling.fang/kinit_ad_user.sh
+++ HADOOP_BIN=/usr/local/hadoop-2.6.3/bin/hadoop
+++++ dirname /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++++ cd /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools
++++ pwd
+++ ROOT_PATH=/home/ad_user/personal/ling.fang/script/tools
++ '[' 1 -ge 1 ']'
++ DATE=20191031
++ '[' 1 -eq 2 ']'
++ JOB_TAG=
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ INPUTDIR='-input "/user/ad_user/ctr_space/ed_join_click/join/20191031/" '
++ echo -input '"/user/ad_user/ctr_space/ed_join_click/join/20191031/"'
+-input "/user/ad_user/ctr_space/ed_join_click/join/20191031/"
++ OUTPUTDIR=/user/ad_user/ctr_space/model_train/shitu/20191031/
++ PLID_EDCLKDIR=/user/ad_user/ctr_space/plid_stat_info/json
++ done_file=/user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS
++ loop_check /user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS 140 1
++ file=/user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS
++ ready=0
++ check_time=140
++ mode=1
++ echo 'input params:/user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS 140 1'
+input params:/user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS 140 1
++ '[' 3 -ne 3 ']'
++ '[' 140 -gt 0 ']'
++ '[' 1 -eq 1 ']'
++ hadoop_check_ready
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS
++ ready=1
++ '[' 1 -eq 1 ']'
++ mylog '/user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS is ready!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:18:35
++ echo '[20191105-23:18:35] /user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS' is 'ready!'
+[20191105-23:18:35] /user/ad_user/ctr_space/ed_join_click/join/20191031/_SUCCESS is ready!
++ return 0
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -cat '/user/ad_user/ctr_space/plid_stat_info/json/*'
+cat: `/user/ad_user/ctr_space/plid_stat_info/json/*': No such file or directory
++ OWNER_INFO=ad_user@cootek.cn
++ TASK_NAME=naga_ctr_generate_shitu_log
++ hadoop_run
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191031/
+rm: `/user/ad_user/ctr_space/model_train/shitu/20191031/': No such file or directory
++ /usr/local/hadoop-2.6.3/bin/hadoop jar /usr/local/hadoop-2.6.3/share/hadoop/tools/lib/hadoop-streaming-2.6.3.jar -libjars /home/ling.fang/script/tools/mr_plugins-1.0.jar -files script -D map.output.key.field.separator=# -D num.key.fields.for.partition=1 -D mapreduce.map.memory.mb=4096 -D mapreduce.map.java.opts=-Xmx3276m -Dmapred.map.tasks.speculative.execution=false -Dmapred.reduce.tasks.speculative.execution=false -Dstream.non.zero.exit.is.failure=false -Dmapred.job.priority=HIGH -Dmapreduce.job.queuename=root.ad-root.etl.dailyetl.high -Dmapred.map.tasks=1000 -Dmapred.reduce.tasks=200 -Dmapred.job.map.capacity=1000 -Dmapred.job.reduce.capacity=200 -Dmapred.job.name=naga_ctr_generate_shitu_log_20191031 -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner -outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat -mapper 'python script/mapper.py' -reducer 'python script/reducer.py' -input '"/user/ad_user/ctr_space/ed_join_click/join/20191031/"' -output /user/ad_user/ctr_space/model_train/shitu/20191031/
+19/11/05 23:18:43 INFO Configuration.deprecation: map.output.key.field.separator is deprecated. Instead, use mapreduce.map.output.key.field.separator
+19/11/05 23:18:43 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+19/11/05 23:18:43 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+19/11/05 23:18:43 INFO Configuration.deprecation: mapred.job.priority is deprecated. Instead, use mapreduce.job.priority
+19/11/05 23:18:43 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/11/05 23:18:43 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+19/11/05 23:18:43 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [/tmp/hadoop-unjar4768628566376354667/] [] /tmp/streamjob2856207877021630020.jar tmpDir=null
+19/11/05 23:18:44 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:18:44 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:18:44 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4044637 for ad_user on ha-hdfs:cootek
+19/11/05 23:18:45 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044637 for ad_user)
+19/11/05 23:18:45 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:18:45 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 25 8f d6 8a 01 6e 60 32 13 d6 8d 30 fb a4 8e 02 7f
+19/11/05 23:18:49 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library from the embedded binaries
+19/11/05 23:18:49 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 52decc77982b58949890770d22720a91adce0c3f]
+19/11/05 23:18:50 INFO mapred.FileInputFormat: Total input paths to process : 1000
+19/11/05 23:18:51 INFO mapreduce.JobSubmitter: number of splits:1000
+19/11/05 23:18:51 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1567079137842_609570
+19/11/05 23:18:51 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044637 for ad_user)
+19/11/05 23:18:51 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:18:51 WARN token.Token: Cannot find class for token kind kms-dt
+Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 25 8f d6 8a 01 6e 60 32 13 d6 8d 30 fb a4 8e 02 7f
+19/11/05 23:18:52 INFO impl.YarnClientImpl: Submitted application application_1567079137842_609570
+19/11/05 23:18:52 INFO mapreduce.Job: The url to track the job: http://hadoop2-namenode.corp.cootek.com:8088/proxy/application_1567079137842_609570/
+19/11/05 23:18:52 INFO mapreduce.Job: Running job: job_1567079137842_609570
+19/11/05 23:19:03 INFO mapreduce.Job: Job job_1567079137842_609570 running in uber mode : false
+19/11/05 23:19:03 INFO mapreduce.Job:  map 0% reduce 0%
+19/11/05 23:19:22 INFO mapreduce.Job:  map 1% reduce 0%
+19/11/05 23:19:24 INFO mapreduce.Job:  map 2% reduce 0%
+19/11/05 23:19:27 INFO mapreduce.Job:  map 3% reduce 0%
+19/11/05 23:19:28 INFO mapreduce.Job:  map 4% reduce 0%
+19/11/05 23:19:29 INFO mapreduce.Job:  map 5% reduce 0%
+19/11/05 23:19:30 INFO mapreduce.Job:  map 6% reduce 0%
+19/11/05 23:19:31 INFO mapreduce.Job:  map 7% reduce 0%
+19/11/05 23:19:32 INFO mapreduce.Job:  map 8% reduce 0%
+19/11/05 23:19:33 INFO mapreduce.Job:  map 10% reduce 0%
+19/11/05 23:19:34 INFO mapreduce.Job:  map 11% reduce 0%
+19/11/05 23:19:35 INFO mapreduce.Job:  map 12% reduce 0%
+19/11/05 23:19:36 INFO mapreduce.Job:  map 13% reduce 0%
+19/11/05 23:19:37 INFO mapreduce.Job:  map 15% reduce 0%
+19/11/05 23:19:38 INFO mapreduce.Job:  map 16% reduce 0%
+19/11/05 23:19:39 INFO mapreduce.Job:  map 17% reduce 0%
+19/11/05 23:19:40 INFO mapreduce.Job:  map 18% reduce 0%
+19/11/05 23:19:41 INFO mapreduce.Job:  map 19% reduce 0%
+19/11/05 23:19:42 INFO mapreduce.Job:  map 21% reduce 0%
+19/11/05 23:19:43 INFO mapreduce.Job:  map 22% reduce 0%
+19/11/05 23:19:44 INFO mapreduce.Job:  map 24% reduce 0%
+19/11/05 23:19:45 INFO mapreduce.Job:  map 26% reduce 0%
+19/11/05 23:19:46 INFO mapreduce.Job:  map 27% reduce 0%
+19/11/05 23:19:47 INFO mapreduce.Job:  map 28% reduce 0%
+19/11/05 23:19:48 INFO mapreduce.Job:  map 30% reduce 0%
+19/11/05 23:19:49 INFO mapreduce.Job:  map 32% reduce 0%
+19/11/05 23:19:50 INFO mapreduce.Job:  map 33% reduce 0%
+19/11/05 23:19:51 INFO mapreduce.Job:  map 36% reduce 0%
+19/11/05 23:19:52 INFO mapreduce.Job:  map 38% reduce 0%
+19/11/05 23:19:53 INFO mapreduce.Job:  map 40% reduce 0%
+19/11/05 23:19:54 INFO mapreduce.Job:  map 41% reduce 0%
+19/11/05 23:19:55 INFO mapreduce.Job:  map 44% reduce 0%
+19/11/05 23:19:56 INFO mapreduce.Job:  map 46% reduce 0%
+19/11/05 23:19:57 INFO mapreduce.Job:  map 47% reduce 0%
+19/11/05 23:19:58 INFO mapreduce.Job:  map 49% reduce 0%
+19/11/05 23:19:59 INFO mapreduce.Job:  map 50% reduce 0%
+19/11/05 23:20:00 INFO mapreduce.Job:  map 51% reduce 0%
+19/11/05 23:20:01 INFO mapreduce.Job:  map 52% reduce 0%
+19/11/05 23:20:02 INFO mapreduce.Job:  map 53% reduce 0%
+19/11/05 23:20:03 INFO mapreduce.Job:  map 54% reduce 0%
+19/11/05 23:20:04 INFO mapreduce.Job:  map 56% reduce 0%
+19/11/05 23:20:06 INFO mapreduce.Job:  map 57% reduce 0%
+19/11/05 23:20:07 INFO mapreduce.Job:  map 58% reduce 0%
+19/11/05 23:20:09 INFO mapreduce.Job:  map 59% reduce 0%
+19/11/05 23:20:14 INFO mapreduce.Job:  map 60% reduce 0%
+19/11/05 23:20:16 INFO mapreduce.Job:  map 61% reduce 0%
+19/11/05 23:20:18 INFO mapreduce.Job:  map 62% reduce 0%
+19/11/05 23:20:20 INFO mapreduce.Job:  map 63% reduce 0%
+19/11/05 23:20:22 INFO mapreduce.Job:  map 64% reduce 0%
+19/11/05 23:20:24 INFO mapreduce.Job:  map 65% reduce 0%
+19/11/05 23:20:25 INFO mapreduce.Job:  map 66% reduce 0%
+19/11/05 23:20:28 INFO mapreduce.Job:  map 67% reduce 0%
+19/11/05 23:20:30 INFO mapreduce.Job:  map 68% reduce 0%
+19/11/05 23:20:31 INFO mapreduce.Job:  map 69% reduce 0%
+19/11/05 23:20:33 INFO mapreduce.Job:  map 70% reduce 0%
+19/11/05 23:20:34 INFO mapreduce.Job:  map 71% reduce 0%
+19/11/05 23:20:36 INFO mapreduce.Job:  map 72% reduce 0%
+19/11/05 23:20:38 INFO mapreduce.Job:  map 73% reduce 0%
+19/11/05 23:20:39 INFO mapreduce.Job:  map 74% reduce 0%
+19/11/05 23:20:41 INFO mapreduce.Job:  map 75% reduce 0%
+19/11/05 23:20:42 INFO mapreduce.Job:  map 76% reduce 0%
+19/11/05 23:20:43 INFO mapreduce.Job:  map 77% reduce 0%
+19/11/05 23:20:44 INFO mapreduce.Job:  map 78% reduce 0%
+19/11/05 23:20:45 INFO mapreduce.Job:  map 79% reduce 0%
+19/11/05 23:20:46 INFO mapreduce.Job:  map 80% reduce 0%
+19/11/05 23:20:47 INFO mapreduce.Job:  map 81% reduce 0%
+19/11/05 23:20:48 INFO mapreduce.Job:  map 82% reduce 0%
+19/11/05 23:20:49 INFO mapreduce.Job:  map 83% reduce 0%
+19/11/05 23:20:50 INFO mapreduce.Job:  map 84% reduce 0%
+19/11/05 23:20:51 INFO mapreduce.Job:  map 85% reduce 0%
+19/11/05 23:20:53 INFO mapreduce.Job:  map 86% reduce 0%
+19/11/05 23:20:54 INFO mapreduce.Job:  map 87% reduce 0%
+19/11/05 23:20:55 INFO mapreduce.Job:  map 88% reduce 0%
+19/11/05 23:20:56 INFO mapreduce.Job:  map 89% reduce 0%
+19/11/05 23:20:58 INFO mapreduce.Job:  map 90% reduce 0%
+19/11/05 23:20:59 INFO mapreduce.Job:  map 91% reduce 0%
+19/11/05 23:21:02 INFO mapreduce.Job:  map 92% reduce 0%
+19/11/05 23:21:03 INFO mapreduce.Job:  map 92% reduce 5%
+19/11/05 23:21:04 INFO mapreduce.Job:  map 92% reduce 12%
+19/11/05 23:21:05 INFO mapreduce.Job:  map 93% reduce 18%
+19/11/05 23:21:06 INFO mapreduce.Job:  map 93% reduce 22%
+19/11/05 23:21:07 INFO mapreduce.Job:  map 93% reduce 26%
+19/11/05 23:21:08 INFO mapreduce.Job:  map 94% reduce 28%
+19/11/05 23:21:09 INFO mapreduce.Job:  map 94% reduce 29%
+19/11/05 23:21:10 INFO mapreduce.Job:  map 95% reduce 30%
+19/11/05 23:21:13 INFO mapreduce.Job:  map 96% reduce 30%
+19/11/05 23:21:15 INFO mapreduce.Job:  map 97% reduce 30%
+19/11/05 23:21:16 INFO mapreduce.Job:  map 97% reduce 31%
+19/11/05 23:21:18 INFO mapreduce.Job:  map 98% reduce 31%
+19/11/05 23:21:21 INFO mapreduce.Job:  map 99% reduce 32%
+19/11/05 23:21:25 INFO mapreduce.Job:  map 99% reduce 33%
+19/11/05 23:21:26 INFO mapreduce.Job:  map 100% reduce 33%
+19/11/05 23:21:45 INFO mapreduce.Job:  map 100% reduce 36%
+19/11/05 23:21:46 INFO mapreduce.Job:  map 100% reduce 45%
+19/11/05 23:21:47 INFO mapreduce.Job:  map 100% reduce 53%
+19/11/05 23:21:48 INFO mapreduce.Job:  map 100% reduce 62%
+19/11/05 23:21:49 INFO mapreduce.Job:  map 100% reduce 66%
+19/11/05 23:21:50 INFO mapreduce.Job:  map 100% reduce 67%
+19/11/05 23:21:51 INFO mapreduce.Job:  map 100% reduce 68%
+19/11/05 23:21:53 INFO mapreduce.Job:  map 100% reduce 69%
+19/11/05 23:21:55 INFO mapreduce.Job:  map 100% reduce 70%
+19/11/05 23:21:57 INFO mapreduce.Job:  map 100% reduce 71%
+19/11/05 23:21:59 INFO mapreduce.Job:  map 100% reduce 72%
+19/11/05 23:22:02 INFO mapreduce.Job:  map 100% reduce 73%
+19/11/05 23:22:04 INFO mapreduce.Job:  map 100% reduce 74%
+19/11/05 23:22:06 INFO mapreduce.Job:  map 100% reduce 75%
+19/11/05 23:22:08 INFO mapreduce.Job:  map 100% reduce 76%
+19/11/05 23:22:10 INFO mapreduce.Job:  map 100% reduce 77%
+19/11/05 23:22:12 INFO mapreduce.Job:  map 100% reduce 78%
+19/11/05 23:22:14 INFO mapreduce.Job:  map 100% reduce 79%
+19/11/05 23:22:16 INFO mapreduce.Job:  map 100% reduce 80%
+19/11/05 23:22:17 INFO mapreduce.Job:  map 100% reduce 81%
+19/11/05 23:22:19 INFO mapreduce.Job:  map 100% reduce 82%
+19/11/05 23:22:21 INFO mapreduce.Job:  map 100% reduce 83%
+19/11/05 23:22:23 INFO mapreduce.Job:  map 100% reduce 84%
+19/11/05 23:22:25 INFO mapreduce.Job:  map 100% reduce 85%
+19/11/05 23:22:27 INFO mapreduce.Job:  map 100% reduce 86%
+19/11/05 23:22:29 INFO mapreduce.Job:  map 100% reduce 87%
+19/11/05 23:22:31 INFO mapreduce.Job:  map 100% reduce 88%
+19/11/05 23:22:32 INFO mapreduce.Job:  map 100% reduce 89%
+19/11/05 23:22:35 INFO mapreduce.Job:  map 100% reduce 90%
+19/11/05 23:22:37 INFO mapreduce.Job:  map 100% reduce 91%
+19/11/05 23:22:39 INFO mapreduce.Job:  map 100% reduce 92%
+19/11/05 23:22:41 INFO mapreduce.Job:  map 100% reduce 93%
+19/11/05 23:22:44 INFO mapreduce.Job:  map 100% reduce 94%
+19/11/05 23:22:47 INFO mapreduce.Job:  map 100% reduce 95%
+19/11/05 23:22:51 INFO mapreduce.Job:  map 100% reduce 96%
+19/11/05 23:22:55 INFO mapreduce.Job:  map 100% reduce 97%
+19/11/05 23:23:00 INFO mapreduce.Job:  map 100% reduce 98%
+19/11/05 23:23:06 INFO mapreduce.Job:  map 100% reduce 99%
+19/11/05 23:23:17 INFO mapreduce.Job:  map 100% reduce 100%
+19/11/05 23:24:59 INFO mapreduce.Job: Job job_1567079137842_609570 completed successfully
+19/11/05 23:24:59 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=18532293253
+		FILE: Number of bytes written=52436519023
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=151995261223
+		HDFS: Number of bytes written=194162696002
+		HDFS: Number of read operations=3600
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=800
+	Job Counters 
+		Launched map tasks=1000
+		Launched reduce tasks=200
+		Data-local map tasks=960
+		Rack-local map tasks=40
+		Total time spent by all maps in occupied slots (ms)=355357096
+		Total time spent by all reduces in occupied slots (ms)=143398290
+		Total time spent by all map tasks (ms)=44419637
+		Total time spent by all reduce tasks (ms)=23899715
+		Total vcore-milliseconds taken by all map tasks=44419637
+		Total vcore-milliseconds taken by all reduce tasks=23899715
+		Total megabyte-milliseconds taken by all map tasks=181942833152
+		Total megabyte-milliseconds taken by all reduce tasks=73419924480
+	Map-Reduce Framework
+		Map input records=71949565
+		Map output records=243993904
+		Map output bytes=144925058595
+		Map output materialized bytes=33752131726
+		Input split bytes=174000
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=8971164
+		Reduce shuffle bytes=33752131726
+		Reduce input records=243993904
+		Reduce output records=145469341
+		Spilled Records=487987808
+		Shuffled Maps =200000
+		Failed Shuffles=0
+		Merged Map outputs=200000
+		GC time elapsed (ms)=464311
+		CPU time spent (ms)=59280230
+		Physical memory (bytes) snapshot=1627881242624
+		Virtual memory (bytes) snapshot=6292251594752
+		Total committed heap usage (bytes)=2232712429568
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=151995087223
+	File Output Format Counters 
+		Bytes Written=194162696002
+19/11/05 23:24:59 INFO streaming.StreamJob: Output directory: /user/ad_user/ctr_space/model_train/shitu/20191031/
++ judge_result hadoop_run
++ [[ 0 -ne 0 ]]
++ echo 'hadoop_run success.'
+hadoop_run success.
++ ADFEA_DIR=/user/ad_user/ctr_space/model_train/shitu/adfea/
++ ADFEA_PATH=/user/ad_user/ctr_space/model_train/shitu/adfea//20191031/
++ INS_DIR=/user/ad_user/ctr_space/model_train/shitu/ins/
++ INS_PATH=/user/ad_user/ctr_space/model_train/shitu/ins//20191031/
++ STATINFO_DIR=/user/ad_user/ctr_space/model_train/shitu/statinfo/
++ STATINFO_PATH=/user/ad_user/ctr_space/model_train/shitu/statinfo//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/adfea//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/adfea//20191031/
+19/11/05 23:25:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/adfea/20191031' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/adfea//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/ins//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/ins//20191031/
+19/11/05 23:25:14 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/ins/20191031' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/ins//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/statinfo//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/statinfo//20191031/
+19/11/05 23:25:23 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/statinfo/20191031' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/statinfo//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191031//part-*-A' /user/ad_user/ctr_space/model_train/shitu/adfea//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/adfea//20191031//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191031//part-*-B' /user/ad_user/ctr_space/model_train/shitu/statinfo//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/statinfo//20191031//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191031//part-*-C' /user/ad_user/ctr_space/model_train/shitu/ins//20191031/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/ins//20191031//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191031/
+19/11/05 23:25:52 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191031' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ mylog 'task[20191031] success!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:25:53
++ echo '[20191105-23:25:53] task[20191031]' 'success!'
+[20191105-23:25:53] task[20191031] success!
++ exit 0
++ bash -x run_shitu.sh 20191101
++ bash /home/ling.fang/kinit_ad_user.sh
++ USER_NAME=ad_user
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ common_file=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++ source /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
+++ bash /home/ling.fang/kinit_ad_user.sh
+++ HADOOP_BIN=/usr/local/hadoop-2.6.3/bin/hadoop
+++++ dirname /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++++ cd /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools
++++ pwd
+++ ROOT_PATH=/home/ad_user/personal/ling.fang/script/tools
++ '[' 1 -ge 1 ']'
++ DATE=20191101
++ '[' 1 -eq 2 ']'
++ JOB_TAG=
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ INPUTDIR='-input "/user/ad_user/ctr_space/ed_join_click/join/20191101/" '
++ echo -input '"/user/ad_user/ctr_space/ed_join_click/join/20191101/"'
+-input "/user/ad_user/ctr_space/ed_join_click/join/20191101/"
++ OUTPUTDIR=/user/ad_user/ctr_space/model_train/shitu/20191101/
++ PLID_EDCLKDIR=/user/ad_user/ctr_space/plid_stat_info/json
++ done_file=/user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS
++ loop_check /user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS 140 1
++ file=/user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS
++ ready=0
++ check_time=140
++ mode=1
++ echo 'input params:/user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS 140 1'
+input params:/user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS 140 1
++ '[' 3 -ne 3 ']'
++ '[' 140 -gt 0 ']'
++ '[' 1 -eq 1 ']'
++ hadoop_check_ready
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS
++ ready=1
++ '[' 1 -eq 1 ']'
++ mylog '/user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS is ready!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:25:56
++ echo '[20191105-23:25:56] /user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS' is 'ready!'
+[20191105-23:25:56] /user/ad_user/ctr_space/ed_join_click/join/20191101/_SUCCESS is ready!
++ return 0
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -cat '/user/ad_user/ctr_space/plid_stat_info/json/*'
+cat: `/user/ad_user/ctr_space/plid_stat_info/json/*': No such file or directory
++ OWNER_INFO=ad_user@cootek.cn
++ TASK_NAME=naga_ctr_generate_shitu_log
++ hadoop_run
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191101/
+rm: `/user/ad_user/ctr_space/model_train/shitu/20191101/': No such file or directory
++ /usr/local/hadoop-2.6.3/bin/hadoop jar /usr/local/hadoop-2.6.3/share/hadoop/tools/lib/hadoop-streaming-2.6.3.jar -libjars /home/ling.fang/script/tools/mr_plugins-1.0.jar -files script -D map.output.key.field.separator=# -D num.key.fields.for.partition=1 -D mapreduce.map.memory.mb=4096 -D mapreduce.map.java.opts=-Xmx3276m -Dmapred.map.tasks.speculative.execution=false -Dmapred.reduce.tasks.speculative.execution=false -Dstream.non.zero.exit.is.failure=false -Dmapred.job.priority=HIGH -Dmapreduce.job.queuename=root.ad-root.etl.dailyetl.high -Dmapred.map.tasks=1000 -Dmapred.reduce.tasks=200 -Dmapred.job.map.capacity=1000 -Dmapred.job.reduce.capacity=200 -Dmapred.job.name=naga_ctr_generate_shitu_log_20191101 -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner -outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat -mapper 'python script/mapper.py' -reducer 'python script/reducer.py' -input '"/user/ad_user/ctr_space/ed_join_click/join/20191101/"' -output /user/ad_user/ctr_space/model_train/shitu/20191101/
+19/11/05 23:26:04 INFO Configuration.deprecation: map.output.key.field.separator is deprecated. Instead, use mapreduce.map.output.key.field.separator
+19/11/05 23:26:04 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+19/11/05 23:26:04 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+19/11/05 23:26:04 INFO Configuration.deprecation: mapred.job.priority is deprecated. Instead, use mapreduce.job.priority
+19/11/05 23:26:04 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/11/05 23:26:04 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+19/11/05 23:26:04 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [/tmp/hadoop-unjar4702789173490417299/] [] /tmp/streamjob741961148630090726.jar tmpDir=null
+19/11/05 23:26:05 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:26:05 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:26:06 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4044733 for ad_user on ha-hdfs:cootek
+19/11/05 23:26:06 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044733 for ad_user)
+19/11/05 23:26:06 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:26:06 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 2c 4c 23 8a 01 6e 60 38 d0 23 8d 30 fc 04 8e 02 7f
+19/11/05 23:26:10 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library from the embedded binaries
+19/11/05 23:26:10 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 52decc77982b58949890770d22720a91adce0c3f]
+19/11/05 23:26:10 INFO mapred.FileInputFormat: Total input paths to process : 1000
+19/11/05 23:26:11 INFO mapreduce.JobSubmitter: number of splits:1000
+19/11/05 23:26:11 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1567079137842_609656
+19/11/05 23:26:11 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044733 for ad_user)
+19/11/05 23:26:11 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:26:11 WARN token.Token: Cannot find class for token kind kms-dt
+Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 2c 4c 23 8a 01 6e 60 38 d0 23 8d 30 fc 04 8e 02 7f
+19/11/05 23:26:11 INFO impl.YarnClientImpl: Submitted application application_1567079137842_609656
+19/11/05 23:26:11 INFO mapreduce.Job: The url to track the job: http://hadoop2-namenode.corp.cootek.com:8088/proxy/application_1567079137842_609656/
+19/11/05 23:26:11 INFO mapreduce.Job: Running job: job_1567079137842_609656
+19/11/05 23:26:29 INFO mapreduce.Job: Job job_1567079137842_609656 running in uber mode : false
+19/11/05 23:26:29 INFO mapreduce.Job:  map 0% reduce 0%
+19/11/05 23:26:48 INFO mapreduce.Job:  map 1% reduce 0%
+19/11/05 23:26:53 INFO mapreduce.Job:  map 2% reduce 0%
+19/11/05 23:26:56 INFO mapreduce.Job:  map 3% reduce 0%
+19/11/05 23:26:59 INFO mapreduce.Job:  map 4% reduce 0%
+19/11/05 23:27:02 INFO mapreduce.Job:  map 5% reduce 0%
+19/11/05 23:27:04 INFO mapreduce.Job:  map 6% reduce 0%
+19/11/05 23:27:07 INFO mapreduce.Job:  map 7% reduce 0%
+19/11/05 23:27:10 INFO mapreduce.Job:  map 8% reduce 0%
+19/11/05 23:27:12 INFO mapreduce.Job:  map 9% reduce 0%
+19/11/05 23:27:14 INFO mapreduce.Job:  map 10% reduce 0%
+19/11/05 23:27:15 INFO mapreduce.Job:  map 11% reduce 0%
+19/11/05 23:27:17 INFO mapreduce.Job:  map 12% reduce 0%
+19/11/05 23:27:18 INFO mapreduce.Job:  map 13% reduce 0%
+19/11/05 23:27:19 INFO mapreduce.Job:  map 14% reduce 0%
+19/11/05 23:27:21 INFO mapreduce.Job:  map 15% reduce 0%
+19/11/05 23:27:23 INFO mapreduce.Job:  map 16% reduce 0%
+19/11/05 23:27:25 INFO mapreduce.Job:  map 17% reduce 0%
+19/11/05 23:27:28 INFO mapreduce.Job:  map 18% reduce 0%
+19/11/05 23:27:30 INFO mapreduce.Job:  map 19% reduce 0%
+19/11/05 23:27:31 INFO mapreduce.Job:  map 20% reduce 0%
+19/11/05 23:27:33 INFO mapreduce.Job:  map 21% reduce 0%
+19/11/05 23:27:35 INFO mapreduce.Job:  map 22% reduce 0%
+19/11/05 23:27:37 INFO mapreduce.Job:  map 23% reduce 0%
+19/11/05 23:27:38 INFO mapreduce.Job:  map 24% reduce 0%
+19/11/05 23:27:40 INFO mapreduce.Job:  map 25% reduce 0%
+19/11/05 23:27:42 INFO mapreduce.Job:  map 26% reduce 0%
+19/11/05 23:27:44 INFO mapreduce.Job:  map 27% reduce 0%
+19/11/05 23:27:45 INFO mapreduce.Job:  map 28% reduce 0%
+19/11/05 23:27:47 INFO mapreduce.Job:  map 29% reduce 0%
+19/11/05 23:27:48 INFO mapreduce.Job:  map 30% reduce 0%
+19/11/05 23:27:49 INFO mapreduce.Job:  map 31% reduce 0%
+19/11/05 23:27:51 INFO mapreduce.Job:  map 32% reduce 0%
+19/11/05 23:27:52 INFO mapreduce.Job:  map 33% reduce 0%
+19/11/05 23:27:53 INFO mapreduce.Job:  map 34% reduce 0%
+19/11/05 23:27:55 INFO mapreduce.Job:  map 35% reduce 0%
+19/11/05 23:27:56 INFO mapreduce.Job:  map 36% reduce 0%
+19/11/05 23:27:57 INFO mapreduce.Job:  map 37% reduce 0%
+19/11/05 23:27:58 INFO mapreduce.Job:  map 38% reduce 0%
+19/11/05 23:27:59 INFO mapreduce.Job:  map 39% reduce 0%
+19/11/05 23:28:01 INFO mapreduce.Job:  map 40% reduce 0%
+19/11/05 23:28:02 INFO mapreduce.Job:  map 41% reduce 0%
+19/11/05 23:28:04 INFO mapreduce.Job:  map 42% reduce 0%
+19/11/05 23:28:05 INFO mapreduce.Job:  map 43% reduce 0%
+19/11/05 23:28:07 INFO mapreduce.Job:  map 44% reduce 0%
+19/11/05 23:28:08 INFO mapreduce.Job:  map 45% reduce 0%
+19/11/05 23:28:09 INFO mapreduce.Job:  map 46% reduce 0%
+19/11/05 23:28:10 INFO mapreduce.Job:  map 47% reduce 0%
+19/11/05 23:28:11 INFO mapreduce.Job:  map 48% reduce 0%
+19/11/05 23:28:12 INFO mapreduce.Job:  map 49% reduce 0%
+19/11/05 23:28:13 INFO mapreduce.Job:  map 50% reduce 0%
+19/11/05 23:28:14 INFO mapreduce.Job:  map 51% reduce 0%
+19/11/05 23:28:16 INFO mapreduce.Job:  map 52% reduce 0%
+19/11/05 23:28:17 INFO mapreduce.Job:  map 53% reduce 0%
+19/11/05 23:28:18 INFO mapreduce.Job:  map 54% reduce 0%
+19/11/05 23:28:20 INFO mapreduce.Job:  map 55% reduce 0%
+19/11/05 23:28:21 INFO mapreduce.Job:  map 56% reduce 0%
+19/11/05 23:28:22 INFO mapreduce.Job:  map 57% reduce 0%
+19/11/05 23:28:23 INFO mapreduce.Job:  map 58% reduce 0%
+19/11/05 23:28:24 INFO mapreduce.Job:  map 59% reduce 0%
+19/11/05 23:28:26 INFO mapreduce.Job:  map 60% reduce 0%
+19/11/05 23:28:27 INFO mapreduce.Job:  map 61% reduce 0%
+19/11/05 23:28:28 INFO mapreduce.Job:  map 62% reduce 0%
+19/11/05 23:28:29 INFO mapreduce.Job:  map 63% reduce 0%
+19/11/05 23:28:30 INFO mapreduce.Job:  map 64% reduce 0%
+19/11/05 23:28:31 INFO mapreduce.Job:  map 65% reduce 0%
+19/11/05 23:28:32 INFO mapreduce.Job:  map 66% reduce 0%
+19/11/05 23:28:33 INFO mapreduce.Job:  map 67% reduce 0%
+19/11/05 23:28:34 INFO mapreduce.Job:  map 68% reduce 0%
+19/11/05 23:28:35 INFO mapreduce.Job:  map 69% reduce 0%
+19/11/05 23:28:36 INFO mapreduce.Job:  map 70% reduce 0%
+19/11/05 23:28:37 INFO mapreduce.Job:  map 71% reduce 0%
+19/11/05 23:28:39 INFO mapreduce.Job:  map 72% reduce 0%
+19/11/05 23:28:41 INFO mapreduce.Job:  map 73% reduce 0%
+19/11/05 23:28:43 INFO mapreduce.Job:  map 74% reduce 0%
+19/11/05 23:28:45 INFO mapreduce.Job:  map 75% reduce 0%
+19/11/05 23:28:48 INFO mapreduce.Job:  map 76% reduce 0%
+19/11/05 23:28:50 INFO mapreduce.Job:  map 77% reduce 0%
+19/11/05 23:28:52 INFO mapreduce.Job:  map 78% reduce 0%
+19/11/05 23:28:55 INFO mapreduce.Job:  map 79% reduce 0%
+19/11/05 23:28:57 INFO mapreduce.Job:  map 80% reduce 0%
+19/11/05 23:29:00 INFO mapreduce.Job:  map 81% reduce 0%
+19/11/05 23:29:02 INFO mapreduce.Job:  map 82% reduce 0%
+19/11/05 23:29:05 INFO mapreduce.Job:  map 83% reduce 0%
+19/11/05 23:29:07 INFO mapreduce.Job:  map 84% reduce 0%
+19/11/05 23:29:10 INFO mapreduce.Job:  map 85% reduce 0%
+19/11/05 23:29:12 INFO mapreduce.Job:  map 86% reduce 0%
+19/11/05 23:29:14 INFO mapreduce.Job:  map 87% reduce 0%
+19/11/05 23:29:15 INFO mapreduce.Job:  map 88% reduce 0%
+19/11/05 23:29:18 INFO mapreduce.Job:  map 89% reduce 0%
+19/11/05 23:29:20 INFO mapreduce.Job:  map 90% reduce 0%
+19/11/05 23:29:22 INFO mapreduce.Job:  map 91% reduce 0%
+19/11/05 23:29:25 INFO mapreduce.Job:  map 92% reduce 0%
+19/11/05 23:29:29 INFO mapreduce.Job:  map 93% reduce 3%
+19/11/05 23:29:30 INFO mapreduce.Job:  map 93% reduce 5%
+19/11/05 23:29:31 INFO mapreduce.Job:  map 93% reduce 6%
+19/11/05 23:29:32 INFO mapreduce.Job:  map 93% reduce 7%
+19/11/05 23:29:33 INFO mapreduce.Job:  map 93% reduce 9%
+19/11/05 23:29:34 INFO mapreduce.Job:  map 94% reduce 10%
+19/11/05 23:29:36 INFO mapreduce.Job:  map 94% reduce 12%
+19/11/05 23:29:40 INFO mapreduce.Job:  map 95% reduce 13%
+19/11/05 23:29:46 INFO mapreduce.Job:  map 95% reduce 14%
+19/11/05 23:29:47 INFO mapreduce.Job:  map 96% reduce 15%
+19/11/05 23:29:48 INFO mapreduce.Job:  map 96% reduce 16%
+19/11/05 23:29:50 INFO mapreduce.Job:  map 96% reduce 17%
+19/11/05 23:29:53 INFO mapreduce.Job:  map 97% reduce 17%
+19/11/05 23:29:57 INFO mapreduce.Job:  map 97% reduce 18%
+19/11/05 23:30:00 INFO mapreduce.Job:  map 97% reduce 19%
+19/11/05 23:30:01 INFO mapreduce.Job:  map 98% reduce 19%
+19/11/05 23:30:03 INFO mapreduce.Job:  map 98% reduce 20%
+19/11/05 23:30:06 INFO mapreduce.Job:  map 98% reduce 21%
+19/11/05 23:30:09 INFO mapreduce.Job:  map 99% reduce 21%
+19/11/05 23:30:10 INFO mapreduce.Job:  map 99% reduce 22%
+19/11/05 23:30:12 INFO mapreduce.Job:  map 99% reduce 23%
+19/11/05 23:30:16 INFO mapreduce.Job:  map 99% reduce 24%
+19/11/05 23:30:18 INFO mapreduce.Job:  map 100% reduce 24%
+19/11/05 23:30:19 INFO mapreduce.Job:  map 100% reduce 25%
+19/11/05 23:30:22 INFO mapreduce.Job:  map 100% reduce 26%
+19/11/05 23:30:24 INFO mapreduce.Job:  map 100% reduce 27%
+19/11/05 23:30:28 INFO mapreduce.Job:  map 100% reduce 28%
+19/11/05 23:30:31 INFO mapreduce.Job:  map 100% reduce 29%
+19/11/05 23:30:32 INFO mapreduce.Job:  map 100% reduce 31%
+19/11/05 23:30:33 INFO mapreduce.Job:  map 100% reduce 39%
+19/11/05 23:30:34 INFO mapreduce.Job:  map 100% reduce 48%
+19/11/05 23:30:35 INFO mapreduce.Job:  map 100% reduce 55%
+19/11/05 23:30:36 INFO mapreduce.Job:  map 100% reduce 59%
+19/11/05 23:30:38 INFO mapreduce.Job:  map 100% reduce 60%
+19/11/05 23:30:40 INFO mapreduce.Job:  map 100% reduce 61%
+19/11/05 23:30:42 INFO mapreduce.Job:  map 100% reduce 63%
+19/11/05 23:30:43 INFO mapreduce.Job:  map 100% reduce 64%
+19/11/05 23:30:44 INFO mapreduce.Job:  map 100% reduce 65%
+19/11/05 23:30:45 INFO mapreduce.Job:  map 100% reduce 66%
+19/11/05 23:30:46 INFO mapreduce.Job:  map 100% reduce 67%
+19/11/05 23:30:48 INFO mapreduce.Job:  map 100% reduce 68%
+19/11/05 23:30:49 INFO mapreduce.Job:  map 100% reduce 69%
+19/11/05 23:30:51 INFO mapreduce.Job:  map 100% reduce 70%
+19/11/05 23:30:52 INFO mapreduce.Job:  map 100% reduce 71%
+19/11/05 23:30:53 INFO mapreduce.Job:  map 100% reduce 72%
+19/11/05 23:30:56 INFO mapreduce.Job:  map 100% reduce 73%
+19/11/05 23:30:58 INFO mapreduce.Job:  map 100% reduce 74%
+19/11/05 23:31:00 INFO mapreduce.Job:  map 100% reduce 75%
+19/11/05 23:31:02 INFO mapreduce.Job:  map 100% reduce 76%
+19/11/05 23:31:03 INFO mapreduce.Job:  map 100% reduce 77%
+19/11/05 23:31:04 INFO mapreduce.Job:  map 100% reduce 78%
+19/11/05 23:31:06 INFO mapreduce.Job:  map 100% reduce 79%
+19/11/05 23:31:09 INFO mapreduce.Job:  map 100% reduce 80%
+19/11/05 23:31:11 INFO mapreduce.Job:  map 100% reduce 81%
+19/11/05 23:31:13 INFO mapreduce.Job:  map 100% reduce 82%
+19/11/05 23:31:15 INFO mapreduce.Job:  map 100% reduce 83%
+19/11/05 23:31:17 INFO mapreduce.Job:  map 100% reduce 84%
+19/11/05 23:31:19 INFO mapreduce.Job:  map 100% reduce 85%
+19/11/05 23:31:21 INFO mapreduce.Job:  map 100% reduce 86%
+19/11/05 23:31:23 INFO mapreduce.Job:  map 100% reduce 87%
+19/11/05 23:31:25 INFO mapreduce.Job:  map 100% reduce 88%
+19/11/05 23:31:27 INFO mapreduce.Job:  map 100% reduce 89%
+19/11/05 23:31:29 INFO mapreduce.Job:  map 100% reduce 90%
+19/11/05 23:31:32 INFO mapreduce.Job:  map 100% reduce 91%
+19/11/05 23:31:34 INFO mapreduce.Job:  map 100% reduce 92%
+19/11/05 23:31:37 INFO mapreduce.Job:  map 100% reduce 93%
+19/11/05 23:31:40 INFO mapreduce.Job:  map 100% reduce 94%
+19/11/05 23:31:43 INFO mapreduce.Job:  map 100% reduce 95%
+19/11/05 23:31:47 INFO mapreduce.Job:  map 100% reduce 96%
+19/11/05 23:31:51 INFO mapreduce.Job:  map 100% reduce 97%
+19/11/05 23:31:57 INFO mapreduce.Job:  map 100% reduce 98%
+19/11/05 23:32:05 INFO mapreduce.Job:  map 100% reduce 99%
+19/11/05 23:32:54 INFO mapreduce.Job:  map 100% reduce 100%
+19/11/05 23:34:18 INFO mapreduce.Job: Job job_1567079137842_609656 completed successfully
+19/11/05 23:34:18 INFO mapreduce.Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=17115922183
+		FILE: Number of bytes written=48284171688
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=145598385667
+		HDFS: Number of bytes written=186144228980
+		HDFS: Number of read operations=3600
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=800
+	Job Counters 
+		Launched map tasks=1000
+		Launched reduce tasks=200
+		Other local map tasks=4
+		Data-local map tasks=970
+		Rack-local map tasks=26
+		Total time spent by all maps in occupied slots (ms)=317126896
+		Total time spent by all reduces in occupied slots (ms)=148626666
+		Total time spent by all map tasks (ms)=39640862
+		Total time spent by all reduce tasks (ms)=24771111
+		Total vcore-milliseconds taken by all map tasks=39640862
+		Total vcore-milliseconds taken by all reduce tasks=24771111
+		Total megabyte-milliseconds taken by all map tasks=162368970752
+		Total megabyte-milliseconds taken by all reduce tasks=76096852992
+	Map-Reduce Framework
+		Map input records=69089387
+		Map output records=215505317
+		Map output bytes=137894312573
+		Map output materialized bytes=31016157697
+		Input split bytes=174000
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=8265440
+		Reduce shuffle bytes=31016157697
+		Reduce input records=215505317
+		Reduce output records=139495271
+		Spilled Records=431010634
+		Shuffled Maps =200000
+		Failed Shuffles=0
+		Merged Map outputs=200000
+		GC time elapsed (ms)=408220
+		CPU time spent (ms)=57169680
+		Physical memory (bytes) snapshot=1615095988224
+		Virtual memory (bytes) snapshot=6295346114560
+		Total committed heap usage (bytes)=2232673632256
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=145598211667
+	File Output Format Counters 
+		Bytes Written=186144228980
+19/11/05 23:34:18 INFO streaming.StreamJob: Output directory: /user/ad_user/ctr_space/model_train/shitu/20191101/
++ judge_result hadoop_run
++ [[ 0 -ne 0 ]]
++ echo 'hadoop_run success.'
+hadoop_run success.
++ ADFEA_DIR=/user/ad_user/ctr_space/model_train/shitu/adfea/
++ ADFEA_PATH=/user/ad_user/ctr_space/model_train/shitu/adfea//20191101/
++ INS_DIR=/user/ad_user/ctr_space/model_train/shitu/ins/
++ INS_PATH=/user/ad_user/ctr_space/model_train/shitu/ins//20191101/
++ STATINFO_DIR=/user/ad_user/ctr_space/model_train/shitu/statinfo/
++ STATINFO_PATH=/user/ad_user/ctr_space/model_train/shitu/statinfo//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/adfea//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/adfea//20191101/
+19/11/05 23:34:24 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/adfea/20191101' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/adfea//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/ins//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/ins//20191101/
+19/11/05 23:34:33 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/ins/20191101' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/ins//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/statinfo//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/statinfo//20191101/
+19/11/05 23:34:45 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/statinfo/20191101' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/statinfo//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191101//part-*-A' /user/ad_user/ctr_space/model_train/shitu/adfea//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/adfea//20191101//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191101//part-*-B' /user/ad_user/ctr_space/model_train/shitu/statinfo//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/statinfo//20191101//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191101//part-*-C' /user/ad_user/ctr_space/model_train/shitu/ins//20191101/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/ins//20191101//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191101/
+19/11/05 23:35:51 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191101' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ mylog 'task[20191101] success!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:35:52
++ echo '[20191105-23:35:52] task[20191101]' 'success!'
+[20191105-23:35:52] task[20191101] success!
++ exit 0
++ bash -x run_shitu.sh 20191102
++ bash /home/ling.fang/kinit_ad_user.sh
++ USER_NAME=ad_user
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ common_file=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++ source /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
+++ bash /home/ling.fang/kinit_ad_user.sh
+++ HADOOP_BIN=/usr/local/hadoop-2.6.3/bin/hadoop
+++++ dirname /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++++ cd /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools
++++ pwd
+++ ROOT_PATH=/home/ad_user/personal/ling.fang/script/tools
++ '[' 1 -ge 1 ']'
++ DATE=20191102
++ '[' 1 -eq 2 ']'
++ JOB_TAG=
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ INPUTDIR='-input "/user/ad_user/ctr_space/ed_join_click/join/20191102/" '
++ echo -input '"/user/ad_user/ctr_space/ed_join_click/join/20191102/"'
+-input "/user/ad_user/ctr_space/ed_join_click/join/20191102/"
++ OUTPUTDIR=/user/ad_user/ctr_space/model_train/shitu/20191102/
++ PLID_EDCLKDIR=/user/ad_user/ctr_space/plid_stat_info/json
++ done_file=/user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS
++ loop_check /user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS 140 1
++ file=/user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS
++ ready=0
++ check_time=140
++ mode=1
++ echo 'input params:/user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS 140 1'
+input params:/user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS 140 1
++ '[' 3 -ne 3 ']'
++ '[' 140 -gt 0 ']'
++ '[' 1 -eq 1 ']'
++ hadoop_check_ready
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS
++ ready=1
++ '[' 1 -eq 1 ']'
++ mylog '/user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS is ready!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:35:55
++ echo '[20191105-23:35:55] /user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS' is 'ready!'
+[20191105-23:35:55] /user/ad_user/ctr_space/ed_join_click/join/20191102/_SUCCESS is ready!
++ return 0
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -cat '/user/ad_user/ctr_space/plid_stat_info/json/*'
+cat: `/user/ad_user/ctr_space/plid_stat_info/json/*': No such file or directory
++ OWNER_INFO=ad_user@cootek.cn
++ TASK_NAME=naga_ctr_generate_shitu_log
++ hadoop_run
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191102/
+rm: `/user/ad_user/ctr_space/model_train/shitu/20191102/': No such file or directory
++ /usr/local/hadoop-2.6.3/bin/hadoop jar /usr/local/hadoop-2.6.3/share/hadoop/tools/lib/hadoop-streaming-2.6.3.jar -libjars /home/ling.fang/script/tools/mr_plugins-1.0.jar -files script -D map.output.key.field.separator=# -D num.key.fields.for.partition=1 -D mapreduce.map.memory.mb=4096 -D mapreduce.map.java.opts=-Xmx3276m -Dmapred.map.tasks.speculative.execution=false -Dmapred.reduce.tasks.speculative.execution=false -Dstream.non.zero.exit.is.failure=false -Dmapred.job.priority=HIGH -Dmapreduce.job.queuename=root.ad-root.etl.dailyetl.high -Dmapred.map.tasks=1000 -Dmapred.reduce.tasks=200 -Dmapred.job.map.capacity=1000 -Dmapred.job.reduce.capacity=200 -Dmapred.job.name=naga_ctr_generate_shitu_log_20191102 -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner -outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat -mapper 'python script/mapper.py' -reducer 'python script/reducer.py' -input '"/user/ad_user/ctr_space/ed_join_click/join/20191102/"' -output /user/ad_user/ctr_space/model_train/shitu/20191102/
+19/11/05 23:36:02 INFO Configuration.deprecation: map.output.key.field.separator is deprecated. Instead, use mapreduce.map.output.key.field.separator
+19/11/05 23:36:02 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+19/11/05 23:36:02 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+19/11/05 23:36:02 INFO Configuration.deprecation: mapred.job.priority is deprecated. Instead, use mapreduce.job.priority
+19/11/05 23:36:02 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/11/05 23:36:02 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+19/11/05 23:36:02 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [/tmp/hadoop-unjar2108101075803254366/] [] /tmp/streamjob2895281838966307606.jar tmpDir=null
+19/11/05 23:36:03 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:36:03 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:36:03 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4044802 for ad_user on ha-hdfs:cootek
+19/11/05 23:36:04 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044802 for ad_user)
+19/11/05 23:36:04 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:36:04 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 35 6a a4 8a 01 6e 60 41 ee a4 8d 30 fc 47 8e 02 7f
+19/11/05 23:36:10 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library from the embedded binaries
+19/11/05 23:36:10 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 52decc77982b58949890770d22720a91adce0c3f]
+19/11/05 23:36:11 INFO mapred.FileInputFormat: Total input paths to process : 1000
+19/11/05 23:36:11 INFO mapreduce.JobSubmitter: number of splits:1000
+19/11/05 23:36:12 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1567079137842_609713
+19/11/05 23:36:12 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044802 for ad_user)
+19/11/05 23:36:12 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:36:12 WARN token.Token: Cannot find class for token kind kms-dt
+Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 35 6a a4 8a 01 6e 60 41 ee a4 8d 30 fc 47 8e 02 7f
+19/11/05 23:36:12 INFO impl.YarnClientImpl: Submitted application application_1567079137842_609713
+19/11/05 23:36:12 INFO mapreduce.Job: The url to track the job: http://hadoop2-namenode.corp.cootek.com:8088/proxy/application_1567079137842_609713/
+19/11/05 23:36:12 INFO mapreduce.Job: Running job: job_1567079137842_609713
+19/11/05 23:36:28 INFO mapreduce.Job: Job job_1567079137842_609713 running in uber mode : false
+19/11/05 23:36:28 INFO mapreduce.Job:  map 0% reduce 0%
+19/11/05 23:36:51 INFO mapreduce.Job:  map 1% reduce 0%
+19/11/05 23:36:54 INFO mapreduce.Job:  map 2% reduce 0%
+19/11/05 23:36:55 INFO mapreduce.Job:  map 3% reduce 0%
+19/11/05 23:36:57 INFO mapreduce.Job:  map 4% reduce 0%
+19/11/05 23:36:59 INFO mapreduce.Job:  map 5% reduce 0%
+19/11/05 23:37:00 INFO mapreduce.Job:  map 6% reduce 0%
+19/11/05 23:37:02 INFO mapreduce.Job:  map 7% reduce 0%
+19/11/05 23:37:03 INFO mapreduce.Job:  map 8% reduce 0%
+19/11/05 23:37:04 INFO mapreduce.Job:  map 9% reduce 0%
+19/11/05 23:37:06 INFO mapreduce.Job:  map 10% reduce 0%
+19/11/05 23:37:07 INFO mapreduce.Job:  map 11% reduce 0%
+19/11/05 23:37:08 INFO mapreduce.Job:  map 12% reduce 0%
+19/11/05 23:37:10 INFO mapreduce.Job:  map 13% reduce 0%
+19/11/05 23:37:11 INFO mapreduce.Job:  map 14% reduce 0%
+19/11/05 23:37:12 INFO mapreduce.Job:  map 15% reduce 0%
+19/11/05 23:37:14 INFO mapreduce.Job:  map 16% reduce 0%
+19/11/05 23:37:15 INFO mapreduce.Job:  map 17% reduce 0%
+19/11/05 23:37:16 INFO mapreduce.Job:  map 18% reduce 0%
+19/11/05 23:37:17 INFO mapreduce.Job:  map 19% reduce 0%
+19/11/05 23:37:18 INFO mapreduce.Job:  map 20% reduce 0%
+19/11/05 23:37:19 INFO mapreduce.Job:  map 21% reduce 0%
+19/11/05 23:37:20 INFO mapreduce.Job:  map 23% reduce 0%
+19/11/05 23:37:21 INFO mapreduce.Job:  map 24% reduce 0%
+19/11/05 23:37:22 INFO mapreduce.Job:  map 26% reduce 0%
+19/11/05 23:37:23 INFO mapreduce.Job:  map 27% reduce 0%
+19/11/05 23:37:24 INFO mapreduce.Job:  map 29% reduce 0%
+19/11/05 23:37:25 INFO mapreduce.Job:  map 30% reduce 0%
+19/11/05 23:37:26 INFO mapreduce.Job:  map 31% reduce 0%
+19/11/05 23:37:27 INFO mapreduce.Job:  map 32% reduce 0%
+19/11/05 23:37:28 INFO mapreduce.Job:  map 33% reduce 0%
+19/11/05 23:37:29 INFO mapreduce.Job:  map 34% reduce 0%
+19/11/05 23:37:30 INFO mapreduce.Job:  map 35% reduce 0%
+19/11/05 23:37:32 INFO mapreduce.Job:  map 36% reduce 0%
+19/11/05 23:37:33 INFO mapreduce.Job:  map 37% reduce 0%
+19/11/05 23:37:35 INFO mapreduce.Job:  map 38% reduce 0%
+19/11/05 23:37:37 INFO mapreduce.Job:  map 39% reduce 0%
+19/11/05 23:37:39 INFO mapreduce.Job:  map 40% reduce 0%
+19/11/05 23:37:41 INFO mapreduce.Job:  map 41% reduce 0%
+19/11/05 23:37:43 INFO mapreduce.Job:  map 42% reduce 0%
+19/11/05 23:37:44 INFO mapreduce.Job:  map 43% reduce 0%
+19/11/05 23:37:45 INFO mapreduce.Job:  map 44% reduce 0%
+19/11/05 23:37:47 INFO mapreduce.Job:  map 45% reduce 0%
+19/11/05 23:37:49 INFO mapreduce.Job:  map 46% reduce 0%
+19/11/05 23:37:50 INFO mapreduce.Job:  map 47% reduce 0%
+19/11/05 23:37:52 INFO mapreduce.Job:  map 48% reduce 0%
+19/11/05 23:37:53 INFO mapreduce.Job:  map 49% reduce 0%
+19/11/05 23:37:55 INFO mapreduce.Job:  map 50% reduce 0%
+19/11/05 23:37:56 INFO mapreduce.Job:  map 51% reduce 0%
+19/11/05 23:37:57 INFO mapreduce.Job:  map 52% reduce 0%
+19/11/05 23:37:58 INFO mapreduce.Job:  map 53% reduce 0%
+19/11/05 23:37:59 INFO mapreduce.Job:  map 54% reduce 0%
+19/11/05 23:38:01 INFO mapreduce.Job:  map 55% reduce 0%
+19/11/05 23:38:02 INFO mapreduce.Job:  map 56% reduce 0%
+19/11/05 23:38:03 INFO mapreduce.Job:  map 57% reduce 0%
+19/11/05 23:38:04 INFO mapreduce.Job:  map 58% reduce 0%
+19/11/05 23:38:05 INFO mapreduce.Job:  map 59% reduce 0%
+19/11/05 23:38:07 INFO mapreduce.Job:  map 60% reduce 0%
+19/11/05 23:38:08 INFO mapreduce.Job:  map 61% reduce 0%
+19/11/05 23:38:09 INFO mapreduce.Job:  map 62% reduce 0%
+19/11/05 23:38:10 INFO mapreduce.Job:  map 63% reduce 0%
+19/11/05 23:38:11 INFO mapreduce.Job:  map 65% reduce 0%
+19/11/05 23:38:12 INFO mapreduce.Job:  map 66% reduce 0%
+19/11/05 23:38:13 INFO mapreduce.Job:  map 67% reduce 0%
+19/11/05 23:38:14 INFO mapreduce.Job:  map 69% reduce 0%
+19/11/05 23:38:15 INFO mapreduce.Job:  map 70% reduce 0%
+19/11/05 23:38:16 INFO mapreduce.Job:  map 71% reduce 0%
+19/11/05 23:38:17 INFO mapreduce.Job:  map 72% reduce 0%
+19/11/05 23:38:18 INFO mapreduce.Job:  map 73% reduce 0%
+19/11/05 23:38:19 INFO mapreduce.Job:  map 74% reduce 0%
+19/11/05 23:38:20 INFO mapreduce.Job:  map 75% reduce 0%
+19/11/05 23:38:22 INFO mapreduce.Job:  map 76% reduce 0%
+19/11/05 23:38:23 INFO mapreduce.Job:  map 77% reduce 0%
+19/11/05 23:38:25 INFO mapreduce.Job:  map 78% reduce 0%
+19/11/05 23:38:26 INFO mapreduce.Job:  map 79% reduce 0%
+19/11/05 23:38:28 INFO mapreduce.Job:  map 80% reduce 0%
+19/11/05 23:38:29 INFO mapreduce.Job:  map 81% reduce 0%
+19/11/05 23:38:31 INFO mapreduce.Job:  map 82% reduce 0%
+19/11/05 23:38:33 INFO mapreduce.Job:  map 83% reduce 0%
+19/11/05 23:38:34 INFO mapreduce.Job:  map 84% reduce 0%
+19/11/05 23:38:36 INFO mapreduce.Job:  map 85% reduce 0%
+19/11/05 23:38:38 INFO mapreduce.Job:  map 86% reduce 0%
+19/11/05 23:38:39 INFO mapreduce.Job:  map 87% reduce 0%
+19/11/05 23:38:41 INFO mapreduce.Job:  map 88% reduce 0%
+19/11/05 23:38:42 INFO mapreduce.Job:  map 89% reduce 0%
+19/11/05 23:38:44 INFO mapreduce.Job:  map 90% reduce 0%
+19/11/05 23:38:46 INFO mapreduce.Job:  map 91% reduce 0%
+19/11/05 23:38:48 INFO mapreduce.Job:  map 92% reduce 1%
+19/11/05 23:38:49 INFO mapreduce.Job:  map 92% reduce 4%
+19/11/05 23:38:50 INFO mapreduce.Job:  map 93% reduce 9%
+19/11/05 23:38:51 INFO mapreduce.Job:  map 93% reduce 11%
+19/11/05 23:38:52 INFO mapreduce.Job:  map 93% reduce 14%
+19/11/05 23:38:53 INFO mapreduce.Job:  map 94% reduce 16%
+19/11/05 23:38:54 INFO mapreduce.Job:  map 94% reduce 18%
+19/11/05 23:38:56 INFO mapreduce.Job:  map 95% reduce 18%
+19/11/05 23:38:59 INFO mapreduce.Job:  map 96% reduce 18%
+19/11/05 23:39:00 INFO mapreduce.Job:  map 96% reduce 19%
+19/11/05 23:39:03 INFO mapreduce.Job:  map 97% reduce 19%
+19/11/05 23:39:04 INFO mapreduce.Job:  map 97% reduce 23%
+19/11/05 23:39:05 INFO mapreduce.Job:  map 97% reduce 29%
+19/11/05 23:39:06 INFO mapreduce.Job:  map 98% reduce 31%
+19/11/05 23:39:09 INFO mapreduce.Job:  map 99% reduce 32%
+19/11/05 23:39:14 INFO mapreduce.Job:  map 100% reduce 33%
+19/11/05 23:39:21 INFO mapreduce.Job:  map 100% reduce 36%
+19/11/05 23:39:22 INFO mapreduce.Job:  map 100% reduce 43%
+19/11/05 23:39:23 INFO mapreduce.Job:  map 100% reduce 55%
+19/11/05 23:39:24 INFO mapreduce.Job:  map 100% reduce 63%
+19/11/05 23:39:25 INFO mapreduce.Job:  map 100% reduce 66%
+19/11/05 23:39:26 INFO mapreduce.Job:  map 100% reduce 68%
+19/11/05 23:39:28 INFO mapreduce.Job:  map 100% reduce 69%
+19/11/05 23:39:30 INFO mapreduce.Job:  map 100% reduce 70%
+19/11/05 23:39:32 INFO mapreduce.Job:  map 100% reduce 71%
+19/11/05 23:39:34 INFO mapreduce.Job:  map 100% reduce 72%
+19/11/05 23:39:35 INFO mapreduce.Job:  map 100% reduce 73%
+19/11/05 23:39:37 INFO mapreduce.Job:  map 100% reduce 74%
+19/11/05 23:39:39 INFO mapreduce.Job:  map 100% reduce 75%
+19/11/05 23:39:41 INFO mapreduce.Job:  map 100% reduce 76%
+19/11/05 23:39:42 INFO mapreduce.Job:  map 100% reduce 77%
+19/11/05 23:39:44 INFO mapreduce.Job:  map 100% reduce 78%
+19/11/05 23:39:46 INFO mapreduce.Job:  map 100% reduce 79%
+19/11/05 23:39:48 INFO mapreduce.Job:  map 100% reduce 80%
+19/11/05 23:39:50 INFO mapreduce.Job:  map 100% reduce 81%
+19/11/05 23:39:52 INFO mapreduce.Job:  map 100% reduce 82%
+19/11/05 23:39:54 INFO mapreduce.Job:  map 100% reduce 83%
+19/11/05 23:39:56 INFO mapreduce.Job:  map 100% reduce 84%
+19/11/05 23:39:57 INFO mapreduce.Job:  map 100% reduce 85%
+19/11/05 23:39:59 INFO mapreduce.Job:  map 100% reduce 86%
+19/11/05 23:40:01 INFO mapreduce.Job:  map 100% reduce 87%
+19/11/05 23:40:03 INFO mapreduce.Job:  map 100% reduce 88%
+19/11/05 23:40:04 INFO mapreduce.Job:  map 100% reduce 89%
+19/11/05 23:40:06 INFO mapreduce.Job:  map 100% reduce 90%
+19/11/05 23:40:08 INFO mapreduce.Job:  map 100% reduce 91%
+19/11/05 23:40:10 INFO mapreduce.Job:  map 100% reduce 92%
+19/11/05 23:40:11 INFO mapreduce.Job:  map 100% reduce 93%
+19/11/05 23:40:13 INFO mapreduce.Job:  map 100% reduce 94%
+19/11/05 23:40:15 INFO mapreduce.Job:  map 100% reduce 95%
+19/11/05 23:40:18 INFO mapreduce.Job:  map 100% reduce 96%
+19/11/05 23:40:20 INFO mapreduce.Job:  map 100% reduce 97%
+19/11/05 23:40:24 INFO mapreduce.Job:  map 100% reduce 98%
+19/11/05 23:40:30 INFO mapreduce.Job:  map 100% reduce 99%
+19/11/05 23:40:49 INFO mapreduce.Job:  map 100% reduce 100%
+19/11/05 23:42:28 INFO mapreduce.Job: Job job_1567079137842_609713 completed successfully
+19/11/05 23:42:29 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=19628738622
+		FILE: Number of bytes written=55159133633
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=162178909166
+		HDFS: Number of bytes written=207550794767
+		HDFS: Number of read operations=3600
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=800
+	Job Counters 
+		Launched map tasks=1000
+		Launched reduce tasks=200
+		Data-local map tasks=971
+		Rack-local map tasks=29
+		Total time spent by all maps in occupied slots (ms)=346320096
+		Total time spent by all reduces in occupied slots (ms)=117414882
+		Total time spent by all map tasks (ms)=43290012
+		Total time spent by all reduce tasks (ms)=19569147
+		Total vcore-milliseconds taken by all map tasks=43290012
+		Total vcore-milliseconds taken by all reduce tasks=19569147
+		Total megabyte-milliseconds taken by all map tasks=177315889152
+		Total megabyte-milliseconds taken by all reduce tasks=60116419584
+	Map-Reduce Framework
+		Map input records=76982126
+		Map output records=238674915
+		Map output bytes=153678695280
+		Map output materialized bytes=35378296667
+		Input split bytes=174000
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=9021890
+		Reduce shuffle bytes=35378296667
+		Reduce input records=238674915
+		Reduce output records=155365201
+		Spilled Records=477349830
+		Shuffled Maps =200000
+		Failed Shuffles=0
+		Merged Map outputs=200000
+		GC time elapsed (ms)=366913
+		CPU time spent (ms)=58830240
+		Physical memory (bytes) snapshot=1642868436992
+		Virtual memory (bytes) snapshot=6292558671872
+		Total committed heap usage (bytes)=2234315177984
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=162178735166
+	File Output Format Counters 
+		Bytes Written=207550794767
+19/11/05 23:42:29 INFO streaming.StreamJob: Output directory: /user/ad_user/ctr_space/model_train/shitu/20191102/
++ judge_result hadoop_run
++ [[ 0 -ne 0 ]]
++ echo 'hadoop_run success.'
+hadoop_run success.
++ ADFEA_DIR=/user/ad_user/ctr_space/model_train/shitu/adfea/
++ ADFEA_PATH=/user/ad_user/ctr_space/model_train/shitu/adfea//20191102/
++ INS_DIR=/user/ad_user/ctr_space/model_train/shitu/ins/
++ INS_PATH=/user/ad_user/ctr_space/model_train/shitu/ins//20191102/
++ STATINFO_DIR=/user/ad_user/ctr_space/model_train/shitu/statinfo/
++ STATINFO_PATH=/user/ad_user/ctr_space/model_train/shitu/statinfo//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/adfea//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/adfea//20191102/
+19/11/05 23:42:34 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/adfea/20191102' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/adfea//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/ins//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/ins//20191102/
+19/11/05 23:42:43 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/ins/20191102' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/ins//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/statinfo//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/statinfo//20191102/
+19/11/05 23:42:52 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/statinfo/20191102' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/statinfo//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191102//part-*-A' /user/ad_user/ctr_space/model_train/shitu/adfea//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/adfea//20191102//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191102//part-*-B' /user/ad_user/ctr_space/model_train/shitu/statinfo//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/statinfo//20191102//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191102//part-*-C' /user/ad_user/ctr_space/model_train/shitu/ins//20191102/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/ins//20191102//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191102/
+19/11/05 23:43:24 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191102' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ mylog 'task[20191102] success!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:43:25
++ echo '[20191105-23:43:25] task[20191102]' 'success!'
+[20191105-23:43:25] task[20191102] success!
++ exit 0
++ bash -x run_shitu.sh 20191103
++ bash /home/ling.fang/kinit_ad_user.sh
++ USER_NAME=ad_user
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ common_file=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++ source /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
+++ bash /home/ling.fang/kinit_ad_user.sh
+++ HADOOP_BIN=/usr/local/hadoop-2.6.3/bin/hadoop
+++++ dirname /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++++ cd /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools
++++ pwd
+++ ROOT_PATH=/home/ad_user/personal/ling.fang/script/tools
++ '[' 1 -ge 1 ']'
++ DATE=20191103
++ '[' 1 -eq 2 ']'
++ JOB_TAG=
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ INPUTDIR='-input "/user/ad_user/ctr_space/ed_join_click/join/20191103/" '
++ echo -input '"/user/ad_user/ctr_space/ed_join_click/join/20191103/"'
+-input "/user/ad_user/ctr_space/ed_join_click/join/20191103/"
++ OUTPUTDIR=/user/ad_user/ctr_space/model_train/shitu/20191103/
++ PLID_EDCLKDIR=/user/ad_user/ctr_space/plid_stat_info/json
++ done_file=/user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS
++ loop_check /user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS 140 1
++ file=/user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS
++ ready=0
++ check_time=140
++ mode=1
++ echo 'input params:/user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS 140 1'
+input params:/user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS 140 1
++ '[' 3 -ne 3 ']'
++ '[' 140 -gt 0 ']'
++ '[' 1 -eq 1 ']'
++ hadoop_check_ready
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS
++ ready=1
++ '[' 1 -eq 1 ']'
++ mylog '/user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS is ready!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:43:27
++ echo '[20191105-23:43:27] /user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS' is 'ready!'
+[20191105-23:43:27] /user/ad_user/ctr_space/ed_join_click/join/20191103/_SUCCESS is ready!
++ return 0
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -cat '/user/ad_user/ctr_space/plid_stat_info/json/*'
+cat: `/user/ad_user/ctr_space/plid_stat_info/json/*': No such file or directory
++ OWNER_INFO=ad_user@cootek.cn
++ TASK_NAME=naga_ctr_generate_shitu_log
++ hadoop_run
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191103/
+rm: `/user/ad_user/ctr_space/model_train/shitu/20191103/': No such file or directory
++ /usr/local/hadoop-2.6.3/bin/hadoop jar /usr/local/hadoop-2.6.3/share/hadoop/tools/lib/hadoop-streaming-2.6.3.jar -libjars /home/ling.fang/script/tools/mr_plugins-1.0.jar -files script -D map.output.key.field.separator=# -D num.key.fields.for.partition=1 -D mapreduce.map.memory.mb=4096 -D mapreduce.map.java.opts=-Xmx3276m -Dmapred.map.tasks.speculative.execution=false -Dmapred.reduce.tasks.speculative.execution=false -Dstream.non.zero.exit.is.failure=false -Dmapred.job.priority=HIGH -Dmapreduce.job.queuename=root.ad-root.etl.dailyetl.high -Dmapred.map.tasks=1000 -Dmapred.reduce.tasks=200 -Dmapred.job.map.capacity=1000 -Dmapred.job.reduce.capacity=200 -Dmapred.job.name=naga_ctr_generate_shitu_log_20191103 -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner -outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat -mapper 'python script/mapper.py' -reducer 'python script/reducer.py' -input '"/user/ad_user/ctr_space/ed_join_click/join/20191103/"' -output /user/ad_user/ctr_space/model_train/shitu/20191103/
+19/11/05 23:43:34 INFO Configuration.deprecation: map.output.key.field.separator is deprecated. Instead, use mapreduce.map.output.key.field.separator
+19/11/05 23:43:34 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+19/11/05 23:43:34 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+19/11/05 23:43:34 INFO Configuration.deprecation: mapred.job.priority is deprecated. Instead, use mapreduce.job.priority
+19/11/05 23:43:34 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/11/05 23:43:34 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+19/11/05 23:43:34 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [/tmp/hadoop-unjar7976043721374938317/] [] /tmp/streamjob2322297672897696094.jar tmpDir=null
+19/11/05 23:43:35 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:43:35 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:43:36 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4044880 for ad_user on ha-hdfs:cootek
+19/11/05 23:43:36 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044880 for ad_user)
+19/11/05 23:43:36 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:43:36 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 3c 51 77 8a 01 6e 60 48 d5 77 8d 30 fc 93 8e 02 7f
+19/11/05 23:43:39 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library from the embedded binaries
+19/11/05 23:43:39 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 52decc77982b58949890770d22720a91adce0c3f]
+19/11/05 23:43:40 INFO mapred.FileInputFormat: Total input paths to process : 1000
+19/11/05 23:43:40 INFO mapreduce.JobSubmitter: number of splits:1000
+19/11/05 23:43:40 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1567079137842_609772
+19/11/05 23:43:40 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044880 for ad_user)
+19/11/05 23:43:40 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:43:40 WARN token.Token: Cannot find class for token kind kms-dt
+Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 3c 51 77 8a 01 6e 60 48 d5 77 8d 30 fc 93 8e 02 7f
+19/11/05 23:43:40 INFO impl.YarnClientImpl: Submitted application application_1567079137842_609772
+19/11/05 23:43:41 INFO mapreduce.Job: The url to track the job: http://hadoop2-namenode.corp.cootek.com:8088/proxy/application_1567079137842_609772/
+19/11/05 23:43:41 INFO mapreduce.Job: Running job: job_1567079137842_609772
+19/11/05 23:43:49 INFO mapreduce.Job: Job job_1567079137842_609772 running in uber mode : false
+19/11/05 23:43:49 INFO mapreduce.Job:  map 0% reduce 0%
+19/11/05 23:44:07 INFO mapreduce.Job:  map 1% reduce 0%
+19/11/05 23:44:10 INFO mapreduce.Job:  map 2% reduce 0%
+19/11/05 23:44:12 INFO mapreduce.Job:  map 3% reduce 0%
+19/11/05 23:44:14 INFO mapreduce.Job:  map 4% reduce 0%
+19/11/05 23:44:15 INFO mapreduce.Job:  map 5% reduce 0%
+19/11/05 23:44:16 INFO mapreduce.Job:  map 6% reduce 0%
+19/11/05 23:44:17 INFO mapreduce.Job:  map 7% reduce 0%
+19/11/05 23:44:18 INFO mapreduce.Job:  map 8% reduce 0%
+19/11/05 23:44:20 INFO mapreduce.Job:  map 9% reduce 0%
+19/11/05 23:44:21 INFO mapreduce.Job:  map 10% reduce 0%
+19/11/05 23:44:23 INFO mapreduce.Job:  map 11% reduce 0%
+19/11/05 23:44:24 INFO mapreduce.Job:  map 12% reduce 0%
+19/11/05 23:44:25 INFO mapreduce.Job:  map 13% reduce 0%
+19/11/05 23:44:26 INFO mapreduce.Job:  map 14% reduce 0%
+19/11/05 23:44:27 INFO mapreduce.Job:  map 15% reduce 0%
+19/11/05 23:44:29 INFO mapreduce.Job:  map 17% reduce 0%
+19/11/05 23:44:30 INFO mapreduce.Job:  map 18% reduce 0%
+19/11/05 23:44:33 INFO mapreduce.Job:  map 19% reduce 0%
+19/11/05 23:44:34 INFO mapreduce.Job:  map 20% reduce 0%
+19/11/05 23:44:35 INFO mapreduce.Job:  map 21% reduce 0%
+19/11/05 23:44:36 INFO mapreduce.Job:  map 22% reduce 0%
+19/11/05 23:44:37 INFO mapreduce.Job:  map 23% reduce 0%
+19/11/05 23:44:38 INFO mapreduce.Job:  map 25% reduce 0%
+19/11/05 23:44:39 INFO mapreduce.Job:  map 26% reduce 0%
+19/11/05 23:44:40 INFO mapreduce.Job:  map 28% reduce 0%
+19/11/05 23:44:41 INFO mapreduce.Job:  map 30% reduce 0%
+19/11/05 23:44:42 INFO mapreduce.Job:  map 31% reduce 0%
+19/11/05 23:44:43 INFO mapreduce.Job:  map 33% reduce 0%
+19/11/05 23:44:44 INFO mapreduce.Job:  map 35% reduce 0%
+19/11/05 23:44:45 INFO mapreduce.Job:  map 36% reduce 0%
+19/11/05 23:44:46 INFO mapreduce.Job:  map 37% reduce 0%
+19/11/05 23:44:47 INFO mapreduce.Job:  map 38% reduce 0%
+19/11/05 23:44:48 INFO mapreduce.Job:  map 39% reduce 0%
+19/11/05 23:44:50 INFO mapreduce.Job:  map 40% reduce 0%
+19/11/05 23:44:52 INFO mapreduce.Job:  map 41% reduce 0%
+19/11/05 23:44:54 INFO mapreduce.Job:  map 42% reduce 0%
+19/11/05 23:44:57 INFO mapreduce.Job:  map 43% reduce 0%
+19/11/05 23:44:59 INFO mapreduce.Job:  map 44% reduce 0%
+19/11/05 23:45:00 INFO mapreduce.Job:  map 45% reduce 0%
+19/11/05 23:45:02 INFO mapreduce.Job:  map 46% reduce 0%
+19/11/05 23:45:03 INFO mapreduce.Job:  map 47% reduce 0%
+19/11/05 23:45:04 INFO mapreduce.Job:  map 48% reduce 0%
+19/11/05 23:45:06 INFO mapreduce.Job:  map 49% reduce 0%
+19/11/05 23:45:07 INFO mapreduce.Job:  map 50% reduce 0%
+19/11/05 23:45:08 INFO mapreduce.Job:  map 51% reduce 0%
+19/11/05 23:45:10 INFO mapreduce.Job:  map 52% reduce 0%
+19/11/05 23:45:11 INFO mapreduce.Job:  map 53% reduce 0%
+19/11/05 23:45:13 INFO mapreduce.Job:  map 54% reduce 0%
+19/11/05 23:45:14 INFO mapreduce.Job:  map 55% reduce 0%
+19/11/05 23:45:15 INFO mapreduce.Job:  map 56% reduce 0%
+19/11/05 23:45:16 INFO mapreduce.Job:  map 57% reduce 0%
+19/11/05 23:45:17 INFO mapreduce.Job:  map 58% reduce 0%
+19/11/05 23:45:18 INFO mapreduce.Job:  map 59% reduce 0%
+19/11/05 23:45:20 INFO mapreduce.Job:  map 60% reduce 0%
+19/11/05 23:45:21 INFO mapreduce.Job:  map 61% reduce 0%
+19/11/05 23:45:22 INFO mapreduce.Job:  map 62% reduce 0%
+19/11/05 23:45:23 INFO mapreduce.Job:  map 63% reduce 0%
+19/11/05 23:45:24 INFO mapreduce.Job:  map 64% reduce 0%
+19/11/05 23:45:25 INFO mapreduce.Job:  map 65% reduce 0%
+19/11/05 23:45:26 INFO mapreduce.Job:  map 67% reduce 0%
+19/11/05 23:45:27 INFO mapreduce.Job:  map 68% reduce 0%
+19/11/05 23:45:28 INFO mapreduce.Job:  map 69% reduce 0%
+19/11/05 23:45:29 INFO mapreduce.Job:  map 70% reduce 0%
+19/11/05 23:45:30 INFO mapreduce.Job:  map 71% reduce 0%
+19/11/05 23:45:31 INFO mapreduce.Job:  map 73% reduce 0%
+19/11/05 23:45:33 INFO mapreduce.Job:  map 74% reduce 0%
+19/11/05 23:45:34 INFO mapreduce.Job:  map 75% reduce 0%
+19/11/05 23:45:35 INFO mapreduce.Job:  map 76% reduce 0%
+19/11/05 23:45:36 INFO mapreduce.Job:  map 77% reduce 0%
+19/11/05 23:45:37 INFO mapreduce.Job:  map 78% reduce 0%
+19/11/05 23:45:38 INFO mapreduce.Job:  map 79% reduce 0%
+19/11/05 23:45:39 INFO mapreduce.Job:  map 80% reduce 0%
+19/11/05 23:45:40 INFO mapreduce.Job:  map 81% reduce 0%
+19/11/05 23:45:41 INFO mapreduce.Job:  map 82% reduce 0%
+19/11/05 23:45:42 INFO mapreduce.Job:  map 83% reduce 0%
+19/11/05 23:45:43 INFO mapreduce.Job:  map 84% reduce 0%
+19/11/05 23:45:44 INFO mapreduce.Job:  map 85% reduce 0%
+19/11/05 23:45:45 INFO mapreduce.Job:  map 86% reduce 0%
+19/11/05 23:45:46 INFO mapreduce.Job:  map 87% reduce 0%
+19/11/05 23:45:47 INFO mapreduce.Job:  map 88% reduce 0%
+19/11/05 23:45:48 INFO mapreduce.Job:  map 89% reduce 0%
+19/11/05 23:45:49 INFO mapreduce.Job:  map 90% reduce 0%
+19/11/05 23:45:51 INFO mapreduce.Job:  map 91% reduce 0%
+19/11/05 23:45:53 INFO mapreduce.Job:  map 92% reduce 0%
+19/11/05 23:45:55 INFO mapreduce.Job:  map 93% reduce 0%
+19/11/05 23:45:56 INFO mapreduce.Job:  map 93% reduce 2%
+19/11/05 23:45:57 INFO mapreduce.Job:  map 94% reduce 10%
+19/11/05 23:45:58 INFO mapreduce.Job:  map 94% reduce 21%
+19/11/05 23:45:59 INFO mapreduce.Job:  map 94% reduce 28%
+19/11/05 23:46:00 INFO mapreduce.Job:  map 95% reduce 29%
+19/11/05 23:46:02 INFO mapreduce.Job:  map 96% reduce 30%
+19/11/05 23:46:05 INFO mapreduce.Job:  map 97% reduce 30%
+19/11/05 23:46:06 INFO mapreduce.Job:  map 97% reduce 31%
+19/11/05 23:46:08 INFO mapreduce.Job:  map 98% reduce 31%
+19/11/05 23:46:11 INFO mapreduce.Job:  map 99% reduce 32%
+19/11/05 23:46:15 INFO mapreduce.Job:  map 100% reduce 33%
+19/11/05 23:46:19 INFO mapreduce.Job:  map 100% reduce 37%
+19/11/05 23:46:20 INFO mapreduce.Job:  map 100% reduce 45%
+19/11/05 23:46:21 INFO mapreduce.Job:  map 100% reduce 55%
+19/11/05 23:46:22 INFO mapreduce.Job:  map 100% reduce 63%
+19/11/05 23:46:23 INFO mapreduce.Job:  map 100% reduce 66%
+19/11/05 23:46:24 INFO mapreduce.Job:  map 100% reduce 67%
+19/11/05 23:46:25 INFO mapreduce.Job:  map 100% reduce 68%
+19/11/05 23:46:26 INFO mapreduce.Job:  map 100% reduce 69%
+19/11/05 23:46:28 INFO mapreduce.Job:  map 100% reduce 70%
+19/11/05 23:46:30 INFO mapreduce.Job:  map 100% reduce 71%
+19/11/05 23:46:31 INFO mapreduce.Job:  map 100% reduce 72%
+19/11/05 23:46:33 INFO mapreduce.Job:  map 100% reduce 73%
+19/11/05 23:46:35 INFO mapreduce.Job:  map 100% reduce 74%
+19/11/05 23:46:37 INFO mapreduce.Job:  map 100% reduce 75%
+19/11/05 23:46:39 INFO mapreduce.Job:  map 100% reduce 76%
+19/11/05 23:46:41 INFO mapreduce.Job:  map 100% reduce 77%
+19/11/05 23:46:43 INFO mapreduce.Job:  map 100% reduce 78%
+19/11/05 23:46:46 INFO mapreduce.Job:  map 100% reduce 79%
+19/11/05 23:46:48 INFO mapreduce.Job:  map 100% reduce 80%
+19/11/05 23:46:50 INFO mapreduce.Job:  map 100% reduce 81%
+19/11/05 23:46:52 INFO mapreduce.Job:  map 100% reduce 82%
+19/11/05 23:46:54 INFO mapreduce.Job:  map 100% reduce 83%
+19/11/05 23:46:57 INFO mapreduce.Job:  map 100% reduce 84%
+19/11/05 23:46:59 INFO mapreduce.Job:  map 100% reduce 85%
+19/11/05 23:47:02 INFO mapreduce.Job:  map 100% reduce 86%
+19/11/05 23:47:04 INFO mapreduce.Job:  map 100% reduce 87%
+19/11/05 23:47:07 INFO mapreduce.Job:  map 100% reduce 88%
+19/11/05 23:47:09 INFO mapreduce.Job:  map 100% reduce 89%
+19/11/05 23:47:12 INFO mapreduce.Job:  map 100% reduce 90%
+19/11/05 23:47:14 INFO mapreduce.Job:  map 100% reduce 91%
+19/11/05 23:47:16 INFO mapreduce.Job:  map 100% reduce 92%
+19/11/05 23:47:19 INFO mapreduce.Job:  map 100% reduce 93%
+19/11/05 23:47:21 INFO mapreduce.Job:  map 100% reduce 94%
+19/11/05 23:47:24 INFO mapreduce.Job:  map 100% reduce 95%
+19/11/05 23:47:26 INFO mapreduce.Job:  map 100% reduce 96%
+19/11/05 23:47:29 INFO mapreduce.Job:  map 100% reduce 97%
+19/11/05 23:47:33 INFO mapreduce.Job:  map 100% reduce 98%
+19/11/05 23:47:39 INFO mapreduce.Job:  map 100% reduce 99%
+19/11/05 23:47:59 INFO mapreduce.Job:  map 100% reduce 100%
+19/11/05 23:48:40 INFO mapreduce.Job: Job job_1567079137842_609772 completed successfully
+19/11/05 23:48:40 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=21500941779
+		FILE: Number of bytes written=60692480045
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=175905773638
+		HDFS: Number of bytes written=225734460040
+		HDFS: Number of read operations=3600
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=800
+	Job Counters 
+		Launched map tasks=1000
+		Launched reduce tasks=200
+		Data-local map tasks=965
+		Rack-local map tasks=35
+		Total time spent by all maps in occupied slots (ms)=362807912
+		Total time spent by all reduces in occupied slots (ms)=123798168
+		Total time spent by all map tasks (ms)=45350989
+		Total time spent by all reduce tasks (ms)=20633028
+		Total vcore-milliseconds taken by all map tasks=45350989
+		Total vcore-milliseconds taken by all reduce tasks=20633028
+		Total megabyte-milliseconds taken by all map tasks=185757650944
+		Total megabyte-milliseconds taken by all reduce tasks=63384662016
+	Map-Reduce Framework
+		Map input records=83652859
+		Map output records=260391550
+		Map output bytes=167149631303
+		Map output materialized bytes=39039441298
+		Input split bytes=174000
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10188014
+		Reduce shuffle bytes=39039441298
+		Reduce input records=260391550
+		Reduce output records=168841114
+		Spilled Records=520783100
+		Shuffled Maps =200000
+		Failed Shuffles=0
+		Merged Map outputs=200000
+		GC time elapsed (ms)=387853
+		CPU time spent (ms)=64008790
+		Physical memory (bytes) snapshot=1657376980992
+		Virtual memory (bytes) snapshot=6291980419072
+		Total committed heap usage (bytes)=2242633531392
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=175905599638
+	File Output Format Counters 
+		Bytes Written=225734460040
+19/11/05 23:48:40 INFO streaming.StreamJob: Output directory: /user/ad_user/ctr_space/model_train/shitu/20191103/
++ judge_result hadoop_run
++ [[ 0 -ne 0 ]]
++ echo 'hadoop_run success.'
+hadoop_run success.
++ ADFEA_DIR=/user/ad_user/ctr_space/model_train/shitu/adfea/
++ ADFEA_PATH=/user/ad_user/ctr_space/model_train/shitu/adfea//20191103/
++ INS_DIR=/user/ad_user/ctr_space/model_train/shitu/ins/
++ INS_PATH=/user/ad_user/ctr_space/model_train/shitu/ins//20191103/
++ STATINFO_DIR=/user/ad_user/ctr_space/model_train/shitu/statinfo/
++ STATINFO_PATH=/user/ad_user/ctr_space/model_train/shitu/statinfo//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/adfea//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/adfea//20191103/
+19/11/05 23:48:46 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/adfea/20191103' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/adfea//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/ins//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/ins//20191103/
+19/11/05 23:48:54 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/ins/20191103' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/ins//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/statinfo//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/statinfo//20191103/
+19/11/05 23:49:03 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/statinfo/20191103' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/statinfo//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191103//part-*-A' /user/ad_user/ctr_space/model_train/shitu/adfea//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/adfea//20191103//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191103//part-*-B' /user/ad_user/ctr_space/model_train/shitu/statinfo//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/statinfo//20191103//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191103//part-*-C' /user/ad_user/ctr_space/model_train/shitu/ins//20191103/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/ins//20191103//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191103/
+19/11/05 23:49:32 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191103' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ mylog 'task[20191103] success!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:49:32
++ echo '[20191105-23:49:32] task[20191103]' 'success!'
+[20191105-23:49:32] task[20191103] success!
++ exit 0
++ bash -x run_shitu.sh 20191104
++ bash /home/ling.fang/kinit_ad_user.sh
++ USER_NAME=ad_user
++ HADOOP_HOME=/usr/local/hadoop-2.6.3
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ common_file=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++ source /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
+++ bash /home/ling.fang/kinit_ad_user.sh
+++ HADOOP_BIN=/usr/local/hadoop-2.6.3/bin/hadoop
+++++ dirname /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools/common.sh
++++ cd /home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate/../../../script/tools
++++ pwd
+++ ROOT_PATH=/home/ad_user/personal/ling.fang/script/tools
++ '[' 1 -ge 1 ']'
++ DATE=20191104
++ '[' 1 -eq 2 ']'
++ JOB_TAG=
+++ pwd
++ ROOT_DIR=/home/ad_user/personal/ling.fang/ctr_space/daily_update/shitu_generate
++ INPUTDIR='-input "/user/ad_user/ctr_space/ed_join_click/join/20191104/" '
++ echo -input '"/user/ad_user/ctr_space/ed_join_click/join/20191104/"'
+-input "/user/ad_user/ctr_space/ed_join_click/join/20191104/"
++ OUTPUTDIR=/user/ad_user/ctr_space/model_train/shitu/20191104/
++ PLID_EDCLKDIR=/user/ad_user/ctr_space/plid_stat_info/json
++ done_file=/user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS
++ loop_check /user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS 140 1
++ file=/user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS
++ ready=0
++ check_time=140
++ mode=1
++ echo 'input params:/user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS 140 1'
+input params:/user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS 140 1
++ '[' 3 -ne 3 ']'
++ '[' 140 -gt 0 ']'
++ '[' 1 -eq 1 ']'
++ hadoop_check_ready
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS
++ ready=1
++ '[' 1 -eq 1 ']'
++ mylog '/user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS is ready!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:49:35
++ echo '[20191105-23:49:35] /user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS' is 'ready!'
+[20191105-23:49:35] /user/ad_user/ctr_space/ed_join_click/join/20191104/_SUCCESS is ready!
++ return 0
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -cat '/user/ad_user/ctr_space/plid_stat_info/json/*'
+cat: `/user/ad_user/ctr_space/plid_stat_info/json/*': No such file or directory
++ OWNER_INFO=ad_user@cootek.cn
++ TASK_NAME=naga_ctr_generate_shitu_log
++ hadoop_run
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191104/
+rm: `/user/ad_user/ctr_space/model_train/shitu/20191104/': No such file or directory
++ /usr/local/hadoop-2.6.3/bin/hadoop jar /usr/local/hadoop-2.6.3/share/hadoop/tools/lib/hadoop-streaming-2.6.3.jar -libjars /home/ling.fang/script/tools/mr_plugins-1.0.jar -files script -D map.output.key.field.separator=# -D num.key.fields.for.partition=1 -D mapreduce.map.memory.mb=4096 -D mapreduce.map.java.opts=-Xmx3276m -Dmapred.map.tasks.speculative.execution=false -Dmapred.reduce.tasks.speculative.execution=false -Dstream.non.zero.exit.is.failure=false -Dmapred.job.priority=HIGH -Dmapreduce.job.queuename=root.ad-root.etl.dailyetl.high -Dmapred.map.tasks=1000 -Dmapred.reduce.tasks=200 -Dmapred.job.map.capacity=1000 -Dmapred.job.reduce.capacity=200 -Dmapred.job.name=naga_ctr_generate_shitu_log_20191104 -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner -outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat -mapper 'python script/mapper.py' -reducer 'python script/reducer.py' -input '"/user/ad_user/ctr_space/ed_join_click/join/20191104/"' -output /user/ad_user/ctr_space/model_train/shitu/20191104/
+19/11/05 23:49:43 INFO Configuration.deprecation: map.output.key.field.separator is deprecated. Instead, use mapreduce.map.output.key.field.separator
+19/11/05 23:49:43 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+19/11/05 23:49:43 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+19/11/05 23:49:43 INFO Configuration.deprecation: mapred.job.priority is deprecated. Instead, use mapreduce.job.priority
+19/11/05 23:49:43 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/11/05 23:49:43 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+19/11/05 23:49:43 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+packageJobJar: [/tmp/hadoop-unjar570907738083846814/] [] /tmp/streamjob1209061956275495795.jar tmpDir=null
+19/11/05 23:49:44 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:49:44 INFO client.RMProxy: Connecting to ResourceManager at hadoop2-namenode.corp.cootek.com/192.168.30.10:8032
+19/11/05 23:49:44 INFO hdfs.DFSClient: Created HDFS_DELEGATION_TOKEN token 4044926 for ad_user on ha-hdfs:cootek
+19/11/05 23:49:45 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044926 for ad_user)
+19/11/05 23:49:45 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:49:45 INFO security.TokenCache: Got dt for hdfs://cootek; Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 41 f1 17 8a 01 6e 60 4e 75 17 8d 30 fc c1 8e 02 7f
+19/11/05 23:49:48 INFO lzo.GPLNativeCodeLoader: Loaded native gpl library from the embedded binaries
+19/11/05 23:49:48 INFO lzo.LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 52decc77982b58949890770d22720a91adce0c3f]
+19/11/05 23:49:48 INFO mapred.FileInputFormat: Total input paths to process : 1000
+19/11/05 23:49:49 INFO mapreduce.JobSubmitter: number of splits:1000
+19/11/05 23:49:49 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1567079137842_609815
+19/11/05 23:49:49 INFO mapreduce.JobSubmitter: Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cootek, Ident: (HDFS_DELEGATION_TOKEN token 4044926 for ad_user)
+19/11/05 23:49:49 WARN token.Token: Cannot find class for token kind kms-dt
+19/11/05 23:49:49 WARN token.Token: Cannot find class for token kind kms-dt
+Kind: kms-dt, Service: 192.168.30.152:16000, Ident: 00 07 61 64 5f 75 73 65 72 06 68 61 64 6f 6f 70 00 8a 01 6e 3c 41 f1 17 8a 01 6e 60 4e 75 17 8d 30 fc c1 8e 02 7f
+19/11/05 23:49:49 INFO impl.YarnClientImpl: Submitted application application_1567079137842_609815
+19/11/05 23:49:49 INFO mapreduce.Job: The url to track the job: http://hadoop2-namenode.corp.cootek.com:8088/proxy/application_1567079137842_609815/
+19/11/05 23:49:49 INFO mapreduce.Job: Running job: job_1567079137842_609815
+19/11/05 23:49:59 INFO mapreduce.Job: Job job_1567079137842_609815 running in uber mode : false
+19/11/05 23:49:59 INFO mapreduce.Job:  map 0% reduce 0%
+19/11/05 23:50:18 INFO mapreduce.Job:  map 1% reduce 0%
+19/11/05 23:50:24 INFO mapreduce.Job:  map 2% reduce 0%
+19/11/05 23:50:29 INFO mapreduce.Job:  map 3% reduce 0%
+19/11/05 23:50:33 INFO mapreduce.Job:  map 4% reduce 0%
+19/11/05 23:50:37 INFO mapreduce.Job:  map 5% reduce 0%
+19/11/05 23:50:39 INFO mapreduce.Job:  map 6% reduce 0%
+19/11/05 23:50:42 INFO mapreduce.Job:  map 7% reduce 0%
+19/11/05 23:50:43 INFO mapreduce.Job:  map 8% reduce 0%
+19/11/05 23:50:45 INFO mapreduce.Job:  map 9% reduce 0%
+19/11/05 23:50:46 INFO mapreduce.Job:  map 10% reduce 0%
+19/11/05 23:50:47 INFO mapreduce.Job:  map 11% reduce 0%
+19/11/05 23:50:48 INFO mapreduce.Job:  map 12% reduce 0%
+19/11/05 23:50:50 INFO mapreduce.Job:  map 13% reduce 0%
+19/11/05 23:50:51 INFO mapreduce.Job:  map 14% reduce 0%
+19/11/05 23:50:53 INFO mapreduce.Job:  map 15% reduce 0%
+19/11/05 23:50:54 INFO mapreduce.Job:  map 16% reduce 0%
+19/11/05 23:50:56 INFO mapreduce.Job:  map 17% reduce 0%
+19/11/05 23:50:58 INFO mapreduce.Job:  map 18% reduce 0%
+19/11/05 23:50:59 INFO mapreduce.Job:  map 19% reduce 0%
+19/11/05 23:51:00 INFO mapreduce.Job:  map 20% reduce 0%
+19/11/05 23:51:01 INFO mapreduce.Job:  map 21% reduce 0%
+19/11/05 23:51:03 INFO mapreduce.Job:  map 22% reduce 0%
+19/11/05 23:51:04 INFO mapreduce.Job:  map 23% reduce 0%
+19/11/05 23:51:06 INFO mapreduce.Job:  map 24% reduce 0%
+19/11/05 23:51:07 INFO mapreduce.Job:  map 25% reduce 0%
+19/11/05 23:51:08 INFO mapreduce.Job:  map 26% reduce 0%
+19/11/05 23:51:09 INFO mapreduce.Job:  map 27% reduce 0%
+19/11/05 23:51:10 INFO mapreduce.Job:  map 28% reduce 0%
+19/11/05 23:51:11 INFO mapreduce.Job:  map 29% reduce 0%
+19/11/05 23:51:13 INFO mapreduce.Job:  map 31% reduce 0%
+19/11/05 23:51:14 INFO mapreduce.Job:  map 32% reduce 0%
+19/11/05 23:51:16 INFO mapreduce.Job:  map 33% reduce 0%
+19/11/05 23:51:17 INFO mapreduce.Job:  map 34% reduce 0%
+19/11/05 23:51:18 INFO mapreduce.Job:  map 35% reduce 0%
+19/11/05 23:51:19 INFO mapreduce.Job:  map 36% reduce 0%
+19/11/05 23:51:20 INFO mapreduce.Job:  map 37% reduce 0%
+19/11/05 23:51:22 INFO mapreduce.Job:  map 38% reduce 0%
+19/11/05 23:51:23 INFO mapreduce.Job:  map 39% reduce 0%
+19/11/05 23:51:24 INFO mapreduce.Job:  map 40% reduce 0%
+19/11/05 23:51:25 INFO mapreduce.Job:  map 41% reduce 0%
+19/11/05 23:51:26 INFO mapreduce.Job:  map 42% reduce 0%
+19/11/05 23:51:27 INFO mapreduce.Job:  map 43% reduce 0%
+19/11/05 23:51:28 INFO mapreduce.Job:  map 44% reduce 0%
+19/11/05 23:51:30 INFO mapreduce.Job:  map 45% reduce 0%
+19/11/05 23:51:31 INFO mapreduce.Job:  map 46% reduce 0%
+19/11/05 23:51:32 INFO mapreduce.Job:  map 47% reduce 0%
+19/11/05 23:51:34 INFO mapreduce.Job:  map 48% reduce 0%
+19/11/05 23:51:35 INFO mapreduce.Job:  map 49% reduce 0%
+19/11/05 23:51:36 INFO mapreduce.Job:  map 50% reduce 0%
+19/11/05 23:51:37 INFO mapreduce.Job:  map 51% reduce 0%
+19/11/05 23:51:38 INFO mapreduce.Job:  map 52% reduce 0%
+19/11/05 23:51:39 INFO mapreduce.Job:  map 53% reduce 0%
+19/11/05 23:51:40 INFO mapreduce.Job:  map 54% reduce 0%
+19/11/05 23:51:41 INFO mapreduce.Job:  map 55% reduce 0%
+19/11/05 23:51:42 INFO mapreduce.Job:  map 56% reduce 0%
+19/11/05 23:51:44 INFO mapreduce.Job:  map 57% reduce 0%
+19/11/05 23:51:45 INFO mapreduce.Job:  map 58% reduce 0%
+19/11/05 23:51:46 INFO mapreduce.Job:  map 59% reduce 0%
+19/11/05 23:51:47 INFO mapreduce.Job:  map 60% reduce 0%
+19/11/05 23:51:48 INFO mapreduce.Job:  map 61% reduce 0%
+19/11/05 23:51:49 INFO mapreduce.Job:  map 62% reduce 0%
+19/11/05 23:51:50 INFO mapreduce.Job:  map 63% reduce 0%
+19/11/05 23:51:51 INFO mapreduce.Job:  map 64% reduce 0%
+19/11/05 23:51:52 INFO mapreduce.Job:  map 65% reduce 0%
+19/11/05 23:51:54 INFO mapreduce.Job:  map 67% reduce 0%
+19/11/05 23:51:55 INFO mapreduce.Job:  map 68% reduce 0%
+19/11/05 23:51:56 INFO mapreduce.Job:  map 69% reduce 0%
+19/11/05 23:51:57 INFO mapreduce.Job:  map 70% reduce 0%
+19/11/05 23:51:58 INFO mapreduce.Job:  map 71% reduce 0%
+19/11/05 23:51:59 INFO mapreduce.Job:  map 72% reduce 0%
+19/11/05 23:52:00 INFO mapreduce.Job:  map 73% reduce 0%
+19/11/05 23:52:02 INFO mapreduce.Job:  map 74% reduce 0%
+19/11/05 23:52:03 INFO mapreduce.Job:  map 75% reduce 0%
+19/11/05 23:52:04 INFO mapreduce.Job:  map 76% reduce 0%
+19/11/05 23:52:06 INFO mapreduce.Job:  map 77% reduce 0%
+19/11/05 23:52:07 INFO mapreduce.Job:  map 78% reduce 0%
+19/11/05 23:52:08 INFO mapreduce.Job:  map 79% reduce 0%
+19/11/05 23:52:09 INFO mapreduce.Job:  map 80% reduce 0%
+19/11/05 23:52:11 INFO mapreduce.Job:  map 81% reduce 0%
+19/11/05 23:52:12 INFO mapreduce.Job:  map 82% reduce 0%
+19/11/05 23:52:14 INFO mapreduce.Job:  map 83% reduce 0%
+19/11/05 23:52:15 INFO mapreduce.Job:  map 84% reduce 0%
+19/11/05 23:52:16 INFO mapreduce.Job:  map 85% reduce 0%
+19/11/05 23:52:18 INFO mapreduce.Job:  map 86% reduce 0%
+19/11/05 23:52:19 INFO mapreduce.Job:  map 87% reduce 0%
+19/11/05 23:52:21 INFO mapreduce.Job:  map 88% reduce 0%
+19/11/05 23:52:23 INFO mapreduce.Job:  map 89% reduce 0%
+19/11/05 23:52:25 INFO mapreduce.Job:  map 90% reduce 0%
+19/11/05 23:52:27 INFO mapreduce.Job:  map 91% reduce 0%
+19/11/05 23:52:28 INFO mapreduce.Job:  map 91% reduce 3%
+19/11/05 23:52:29 INFO mapreduce.Job:  map 92% reduce 10%
+19/11/05 23:52:30 INFO mapreduce.Job:  map 92% reduce 16%
+19/11/05 23:52:31 INFO mapreduce.Job:  map 92% reduce 19%
+19/11/05 23:52:32 INFO mapreduce.Job:  map 93% reduce 22%
+19/11/05 23:52:33 INFO mapreduce.Job:  map 93% reduce 25%
+19/11/05 23:52:34 INFO mapreduce.Job:  map 94% reduce 27%
+19/11/05 23:52:35 INFO mapreduce.Job:  map 95% reduce 28%
+19/11/05 23:52:36 INFO mapreduce.Job:  map 95% reduce 29%
+19/11/05 23:52:37 INFO mapreduce.Job:  map 96% reduce 29%
+19/11/05 23:52:38 INFO mapreduce.Job:  map 97% reduce 30%
+19/11/05 23:52:40 INFO mapreduce.Job:  map 98% reduce 30%
+19/11/05 23:52:41 INFO mapreduce.Job:  map 98% reduce 31%
+19/11/05 23:52:42 INFO mapreduce.Job:  map 99% reduce 31%
+19/11/05 23:52:43 INFO mapreduce.Job:  map 99% reduce 32%
+19/11/05 23:52:45 INFO mapreduce.Job:  map 100% reduce 32%
+19/11/05 23:52:46 INFO mapreduce.Job:  map 100% reduce 33%
+19/11/05 23:52:51 INFO mapreduce.Job:  map 100% reduce 34%
+19/11/05 23:52:52 INFO mapreduce.Job:  map 100% reduce 40%
+19/11/05 23:52:53 INFO mapreduce.Job:  map 100% reduce 51%
+19/11/05 23:52:54 INFO mapreduce.Job:  map 100% reduce 61%
+19/11/05 23:52:55 INFO mapreduce.Job:  map 100% reduce 65%
+19/11/05 23:52:56 INFO mapreduce.Job:  map 100% reduce 67%
+19/11/05 23:52:57 INFO mapreduce.Job:  map 100% reduce 68%
+19/11/05 23:52:59 INFO mapreduce.Job:  map 100% reduce 69%
+19/11/05 23:53:01 INFO mapreduce.Job:  map 100% reduce 70%
+19/11/05 23:53:02 INFO mapreduce.Job:  map 100% reduce 71%
+19/11/05 23:53:04 INFO mapreduce.Job:  map 100% reduce 72%
+19/11/05 23:53:06 INFO mapreduce.Job:  map 100% reduce 73%
+19/11/05 23:53:09 INFO mapreduce.Job:  map 100% reduce 74%
+19/11/05 23:53:11 INFO mapreduce.Job:  map 100% reduce 75%
+19/11/05 23:53:12 INFO mapreduce.Job:  map 100% reduce 76%
+19/11/05 23:53:14 INFO mapreduce.Job:  map 100% reduce 77%
+19/11/05 23:53:16 INFO mapreduce.Job:  map 100% reduce 78%
+19/11/05 23:53:18 INFO mapreduce.Job:  map 100% reduce 79%
+19/11/05 23:53:20 INFO mapreduce.Job:  map 100% reduce 80%
+19/11/05 23:53:22 INFO mapreduce.Job:  map 100% reduce 81%
+19/11/05 23:53:24 INFO mapreduce.Job:  map 100% reduce 82%
+19/11/05 23:53:26 INFO mapreduce.Job:  map 100% reduce 83%
+19/11/05 23:53:28 INFO mapreduce.Job:  map 100% reduce 84%
+19/11/05 23:53:30 INFO mapreduce.Job:  map 100% reduce 85%
+19/11/05 23:53:32 INFO mapreduce.Job:  map 100% reduce 86%
+19/11/05 23:53:34 INFO mapreduce.Job:  map 100% reduce 87%
+19/11/05 23:53:36 INFO mapreduce.Job:  map 100% reduce 88%
+19/11/05 23:53:38 INFO mapreduce.Job:  map 100% reduce 89%
+19/11/05 23:53:39 INFO mapreduce.Job:  map 100% reduce 90%
+19/11/05 23:53:41 INFO mapreduce.Job:  map 100% reduce 91%
+19/11/05 23:53:43 INFO mapreduce.Job:  map 100% reduce 92%
+19/11/05 23:53:45 INFO mapreduce.Job:  map 100% reduce 93%
+19/11/05 23:53:48 INFO mapreduce.Job:  map 100% reduce 94%
+19/11/05 23:53:51 INFO mapreduce.Job:  map 100% reduce 95%
+19/11/05 23:53:54 INFO mapreduce.Job:  map 100% reduce 96%
+19/11/05 23:53:59 INFO mapreduce.Job:  map 100% reduce 97%
+19/11/05 23:54:06 INFO mapreduce.Job:  map 100% reduce 98%
+19/11/05 23:54:28 INFO mapreduce.Job:  map 100% reduce 99%
+19/11/05 23:55:09 INFO mapreduce.Job:  map 100% reduce 100%
+19/11/05 23:56:27 INFO mapreduce.Job: Job job_1567079137842_609815 completed successfully
+19/11/05 23:56:27 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=21246635263
+		FILE: Number of bytes written=59626540501
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=171392965341
+		HDFS: Number of bytes written=220147687013
+		HDFS: Number of read operations=3600
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=800
+	Job Counters 
+		Launched map tasks=1000
+		Launched reduce tasks=200
+		Data-local map tasks=971
+		Rack-local map tasks=29
+		Total time spent by all maps in occupied slots (ms)=351571080
+		Total time spent by all reduces in occupied slots (ms)=124334520
+		Total time spent by all map tasks (ms)=43946385
+		Total time spent by all reduce tasks (ms)=20722420
+		Total vcore-milliseconds taken by all map tasks=43946385
+		Total vcore-milliseconds taken by all reduce tasks=20722420
+		Total megabyte-milliseconds taken by all map tasks=180004392960
+		Total megabyte-milliseconds taken by all reduce tasks=63659274240
+	Map-Reduce Framework
+		Map input records=81586106
+		Map output records=262379459
+		Map output bytes=163526176297
+		Map output materialized bytes=38227806550
+		Input split bytes=174000
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=9529295
+		Reduce shuffle bytes=38227806550
+		Reduce input records=262379459
+		Reduce output records=164784947
+		Spilled Records=524758918
+		Shuffled Maps =200000
+		Failed Shuffles=0
+		Merged Map outputs=200000
+		GC time elapsed (ms)=385036
+		CPU time spent (ms)=62812330
+		Physical memory (bytes) snapshot=1657381015552
+		Virtual memory (bytes) snapshot=6293253955584
+		Total committed heap usage (bytes)=2238653136896
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=171392791341
+	File Output Format Counters 
+		Bytes Written=220147687013
+19/11/05 23:56:27 INFO streaming.StreamJob: Output directory: /user/ad_user/ctr_space/model_train/shitu/20191104/
++ judge_result hadoop_run
++ [[ 0 -ne 0 ]]
++ echo 'hadoop_run success.'
+hadoop_run success.
++ ADFEA_DIR=/user/ad_user/ctr_space/model_train/shitu/adfea/
++ ADFEA_PATH=/user/ad_user/ctr_space/model_train/shitu/adfea//20191104/
++ INS_DIR=/user/ad_user/ctr_space/model_train/shitu/ins/
++ INS_PATH=/user/ad_user/ctr_space/model_train/shitu/ins//20191104/
++ STATINFO_DIR=/user/ad_user/ctr_space/model_train/shitu/statinfo/
++ STATINFO_PATH=/user/ad_user/ctr_space/model_train/shitu/statinfo//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/adfea//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/adfea//20191104/
+19/11/05 23:56:33 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/adfea/20191104' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/adfea//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/ins//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/ins//20191104/
+19/11/05 23:56:42 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/ins/20191104' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/ins//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -test -e /user/ad_user/ctr_space/model_train/shitu/statinfo//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/statinfo//20191104/
+19/11/05 23:56:51 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/statinfo/20191104' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mkdir -p /user/ad_user/ctr_space/model_train/shitu/statinfo//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191104//part-*-A' /user/ad_user/ctr_space/model_train/shitu/adfea//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/adfea//20191104//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191104//part-*-B' /user/ad_user/ctr_space/model_train/shitu/statinfo//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/statinfo//20191104//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -mv '/user/ad_user/ctr_space/model_train/shitu/20191104//part-*-C' /user/ad_user/ctr_space/model_train/shitu/ins//20191104/
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -touchz /user/ad_user/ctr_space/model_train/shitu/ins//20191104//_SUCCESS
++ /usr/local/hadoop-2.6.3/bin/hadoop fs -rm -r /user/ad_user/ctr_space/model_train/shitu/20191104/
+19/11/05 23:57:21 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://cootek/user/ad_user/ctr_space/model_train/shitu/20191104' to trash at: hdfs://cootek/user/ad_user/.Trash/Current
++ mylog 'task[20191104] success!'
+++ date +%Y%m%d-%H:%M:%S
++ now=20191105-23:57:21
++ echo '[20191105-23:57:21] task[20191104]' 'success!'
+[20191105-23:57:21] task[20191104] success!
++ exit 0
